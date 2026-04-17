@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Static Wiki Engine</title>
+<title>Static Wiki Engine (RAW Mode)</title>
 
 <style>
 body {
@@ -107,7 +107,6 @@ async function loadPages() {
     const res = await fetch(BASE_URL + "manifest.json");
     pages = await res.json();
   } catch (e) {
-    console.log("Manifest failed");
     pages = [];
   }
   renderList();
@@ -155,7 +154,7 @@ async function loadPage(name) {
   }
 }
 
-/* ================= CLEANER ================= */
+/* ================= CLEAN ================= */
 function clean(str) {
   return str
     .replace(/\r/g, "")
@@ -163,21 +162,21 @@ function clean(str) {
     .trim();
 }
 
-/* ================= ASSET PARSER ================= */
+/* ================= ASSETS (RAW ONLY) ================= */
 function parseAssets(folder, text) {
 
-  // IMAGE
+  // IMAGE → RAW ONLY
   text = text.replace(/image::(.*)/g, (m, src) => {
 
-    const cleanSrc = clean(src);
+    const file = clean(src);
 
-    const url = cleanSrc.startsWith("http")
-      ? cleanSrc
-      : `${BASE_URL}pages/${folder}/${cleanSrc}`;
+    const url = file.startsWith("http")
+      ? file
+      : `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${folder}/${file}`;
 
     return `
       <div class="debug-box">
-        <div class="debug-url">DEBUG IMAGE URL:</div>
+        <div class="debug-url">RAW IMAGE URL:</div>
         <div class="debug-url">${url}</div>
 
         <img src="${url}"
@@ -186,14 +185,14 @@ function parseAssets(folder, text) {
     `;
   });
 
-  // MP3
+  // MP3 → RAW ONLY
   text = text.replace(/mp3::(.*)/g, (m, src) => {
 
-    const cleanSrc = clean(src);
+    const file = clean(src);
 
-    const url = cleanSrc.startsWith("http")
-      ? cleanSrc
-      : `${BASE_URL}pages/${folder}/${cleanSrc}`;
+    const url = file.startsWith("http")
+      ? file
+      : `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${folder}/${file}`;
 
     return `
       <audio controls>
