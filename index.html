@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Wiki Engine (Fixed Properly)</title>
+<title>Static Wiki Engine</title>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -19,16 +19,11 @@ body {
   height:100vh;
 }
 
+/* SIDEBAR */
 #sidebar {
-  width:280px;
+  width:300px;
   background:#111827;
   padding:10px;
-  overflow-y:auto;
-}
-
-#content {
-  flex:1;
-  padding:20px;
   overflow-y:auto;
 }
 
@@ -43,7 +38,11 @@ input {
   border-radius:6px;
 }
 
+/* PAGE ITEM */
 .page {
+  display:flex;
+  align-items:center;
+  gap:10px;
   padding:8px;
   cursor:pointer;
   border-bottom:1px solid #222;
@@ -51,6 +50,21 @@ input {
 
 .page:hover {
   background:#1f2937;
+}
+
+/* ICON */
+.page img {
+  width:22px;
+  height:22px;
+  object-fit:cover;
+  border-radius:4px;
+}
+
+/* CONTENT */
+#content {
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
 }
 
 img {
@@ -64,6 +78,7 @@ audio {
   margin:10px 0;
 }
 
+/* LINKS */
 a {
   color:#60a5fa;
 }
@@ -90,6 +105,8 @@ a {
 
 /* ================= CONFIG ================= */
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
+const ICON_URL = BASE_URL + "blueprint.jpg";
+
 let pages = [];
 
 /* ================= LOAD PAGES ================= */
@@ -111,16 +128,24 @@ function renderList() {
   pages
     .filter(p => p.toLowerCase().includes(q))
     .forEach(p => {
+
       const div = document.createElement("div");
       div.className = "page";
-      div.innerText = "📄 " + p;
+
+      div.innerHTML = `
+        <img src="${ICON_URL}" alt="icon">
+        <span>${p}</span>
+      `;
+
       div.onclick = () => loadPage(p);
+
       list.appendChild(div);
     });
 }
 
 /* ================= LOAD PAGE ================= */
 async function loadPage(name) {
+
   title.innerText = name;
   page.innerHTML = "Loading...";
 
@@ -139,12 +164,18 @@ async function loadPage(name) {
   }
 }
 
-/* ================= RAW ASSET SYSTEM ================= */
+/* ================= CLEAN ================= */
+function clean(str) {
+  return str.replace(/\r/g, "").replace(/\n/g, "").trim();
+}
+
+/* ================= ASSETS ================= */
 function convertAssets(folder, text) {
 
-  // IMAGE
+  // 🖼️ IMAGE → RAW
   text = text.replace(/image::(.*)/g, (m, src) => {
-    const file = src.trim();
+
+    const file = clean(src);
 
     const url = file.startsWith("http")
       ? file
@@ -153,9 +184,10 @@ function convertAssets(folder, text) {
     return `![](${url})`;
   });
 
-  // MP3
+  // 🎵 MP3 → RAW
   text = text.replace(/mp3::(.*)/g, (m, src) => {
-    const file = src.trim();
+
+    const file = clean(src);
 
     const url = file.startsWith("http")
       ? file
