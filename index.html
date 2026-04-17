@@ -141,22 +141,31 @@ async function loadPage(name) {
 /* ================= ASSET PARSER ================= */
 function parseAssets(folder, text) {
 
-  // IMAGE
+  // normalize ALL line endings first
+  text = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
   text = text.replace(/image::(.*)/g, (m, src) => {
-    const clean = src.trim();
+    const clean = src
+      .trim()
+      .replace(/\r/g, "")
+      .replace(/\n/g, "");
+
     const url = `${BASE_URL}pages/${folder}/${clean}`;
 
-    console.log("IMG:", url);
+    console.log("IMG CLEAN:", JSON.stringify(clean), url);
 
-    return `<img src="${url}" onerror="this.style.border='3px solid red'; this.alt='FAILED IMAGE'">`;
+    return `<img src="${url}" onerror="this.style.border='3px solid red'">`;
   });
 
-  // AUDIO
   text = text.replace(/mp3::(.*)/g, (m, src) => {
-    const clean = src.trim();
+    const clean = src
+      .trim()
+      .replace(/\r/g, "")
+      .replace(/\n/g, "");
+
     const url = `${BASE_URL}pages/${folder}/${clean}`;
 
-    console.log("MP3:", url);
+    console.log("MP3 CLEAN:", JSON.stringify(clean), url);
 
     return `
       <audio controls>
