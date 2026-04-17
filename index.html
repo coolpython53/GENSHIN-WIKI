@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Wiki Engine</title>
+<title>Static Wiki Engine</title>
 
 <style>
 body {
@@ -53,13 +53,26 @@ input {
 
 img {
   max-width:100%;
-  margin:10px 0;
+  margin-top:10px;
   border-radius:10px;
 }
 
 audio {
   width:100%;
   margin:10px 0;
+}
+
+.debug-box {
+  border:1px solid #444;
+  padding:8px;
+  margin:10px 0;
+  background:#0f172a;
+}
+
+.debug-url {
+  font-size:12px;
+  color:#aaa;
+  word-break:break-all;
 }
 </style>
 </head>
@@ -85,16 +98,16 @@ audio {
 /* ================= CONFIG ================= */
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
 
-/* ================= PAGES ================= */
+/* ================= DATA ================= */
 let pages = [];
 
-/* ================= LOAD ================= */
+/* ================= LOAD MANIFEST ================= */
 async function loadPages() {
   try {
     const res = await fetch(BASE_URL + "manifest.json");
     pages = await res.json();
   } catch (e) {
-    console.log("Manifest failed:", e);
+    console.log("Manifest failed");
     pages = [];
   }
   renderList();
@@ -123,13 +136,11 @@ async function loadPage(name) {
 
   const url = `${BASE_URL}pages/${encodeURIComponent(name)}/page.md`;
 
-  console.log("PAGE URL:", url);
-
   try {
     const res = await fetch(url);
 
     if (!res.ok) {
-      page.innerHTML = `❌ Page failed: ${res.status}`;
+      page.innerHTML = "❌ Failed to load page: " + res.status;
       return;
     }
 
@@ -140,12 +151,11 @@ async function loadPage(name) {
     page.innerHTML = markdown(text);
 
   } catch (err) {
-    console.log(err);
-    page.innerHTML = "❌ Network error loading page";
+    page.innerHTML = "❌ Network error";
   }
 }
 
-/* ================= ASSETS ================= */
+/* ================= CLEANER ================= */
 function clean(str) {
   return str
     .replace(/\r/g, "")
@@ -153,25 +163,37 @@ function clean(str) {
     .trim();
 }
 
+/* ================= ASSET PARSER ================= */
 function parseAssets(folder, text) {
 
+  // IMAGE
   text = text.replace(/image::(.*)/g, (m, src) => {
-    const file = clean(src);
-    const url = `${BASE_URL}pages/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`;
 
-    console.log("IMG URL:", url);
+    const cleanSrc = clean(src);
+
+    const url = cleanSrc.startsWith("http")
+      ? cleanSrc
+      : `${BASE_URL}pages/${folder}/${cleanSrc}`;
 
     return `
-      <img src="${url}"
-        onerror="console.log('IMAGE FAILED:', this.src); this.style.border='3px solid red';">
+      <div class="debug-box">
+        <div class="debug-url">DEBUG IMAGE URL:</div>
+        <div class="debug-url">${url}</div>
+
+        <img src="${url}"
+          onerror="this.style.border='3px solid red'; this.alt='FAILED IMAGE'">
+      </div>
     `;
   });
 
+  // MP3
   text = text.replace(/mp3::(.*)/g, (m, src) => {
-    const file = clean(src);
-    const url = `${BASE_URL}pages/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`;
 
-    console.log("AUDIO URL:", url);
+    const cleanSrc = clean(src);
+
+    const url = cleanSrc.startsWith("http")
+      ? cleanSrc
+      : `${BASE_URL}pages/${folder}/${cleanSrc}`;
 
     return `
       <audio controls>
