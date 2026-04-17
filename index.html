@@ -38,6 +38,7 @@ input {
   background:#0f172a;
   color:white;
   border:1px solid #333;
+  border-radius:6px;
 }
 
 .page {
@@ -50,8 +51,16 @@ input {
   background:#1f2937;
 }
 
-img { max-width:100%; border-radius:8px; margin:10px 0; }
-audio { width:100%; margin:10px 0; }
+img {
+  max-width:100%;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+audio {
+  width:100%;
+  margin:10px 0;
+}
 </style>
 </head>
 
@@ -65,7 +74,7 @@ audio { width:100%; margin:10px 0; }
   </div>
 
   <div id="content">
-    <h2 id="title">Loading wiki...</h2>
+    <h2 id="title">Select a page</h2>
     <div id="page"></div>
   </div>
 
@@ -92,7 +101,7 @@ function renderList() {
     .forEach(p => {
       const div = document.createElement("div");
       div.className = "page";
-      div.innerText = p;
+      div.innerText = "📄 " + p;
       div.onclick = () => loadPage(p);
       list.appendChild(div);
     });
@@ -106,18 +115,20 @@ async function loadPage(name) {
   const res = await fetch(`pages/${name}/page.md`);
   let text = await res.text();
 
-  text = await parseAssets(name, text);
+  text = parseAssets(name, text);
 
   page.innerHTML = markdown(text);
 }
 
-/* ================= ASSETS ================= */
-async function parseAssets(folder, text) {
+/* ================= ASSET PARSER ================= */
+function parseAssets(folder, text) {
 
+  // IMAGE TAGS
   text = text.replace(/image::(.*)/g, (m, src) => {
     return `<img src="pages/${folder}/${src.trim()}">`;
   });
 
+  // MP3 TAGS
   text = text.replace(/mp3::(.*)/g, (m, src) => {
     return `
       <audio controls>
@@ -129,7 +140,7 @@ async function parseAssets(folder, text) {
   return text;
 }
 
-/* ================= MARKDOWN ================= */
+/* ================= MINI MARKDOWN ================= */
 function markdown(text) {
   return text
     .replace(/^### (.*$)/gim, "<h3>$1</h3>")
