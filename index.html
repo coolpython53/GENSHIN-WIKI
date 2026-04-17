@@ -2,21 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Wiki System</title>
+<title>Fandom-Style Wiki</title>
 
 <style>
 body {
   font-family: Arial;
+  margin:0;
   background:#0b0f1a;
   color:white;
-  margin:0;
-  padding:0;
 }
 
 input, textarea {
   width:100%;
   padding:10px;
-  margin:5px 0;
+  margin:6px 0;
   box-sizing:border-box;
   background:#111827;
   color:white;
@@ -27,31 +26,26 @@ input, textarea {
 button {
   padding:10px;
   margin:5px;
-  cursor:pointer;
   background:#2563eb;
   border:none;
   color:white;
   border-radius:6px;
+  cursor:pointer;
 }
 
 button:hover {
   background:#1d4ed8;
 }
 
-/* ================= LOADING OVERLAY ================= */
 #loading {
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.8);
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
   display:none;
   justify-content:center;
   align-items:center;
   flex-direction:column;
   z-index:9999;
-  color:white;
 }
 
 .spinner {
@@ -60,13 +54,11 @@ button:hover {
   border:5px solid #333;
   border-top:5px solid #4c7dff;
   border-radius:50%;
-  animation: spin 1s linear infinite;
-  margin-bottom:10px;
+  animation:spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% { transform:rotate(360deg); }
 }
 
 #pages div {
@@ -83,34 +75,33 @@ button:hover {
 
 <body>
 
-<!-- LOADING OVERLAY -->
 <div id="loading">
   <div class="spinner"></div>
   <div id="loadingText">Loading...</div>
 </div>
 
-<!-- LOGIN -->
 <div id="loginBox">
   <h2>Login</h2>
-
   <input id="email" placeholder="email">
   <input id="password" type="password" placeholder="password">
-
   <button onclick="login()">Login</button>
   <button onclick="signup()">Signup</button>
 </div>
 
-<!-- WIKI -->
 <div id="wiki" style="display:none; padding:10px;">
+
   <h2>Wiki</h2>
 
-  <button onclick="loadPages()">Reload Pages</button>
+  <input id="search" placeholder="Search pages..." oninput="filterPages()">
+
+  <button onclick="loadPages()">Reload</button>
+  <button onclick="toggleMode()" id="modeBtn">View Mode</button>
   <button onclick="logout()">Logout</button>
 
   <div id="pages"></div>
 
   <h3 id="title"></h3>
-  <textarea id="editor" rows="10"></textarea>
+  <textarea id="editor"></textarea>
 
   <button onclick="save()">Save</button>
 </div>
@@ -118,7 +109,7 @@ button:hover {
 <script>
 const API = "https://script.google.com/macros/s/AKfycbxPCEBLslQVpHCJAJeal6ao-KuR9VRaaCyfL1FekDG9npiHBXurFzY8kgfFufzMq69yVg/exec";
 
-/* ================= ELEMENTS ================= */
+/* ===== ELEMENTS ===== */
 const loginBox = document.getElementById("loginBox");
 const wiki = document.getElementById("wiki");
 const pages = document.getElementById("pages");
@@ -126,161 +117,136 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const editor = document.getElementById("editor");
 const title = document.getElementById("title");
+const search = document.getElementById("search");
 
-/* ================= STATE ================= */
+/* ===== STATE ===== */
 let user = null;
 let current = null;
+let mode = "view";
+let cache = [];
 
-/* ================= LOADING ================= */
-function showLoading(text="Loading...") {
-  document.getElementById("loadingText").innerText = text;
+/* ===== LOADING ===== */
+function showLoading(t="Loading..."){
+  document.getElementById("loadingText").innerText = t;
   document.getElementById("loading").style.display = "flex";
 }
-
-function hideLoading() {
+function hideLoading(){
   document.getElementById("loading").style.display = "none";
 }
 
-/* ================= API WRAPPER ================= */
-async function api(url, loadingText="Loading...") {
-  showLoading(loadingText);
-
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-
+/* ===== API ===== */
+async function api(url, t="Loading..."){
+  showLoading(t);
+  try{
+    const r = await fetch(url);
+    const d = await r.json();
     hideLoading();
-
-    if (!data) throw new Error("Empty response");
-
-    return data;
-
-  } catch (err) {
+    return d;
+  }catch(e){
     hideLoading();
-    console.error(err);
-    alert("Network / API error");
-    return { success: false, message: "network error" };
+    return {success:false,message:"network error"};
   }
 }
 
-/* ================= LOGIN ================= */
-async function login() {
-
-  const url =
-    API +
+/* ===== LOGIN ===== */
+async function login(){
+  const url = API +
     "?action=login" +
     "&email=" + encodeURIComponent(email.value) +
     "&password=" + encodeURIComponent(password.value);
 
-  const data = await api(url, "Logging in...");
+  const d = await api(url,"Logging in...");
 
-  if (data.success) {
-    user = data;
-    localStorage.setItem("user", JSON.stringify(user));
-
-    loginBox.style.display = "none";
-    wiki.style.display = "block";
-
+  if(d.success){
+    user = d;
+    localStorage.setItem("user", JSON.stringify(d));
+    loginBox.style.display="none";
+    wiki.style.display="block";
     loadPages();
-  } else {
-    alert(data.message || "Login failed");
-  }
+  } else alert(d.message);
 }
 
-/* ================= SIGNUP ================= */
-async function signup() {
-
-  const url =
-    API +
+/* ===== SIGNUP ===== */
+async function signup(){
+  const url = API +
     "?action=signup" +
-    "&username=" + encodeURIComponent("user") +
+    "&username=user" +
     "&email=" + encodeURIComponent(email.value) +
     "&password=" + encodeURIComponent(password.value);
 
-  const data = await api(url, "Creating account...");
-
-  alert(data.message || JSON.stringify(data));
+  alert(JSON.stringify(await api(url,"Signing up...")));
 }
 
-/* ================= LOAD PAGES ================= */
-async function loadPages() {
+/* ===== LOAD ===== */
+async function loadPages(){
+  const d = await api(API+"?action=listPages","Loading pages...");
+  cache = d.pages || [];
+  render(cache);
+}
 
-  const url = API + "?action=listPages";
-
-  const data = await api(url, "Loading pages...");
-
-  pages.innerHTML = "";
-
-  if (!data.success) {
-    pages.innerHTML = "Failed to load pages";
-    return;
-  }
-
-  data.pages.forEach(p => {
-    const div = document.createElement("div");
-    div.innerText = p.title;
-
-    div.onclick = () => openPage(p.id);
-
+function render(list){
+  pages.innerHTML="";
+  list.forEach(p=>{
+    const div=document.createElement("div");
+    div.innerText="📄 "+p.title;
+    div.onclick=()=>openPage(p.id);
     pages.appendChild(div);
   });
 }
 
-/* ================= OPEN PAGE ================= */
-async function openPage(id) {
-
-  current = id;
-
-  const url = API + "?action=getPage&id=" + encodeURIComponent(id);
-
-  const data = await api(url, "Opening page...");
-
-  if (!data.success) {
-    alert(data.message || "Failed to open page");
-    return;
-  }
-
-  title.innerText = data.page.title;
-  editor.value = data.page.content || "";
+/* ===== SEARCH ===== */
+function filterPages(){
+  const q = search.value.toLowerCase();
+  render(cache.filter(p=>p.title.toLowerCase().includes(q)));
 }
 
-/* ================= SAVE ================= */
-async function save() {
+/* ===== OPEN ===== */
+async function openPage(id){
+  current=id;
+  const d=await api(API+"?action=getPage&id="+id,"Opening...");
+  if(!d.success)return;
 
-  if (!current) return alert("No page selected");
-
-  const url =
-    API +
-    "?action=updatePage" +
-    "&id=" + encodeURIComponent(current) +
-    "&content=" + encodeURIComponent(editor.value) +
-    "&editor=" + encodeURIComponent(user?.email || "unknown");
-
-  const data = await api(url, "Saving page...");
-
-  if (data.success) {
-    alert("Saved!");
-  } else {
-    alert(data.message || "Save failed");
-  }
+  title.innerText=d.page.title;
+  editor.value=d.page.content||"";
+  editor.disabled = (user.role!=="admin" || mode==="view");
 }
 
-/* ================= AUTO LOGIN ================= */
-window.onload = () => {
-  const saved = localStorage.getItem("user");
+/* ===== SAVE ===== */
+async function save(){
+  const d=await api(
+    API+
+    "?action=updatePage"+
+    "&id="+current+
+    "&content="+encodeURIComponent(editor.value)+
+    "&editor="+encodeURIComponent(user.email),
+    "Saving..."
+  );
+  alert(d.success?"Saved!":d.message);
+}
 
-  if (saved) {
-    user = JSON.parse(saved);
+/* ===== MODE ===== */
+function toggleMode(){
+  if(user.role!=="admin") return alert("Admin only");
 
-    loginBox.style.display = "none";
-    wiki.style.display = "block";
+  mode = mode==="view"?"edit":"view";
+  editor.disabled = (mode==="view");
+  document.getElementById("modeBtn").innerText =
+    mode==="edit"?"Edit Mode":"View Mode";
+}
 
+/* ===== AUTO LOGIN ===== */
+window.onload=()=>{
+  const s=localStorage.getItem("user");
+  if(s){
+    user=JSON.parse(s);
+    loginBox.style.display="none";
+    wiki.style.display="block";
     loadPages();
   }
 };
 
-/* ================= LOGOUT ================= */
-function logout() {
+/* ===== LOGOUT ===== */
+function logout(){
   localStorage.removeItem("user");
   location.reload();
 }
