@@ -82,24 +82,26 @@ audio {
 
 <script>
 
-/* ================= SOURCE OF TRUTH ================= */
-let pages = [];
+/* ================= CONFIG ================= */
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
+
+/* ================= PAGES ================= */
+let pages = [];
 
 /* ================= LOAD MANIFEST ================= */
 async function loadPages() {
   try {
-    const res = await fetch("manifest.json");
+    const res = await fetch(BASE_URL + "manifest.json");
     pages = await res.json();
   } catch (e) {
-    // fallback if manifest missing
-    pages = ["amber", "lisa"];
+    console.log("Manifest failed, fallback used");
+    pages = [];
   }
 
   renderList();
 }
 
-/* ================= LIST ================= */
+/* ================= RENDER LIST ================= */
 function renderList() {
   const q = search.value.toLowerCase();
   list.innerHTML = "";
@@ -120,26 +122,41 @@ async function loadPage(name) {
   title.innerText = name;
   page.innerHTML = "Loading...";
 
-  const res = await fetch(`pages/${name}/page.md`);
-  let text = await res.text();
+  const url = `${BASE_URL}pages/${name}/page.md`;
 
-  text = parseAssets(name, text);
+  try {
+    const res = await fetch(url);
+    let text = await res.text();
 
-  page.innerHTML = markdown(text);
+    text = parseAssets(name, text);
+
+    page.innerHTML = markdown(text);
+
+  } catch (err) {
+    page.innerHTML = "❌ Failed to load page: " + url;
+    console.log(err);
+  }
 }
 
-/* ================= ASSETS ================= */
+/* ================= ASSET PARSER ================= */
 function parseAssets(folder, text) {
 
-  // IMAGES
+  // IMAGE
   text = text.replace(/image::(.*)/g, (m, src) => {
-    const url = BASE_URL + `pages/${folder}/${src.trim()}`;
-    return `<img src="${url}">`;
+    const clean = src.trim();
+    const url = `${BASE_URL}pages/${folder}/${clean}`;
+
+    console.log("IMG:", url);
+
+    return `<img src="${url}" onerror="this.style.border='3px solid red'; this.alt='FAILED IMAGE'">`;
   });
 
-  // AUDIO (MP3)
+  // AUDIO
   text = text.replace(/mp3::(.*)/g, (m, src) => {
-    const url = BASE_URL + `pages/${folder}/${src.trim()}`;
+    const clean = src.trim();
+    const url = `${BASE_URL}pages/${folder}/${clean}`;
+
+    console.log("MP3:", url);
 
     return `
       <audio controls>
