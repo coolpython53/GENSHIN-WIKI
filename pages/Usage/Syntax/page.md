@@ -5,6 +5,9 @@ This wiki uses markdown for most of its formatting. You can view [a guide to usi
 This wiki also has some custom syntax. Here is the custom syntax we have:
 ##### image:\:
 The image:\: syntax is used for inserting images. To use this, the image should be in the same directory as the page.md or folder.md
+Also, you can use image:\:URL_HERE:::50,50 (height and width)
+or
+image:\:URL_HERE::::50 (50% of max size)
 Please use the raw github url. We have a converter [here](https://coolpython53.github.io/GitHub-to-Pages/).
 ###### Example usage:
 image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/example.jpg
