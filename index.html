@@ -161,21 +161,29 @@ function renderNode(node, container, depth=0){
 
 function openWikiPath(rawPath){
 
+  // 1. remove repo prefix safely
   let path = rawPath
     .replace(/^GENSHIN-WIKI\/pages\//, "")
     .replace(/^pages\//, "");
 
-  const isFolder = path.endsWith("folder.md");
-  const isPage = path.endsWith("page.md");
+  // 2. detect type FIRST (before stripping incorrectly)
+  const isFolder = path.includes("folder.md");
+  const isPage = path.includes("page.md");
 
-  const cleanPath = path
+  // 3. strip file names properly
+  path = path
     .replace(/\/folder\.md$/, "")
     .replace(/\/page\.md$/, "");
 
-  if(isFolder) return loadFolder(cleanPath);
-  if(isPage) return loadPage(cleanPath);
+  // 4. normalize accidental trailing slashes
+  path = path.replace(/\/$/, "");
 
-  loadPage(cleanPath);
+  // 5. route
+  if(isFolder) return loadFolder(path);
+  if(isPage) return loadPage(path);
+
+  // fallback
+  loadPage(path);
 }
 
 /* ---------------- PAGE ---------------- */
