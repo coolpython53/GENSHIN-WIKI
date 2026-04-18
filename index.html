@@ -98,13 +98,12 @@ audio {
 </div>
 
 <script>
-
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
 const FALLBACK_ICON = BASE_URL + "blueprint.jpg";
 
+// You can list top-level pages/folders in manifest
 let pages = [];
 
-/* ================= LOAD ================= */
 async function loadPages() {
   try {
     const res = await fetch(BASE_URL + "manifest.json");
@@ -115,14 +114,12 @@ async function loadPages() {
   renderTree();
 }
 
-/* ================= BUILD TREE ================= */
+// Build tree structure from manifest
 function buildTree(paths) {
   const root = {};
-
   paths.forEach(path => {
     const parts = path.split("/");
     let current = root;
-
     parts.forEach((part, i) => {
       if (!current[part]) {
         current[part] = {
@@ -133,11 +130,10 @@ function buildTree(paths) {
       current = current[part].__children;
     });
   });
-
   return root;
 }
 
-/* ================= RENDER TREE ================= */
+// Render sidebar tree
 function renderTree() {
   const q = search.value.toLowerCase();
   tree.innerHTML = "";
@@ -150,7 +146,6 @@ function renderTree() {
 
 function renderNode(node, container, depth = 0) {
   Object.keys(node).forEach(key => {
-
     const item = node[key];
     const hasChildren = Object.keys(item.__children).length > 0;
     const fullPath = item.__path;
@@ -160,24 +155,28 @@ function renderNode(node, container, depth = 0) {
     div.style.marginLeft = depth * 16 + "px";
 
     const iconUrl = `${BASE_URL}pages/${fullPath}/blueprint.jpg`;
+    div.innerHTML = `<img class="icon" src="${iconUrl}" onerror="this.src='${FALLBACK_ICON}'">
+                     <span class="${hasChildren ? 'folder' : ''}">${key}</span>`;
 
-    div.innerHTML = `
-      <img class="icon" src="${iconUrl}" onerror="this.src='${FALLBACK_ICON}'">
-      <span class="${hasChildren ? "folder" : ""}">${key}</span>
-    `;
-
+    // Folder toggle
     if (hasChildren) {
       let open = false;
-
       div.onclick = () => {
         open = !open;
-        if (open) {
-          renderNode(item.__children, container, depth + 1);
-        } else {
-          renderTree();
+        // Remove any children nodes below this folder first
+        const siblings = Array.from(container.children);
+        const start = siblings.indexOf(div) + 1;
+        for (let i = start; i < siblings.length;) {
+          if (parseInt(siblings[i].style.marginLeft) > depth * 16) {
+            container.removeChild(siblings[i]);
+          } else {
+            i++;
+          }
         }
+        if (open) renderNode(item.__children, container, depth + 1);
       };
-
+      // Still load page.md if it exists
+      div.ondblclick = () => loadPage(fullPath);
     } else {
       div.onclick = () => loadPage(fullPath);
     }
@@ -186,10 +185,9 @@ function renderNode(node, container, depth = 0) {
   });
 }
 
-/* ================= LOAD PAGE ================= */
+// Load a page
 async function loadPage(fullPath) {
   const name = fullPath.split("/").pop();
-
   title.innerText = name;
   page.innerHTML = "Loading...";
 
@@ -197,60 +195,49 @@ async function loadPage(fullPath) {
 
   try {
     const res = await fetch(url);
-
-    if (!res.ok) throw "no page";
-
-    let text = await res.text();
-    text = convertAssets(fullPath, text);
-
-    page.innerHTML = marked.parse(text);
-
+    if (res.ok) {
+      let text = await res.text();
+      text = convertAssets(fullPath, text);
+      page.innerHTML = marked.parse(text);
+    } else {
+      page.innerHTML = "📁 Folder (no page.md)";
+    }
   } catch {
     page.innerHTML = "📁 Folder (no page.md)";
   }
 }
 
-/* ================= CLEAN ================= */
+// Clean strings
 function clean(str) {
   return str.replace(/\r/g, "").replace(/\n/g, "").trim();
 }
 
-/* ================= RESOLVE (PAGES ONLY) ================= */
+// Resolve paths inside pages only
 function resolvePath(basePath, file) {
-
   if (file.startsWith("http")) return file;
-
   if (file.startsWith("/")) return "";
-
   const stack = basePath.split("/");
-
   file.split("/").forEach(part => {
     if (part === "..") stack.pop();
     else if (part !== ".") stack.push(part);
   });
-
   return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
 }
 
-/* ================= ASSETS ================= */
+// Convert image/mp3 links in markdown
 function convertAssets(fullPath, text) {
-
   text = text.replace(/image::(.*)/g, (m, src) => {
     const url = resolvePath(fullPath, clean(src));
     return url ? `![](${url})` : "";
   });
-
   text = text.replace(/mp3::(.*)/g, (m, src) => {
     const url = resolvePath(fullPath, clean(src));
-    return url
-      ? `<audio controls><source src="${url}" type="audio/mpeg"></audio>`
-      : "";
+    return url ? `<audio controls><source src="${url}" type="audio/mpeg"></audio>` : "";
   });
-
   return text;
 }
 
-/* ================= START ================= */
+// Start
 loadPages();
 
 </script>
