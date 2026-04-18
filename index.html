@@ -177,28 +177,28 @@ function resolvePath(basePath,file){
   return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
 }
 
-function convertAssets(fullPath,text){
+function convertAssets(fullPath, text){
 
-  // IMAGE SUPPORT:
+  // IMAGE SYNTAX:
   // image::url
   // image::url:::500,300
   // image::url::::50
 
-  text = text.replace(/image::(.*?)(:::[:\d,]+)?/g, (m, src, size) => {
-    const url = resolvePath(fullPath, clean(src));
+  text = text.replace(/image::(\S+)/g, (m, token) => {
+
+    const url = resolvePath(fullPath, clean(token.split(":::")[0].split("::::")[0]));
     if(!url) return "";
 
-    if(!size) return `![](${url})`;
-
-    if(size.startsWith("::::")) {
-      const percent = size.replace("::::","").trim();
+    // ---- percent version ----
+    if(token.includes("::::")) {
+      const percent = token.split("::::")[1];
       return `<img src="${url}" style="width:${percent}%;height:auto;">`;
     }
 
-    if(size.startsWith(":::")) {
-      const dims = size.replace(":::","").split(",");
-      const w = dims[0]?.trim();
-      const h = dims[1]?.trim();
+    // ---- pixel version ----
+    if(token.includes(":::")) {
+      const size = token.split(":::")[1];
+      const [w, h] = size.split(",");
 
       let style = "";
       if(w) style += `width:${w}px;`;
@@ -207,12 +207,13 @@ function convertAssets(fullPath,text){
       return `<img src="${url}" style="${style}">`;
     }
 
-    return `![](${url})`;
+    // ---- default ----
+    return `<img src="${url}">`;
   });
 
   text = text.replace(/mp3::(.*)/g,(m,src)=>{
     const url = resolvePath(fullPath,clean(src));
-    return url?`<audio controls><source src="${url}" type="audio/mpeg"></audio>`:"";
+    return url ? `<audio controls><source src="${url}" type="audio/mpeg"></audio>` : "";
   });
 
   return text;
