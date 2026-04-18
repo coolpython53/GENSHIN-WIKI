@@ -41,15 +41,17 @@ li:hover { text-decoration:underline; }
 </div>
 
 <script>
+
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
 const FALLBACK_ICON = BASE_URL + "blueprint.jpg";
 const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
 let pages = [];
+let imageStore = [];
 
-/* ---------------- LOAD PAGES ---------------- */
+/* ---------------- LOAD ---------------- */
 
-async function loadPages() {
+async function loadPages(){
   try {
     const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
     pages = await res.json();
@@ -61,29 +63,29 @@ async function loadPages() {
 
 /* ---------------- TREE ---------------- */
 
-function buildTree(paths) {
+function buildTree(paths){
   const root = {};
-  paths.forEach(path => {
+  paths.forEach(path=>{
     const parts = path.split("/");
-    let current = root;
-    parts.forEach((part,i) => {
-      if(!current[part]) current[part] = {__children:{}, __path: parts.slice(0,i+1).join("/")};
-      current = current[part].__children;
+    let cur = root;
+    parts.forEach((p,i)=>{
+      if(!cur[p]) cur[p] = {__children:{}, __path: parts.slice(0,i+1).join("/")};
+      cur = cur[p].__children;
     });
   });
   return root;
 }
 
-function renderTree() {
+function renderTree(){
   const q = search.value.toLowerCase();
   tree.innerHTML = "";
   const filtered = pages.filter(p => p.toLowerCase().includes(q));
   renderNode(buildTree(filtered), tree);
 }
 
-async function getBlueprintUrl(fullPath) {
+async function getIcon(path){
   for(const ext of ICON_EXTENSIONS){
-    const url = `${BASE_URL}pages/${fullPath}/blueprint.${ext}`;
+    const url = `${BASE_URL}pages/${path}/blueprint.${ext}`;
     try {
       const res = await fetch(url, {method:'HEAD'});
       if(res.ok) return url;
@@ -93,7 +95,7 @@ async function getBlueprintUrl(fullPath) {
 }
 
 function renderNode(node, container, depth=0){
-  Object.keys(node).forEach(async key => {
+  Object.keys(node).forEach(async key=>{
     const item = node[key];
     const fullPath = item.__path;
     const hasChildren = Object.keys(item.__children).length > 0;
@@ -102,10 +104,10 @@ function renderNode(node, container, depth=0){
     div.className = "item indent";
     div.style.marginLeft = depth * 16 + "px";
 
-    const iconUrl = await getBlueprintUrl(fullPath);
+    const icon = await getIcon(fullPath);
 
     div.innerHTML = `
-      <img class="icon" src="${iconUrl}" onerror="this.src='${FALLBACK_ICON}'">
+      <img class="icon" src="${icon}" onerror="this.src='${FALLBACK_ICON}'">
       <span class="${hasChildren?'folder':''}">${key.replace(/_/g,' ')}</span>
     `;
 
@@ -115,16 +117,33 @@ function renderNode(node, container, depth=0){
   });
 }
 
-/* ---------------- PAGE LOADING ---------------- */
+/* ---------------- ROUTER (IMPORTANT FIX) ---------------- */
+
+function openWikiPath(pathWithFile){
+
+  const isFolder = pathWithFile.endsWith("folder.md");
+  const isPage = pathWithFile.endsWith("page.md");
+
+  const cleanPath = pathWithFile
+    .replace("/page.md","")
+    .replace("/folder.md","");
+
+  if(isFolder) return loadFolder(cleanPath);
+  if(isPage) return loadPage(cleanPath);
+
+  // fallback
+  loadPage(cleanPath);
+}
+
+/* ---------------- PAGE ---------------- */
 
 async function loadPage(fullPath){
-  const name = fullPath.split("/").pop();
-  title.innerText = name.replace(/_/g,' ');
+  title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
   page.innerHTML = "Loading...";
 
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
 
-  try {
+  try{
     const res = await fetch(url);
     if(!res.ok) return page.innerHTML = "📁 Folder";
 
@@ -135,7 +154,6 @@ async function loadPage(fullPath){
 
     page.innerHTML = marked.parse(text);
 
-    // 🔥 IMPORTANT: re-inject images AFTER markdown render
     restoreImages();
 
   } catch {
@@ -149,12 +167,13 @@ async function loadFolder(fullPath){
   title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
   page.innerHTML = "";
 
-  const folderMdUrl = `${BASE_URL}pages/${fullPath}/folder.md`;
+  const url = `${BASE_URL}pages/${fullPath}/folder.md`;
 
   try{
-    const res = await fetch(folderMdUrl);
+    const res = await fetch(url);
     if(res.ok){
       let text = await res.text();
+
       text = convertAssets(fullPath,text);
       text = convertPageLinks(text);
 
@@ -164,12 +183,7 @@ async function loadFolder(fullPath){
     }
   } catch {}
 
-  const children = pages.filter(p => p.startsWith(fullPath) && p !== fullPath);
-
-  if(children.length === 0){
-    page.innerHTML += "<br>📁 Empty Folder";
-    return;
-  }
+  const children = pages.filter(p=>p.startsWith(fullPath) && p!==fullPath);
 
   const ul = document.createElement("ul");
   children.forEach(c=>{
@@ -182,48 +196,41 @@ async function loadFolder(fullPath){
   page.appendChild(ul);
 }
 
-/* ---------------- IMAGE ENGINE (FIXED) ---------------- */
-
-let imageStore = [];
+/* ---------------- IMAGE ENGINE ---------------- */
 
 function convertAssets(fullPath, text){
 
   imageStore = [];
 
-  text = text.replace(/image::([^\n]+)/g, (m, raw) => {
+  text = text.replace(/image::([^\n]+)/g,(m,raw)=>{
 
-    const token = raw.trim();
-
-    let url = token;
-    let html = "";
+    let token = raw.trim();
 
     // ---- percent ----
     const pct = token.match(/::::(\d+)%?$/);
-    if (pct) {
-      url = token.replace(/::::\d+%?$/, "");
-      const finalUrl = resolvePath(fullPath, clean(url));
-      html = `<img src="${finalUrl}" style="width:${pct[1]}%;height:auto;">`;
+    if(pct){
+      const url = resolvePath(fullPath, clean(token.replace(/::::\d+%?$/,"")));
+      const html = `<img src="${url}" style="width:${pct[1]}%;height:auto;">`;
       imageStore.push(html);
       return `@@IMG${imageStore.length-1}@@`;
     }
 
     // ---- pixel ----
     const px = token.match(/:::([\d]+)(?:,([\d]+))?$/);
-    if (px) {
-      url = token.replace(/:::[\d]+(,[\d]+)?$/, "");
-      const finalUrl = resolvePath(fullPath, clean(url));
+    if(px){
+      const url = resolvePath(fullPath, clean(token.replace(/:::[\d]+(,[\d]+)?$/,"")));
 
       let style = "";
       if(px[1]) style += `width:${px[1]}px;`;
       if(px[2]) style += `height:${px[2]}px;`;
 
-      html = `<img src="${finalUrl}" style="${style}">`;
+      const html = `<img src="${url}" style="${style}">`;
       imageStore.push(html);
       return `@@IMG${imageStore.length-1}@@`;
     }
 
-    const finalUrl = resolvePath(fullPath, clean(url));
-    html = `<img src="${finalUrl}">`;
+    const url = resolvePath(fullPath, clean(token));
+    const html = `<img src="${url}">`;
     imageStore.push(html);
     return `@@IMG${imageStore.length-1}@@`;
   });
@@ -240,7 +247,7 @@ function convertAssets(fullPath, text){
 
 function restoreImages(){
   const el = document.getElementById("page");
-  imageStore.forEach((img, i) => {
+  imageStore.forEach((img,i)=>{
     el.innerHTML = el.innerHTML.replaceAll(`@@IMG${i}@@`, img);
   });
 }
@@ -249,23 +256,21 @@ function restoreImages(){
 
 function convertPageLinks(text){
   return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(m,t,p)=>{
-    const cleanPath = p.replace(/\/page\.md$/,'');
-    return `<a onclick="loadPage('${cleanPath}')">${t.replace(/_/g,' ')}</a>`;
+    return `<a href="#" onclick="openWikiPath('${p}')">${t.replace(/_/g,' ')}</a>`;
   });
 }
 
 /* ---------------- UTIL ---------------- */
 
-function clean(str){ return str.replace(/\r/g,"").trim(); }
+function clean(str){return str.replace(/\r/g,"").trim();}
 
-function resolvePath(basePath,file){
+function resolvePath(base,file){
   if(file.startsWith("http")) return file;
-  if(file.startsWith("/")) return "";
 
-  const stack = basePath.split("/");
-  file.split("/").forEach(part=>{
-    if(part==="..") stack.pop();
-    else if(part!==".") stack.push(part);
+  const stack = base.split("/");
+  file.split("/").forEach(p=>{
+    if(p==="..") stack.pop();
+    else if(p!==".") stack.push(p);
   });
 
   return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
@@ -274,6 +279,7 @@ function resolvePath(basePath,file){
 /* ---------------- START ---------------- */
 
 loadPages();
+
 </script>
 
 </body>
