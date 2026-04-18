@@ -179,35 +179,45 @@ function resolvePath(basePath,file){
 
 function convertAssets(fullPath, text){
 
-  // IMAGE SYNTAX:
-  // image::url
-  // image::url:::500,300
-  // image::url::::50
+  // image::FULL_URL:::500,300
+  // image::FULL_URL::::50
+  // image::FULL_URL
 
-  text = text.replace(/image::(\S+)/g, (m, token) => {
+  text = text.replace(/image::(.+)/g, (m, rawLine) => {
 
-    const url = resolvePath(fullPath, clean(token.split(":::")[0].split("::::")[0]));
-    if(!url) return "";
+    let raw = rawLine.trim();
+
+    let url = raw;
+    let style = "";
 
     // ---- percent version ----
-    if(token.includes("::::")) {
-      const percent = token.split("::::")[1];
+    const percentIndex = raw.indexOf("::::");
+    if (percentIndex !== -1) {
+      url = raw.slice(0, percentIndex).trim();
+      const percent = raw.slice(percentIndex + 4).trim();
+
+      url = resolvePath(fullPath, clean(url));
       return `<img src="${url}" style="width:${percent}%;height:auto;">`;
     }
 
     // ---- pixel version ----
-    if(token.includes(":::")) {
-      const size = token.split(":::")[1];
+    const sizeIndex = raw.indexOf(":::");
+    if (sizeIndex !== -1) {
+      url = raw.slice(0, sizeIndex).trim();
+      const size = raw.slice(sizeIndex + 3).trim();
+
       const [w, h] = size.split(",");
 
-      let style = "";
-      if(w) style += `width:${w}px;`;
-      if(h) style += `height:${h}px;`;
+      url = resolvePath(fullPath, clean(url));
+
+      if (w) style += `width:${w}px;`;
+      if (h) style += `height:${h}px;`;
 
       return `<img src="${url}" style="${style}">`;
     }
 
-    // ---- default ----
+    // ---- normal image ----
+    url = resolvePath(fullPath, clean(url));
     return `<img src="${url}">`;
   });
 
