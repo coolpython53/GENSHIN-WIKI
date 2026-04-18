@@ -19,8 +19,13 @@ img.icon { width:18px; height:18px; border-radius:4px; }
 #content { flex:1; padding:20px; overflow-y:auto; }
 img { max-width:100%; border-radius:10px; }
 audio { width:100%; }
+a { color:#60a5fa; cursor:pointer; }
+ul { padding-left:20px; }
+li { margin:4px 0; cursor:pointer; }
+li:hover { text-decoration:underline; }
 </style>
 </head>
+
 <body>
 
 <div id="layout">
@@ -41,7 +46,7 @@ const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
 let pages = [];
 
-// fetch manifest.json with cache busting
+// Load manifest.json with cache busting
 async function loadPages() {
   try {
     const res = await fetch(BASE_URL + "manifest.json?t=" + new Date().getTime());
@@ -59,9 +64,7 @@ function buildTree(paths) {
     const parts = path.split("/");
     let current = root;
     parts.forEach((part,i) => {
-      if(!current[part]) {
-        current[part] = {__children:{}, __path: parts.slice(0,i+1).join("/")};
-      }
+      if(!current[part]) current[part] = {__children:{}, __path: parts.slice(0,i+1).join("/")};
       current = current[part].__children;
     });
   });
@@ -77,20 +80,20 @@ function renderTree() {
   renderNode(treeData, tree);
 }
 
-// Helper to get first valid blueprint URL
+// Check which blueprint exists
 async function getBlueprintUrl(fullPath) {
-  for(const ext of ICON_EXTENSIONS) {
+  for(const ext of ICON_EXTENSIONS){
     const url = `${BASE_URL}pages/${fullPath}/blueprint.${ext}`;
     try {
       const res = await fetch(url, {method:'HEAD'});
       if(res.ok) return url;
-    } catch {}
+    } catch{}
   }
   return FALLBACK_ICON;
 }
 
 // Render nodes recursively
-function renderNode(node, container, depth=0) {
+function renderNode(node, container, depth=0){
   Object.keys(node).forEach(async key => {
     const item = node[key];
     const hasChildren = Object.keys(item.__children).length > 0;
@@ -102,9 +105,9 @@ function renderNode(node, container, depth=0) {
 
     const iconUrl = await getBlueprintUrl(fullPath);
     div.innerHTML = `<img class="icon" src="${iconUrl}" onerror="this.src='${FALLBACK_ICON}'">
-                     <span class="${hasChildren ? 'folder' : ''}">${key}</span>`;
+                     <span class="${hasChildren?'folder':''}">${key.replace(/_/g,' ')}</span>`;
 
-    if(hasChildren) {
+    if(hasChildren){
       let open=false;
       div.onclick = () => {
         open = !open;
@@ -114,8 +117,8 @@ function renderNode(node, container, depth=0) {
           if(parseInt(siblings[i].style.marginLeft) > depth*16) container.removeChild(siblings[i]);
         }
         if(open) renderNode(item.__children, container, depth+1);
-        loadPage(fullPath); // auto-load page.md if exists
       };
+      div.ondblclick = () => loadFolder(fullPath);
     } else {
       div.onclick = () => loadPage(fullPath);
     }
@@ -127,45 +130,74 @@ function renderNode(node, container, depth=0) {
 // Load page.md
 async function loadPage(fullPath){
   const name = fullPath.split("/").pop();
-  title.innerText = name;
+  title.innerText = name.replace(/_/g,' ');
   page.innerHTML = "Loading...";
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
   try {
     const res = await fetch(url);
     if(res.ok){
       let text = await res.text();
-      text = convertAssets(fullPath, text);
+      text = convertAssets(fullPath,text);
+      text = convertPageLinks(text); // curly brace page links
       page.innerHTML = marked.parse(text);
     } else {
-      page.innerHTML = "📁 Folder (no page.md)";
+      page.innerHTML = "📁 Folder"; // no page.md
     }
   } catch {
-    page.innerHTML = "📁 Folder (no page.md)";
+    page.innerHTML = "📁 Folder"; // no page.md
   }
 }
 
-// Convert assets
+// Load folder content as list
+function loadFolder(fullPath){
+  title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
+  page.innerHTML = "";
+  const children = pages.filter(p=>p.startsWith(fullPath));
+  if(children.length===0){
+    page.innerHTML="📁 Empty Folder";
+    return;
+  }
+  const ul = document.createElement("ul");
+  children.forEach(c=>{
+    const li = document.createElement("li");
+    li.innerText = c.split("/").pop().replace(/_/g,' ');
+    li.onclick = ()=>loadPage(c);
+    ul.appendChild(li);
+  });
+  page.appendChild(ul);
+}
+
+// Convert assets inside markdown
 function clean(str){return str.replace(/\r/g,"").replace(/\n/g,"").trim();}
-function resolvePath(basePath, file){
+function resolvePath(basePath,file){
   if(file.startsWith("http")) return file;
   if(file.startsWith("/")) return "";
   const stack = basePath.split("/");
   file.split("/").forEach(part=>{
     if(part==="..") stack.pop();
-    else if(part!=="." ) stack.push(part);
+    else if(part!==".") stack.push(part);
   });
   return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
 }
 function convertAssets(fullPath,text){
   text=text.replace(/image::(.*)/g,(m,src)=>{
-    const url = resolvePath(fullPath, clean(src));
+    const url = resolvePath(fullPath,clean(src));
     return url?`![](${url})`:"";
   });
   text=text.replace(/mp3::(.*)/g,(m,src)=>{
-    const url = resolvePath(fullPath, clean(src));
+    const url = resolvePath(fullPath,clean(src));
     return url?`<audio controls><source src="${url}" type="audio/mpeg"></audio>`:"";
   });
   return text;
+}
+
+// Inline curly-brace page links with custom text
+// {[Your_Text_here]page::PAGE_PATH_HERE}
+function convertPageLinks(text){
+  return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(match,linkText,path)=>{
+    const cleanPath = path.replace(/\/page\.md$/,'');
+    return `<a onclick="loadPage('${cleanPath}')">${linkText.replace(/_/g,' ')}</a>`;
+  });
 }
 
 // Start
