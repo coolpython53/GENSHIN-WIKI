@@ -39,7 +39,6 @@ input {
 .item:hover { background:#1f2937; }
 
 .folder { font-weight:bold; }
-.indent { margin-left:16px; }
 
 img.icon {
   width:18px;
@@ -86,6 +85,7 @@ const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
 let pages = [];
 let imageStore = [];
+let expandedFolders = new Set();
 
 /* ---------------- LOAD PAGES ---------------- */
 
@@ -106,8 +106,14 @@ function buildTree(paths){
   paths.forEach(path=>{
     const parts = path.split("/");
     let cur = root;
+
     parts.forEach((p,i)=>{
-      if(!cur[p]) cur[p] = {__children:{}, __path: parts.slice(0,i+1).join("/")};
+      if(!cur[p]) {
+        cur[p] = {
+          __children:{},
+          __path: parts.slice(0,i+1).join("/")
+        };
+      }
       cur = cur[p].__children;
     });
   });
@@ -117,8 +123,11 @@ function buildTree(paths){
 function renderTree(){
   const q = search.value.toLowerCase();
   tree.innerHTML = "";
+
   const filtered = pages.filter(p => p.toLowerCase().includes(q));
-  renderNode(buildTree(filtered), tree);
+  const treeData = buildTree(filtered);
+
+  renderNode(treeData, tree, 0);
 }
 
 /* ---------------- ICONS ---------------- */
@@ -134,56 +143,57 @@ async function getIcon(path){
   return FALLBACK_ICON;
 }
 
-function renderNode(node, container, depth=0){
-  Object.keys(node).forEach(async key=>{
+/* ---------------- EXPANDABLE TREE ---------------- */
+
+async function renderNode(node, container, depth = 0) {
+  for (const key of Object.keys(node)) {
     const item = node[key];
     const fullPath = item.__path;
-    const hasChildren = Object.keys(item.__children).length > 0;
+    const children = item.__children;
+    const hasChildren = Object.keys(children).length > 0;
+    const isOpen = expandedFolders.has(fullPath);
+
+    const wrapper = document.createElement("div");
 
     const div = document.createElement("div");
-    div.className = "item indent";
+    div.className = "item";
     div.style.marginLeft = depth * 16 + "px";
 
     const icon = await getIcon(fullPath);
 
     div.innerHTML = `
       <img class="icon" src="${icon}" onerror="this.src='${FALLBACK_ICON}'">
-      <span class="${hasChildren?'folder':''}">${key.replace(/_/g,' ')}</span>
+      <span class="${hasChildren ? 'folder' : ''}">
+        ${key.replace(/_/g,' ')}
+      </span>
     `;
 
-    div.onclick = () => hasChildren ? loadFolder(fullPath) : loadPage(fullPath);
+    div.onclick = async (e) => {
+      e.stopPropagation();
 
-    container.appendChild(div);
-  });
-}
+      if (hasChildren) {
+        if (expandedFolders.has(fullPath)) {
+          expandedFolders.delete(fullPath);
+        } else {
+          expandedFolders.add(fullPath);
+          loadFolder(fullPath);
+        }
+        renderTree();
+      } else {
+        loadPage(fullPath);
+      }
+    };
 
-/* ---------------- ROUTER FIX ---------------- */
+    wrapper.appendChild(div);
 
-function openWikiPath(rawPath){
+    if (hasChildren && isOpen) {
+      const childContainer = document.createElement("div");
+      await renderNode(children, childContainer, depth + 1);
+      wrapper.appendChild(childContainer);
+    }
 
-  // 1. remove repo prefix safely
-  let path = rawPath
-    .replace(/^GENSHIN-WIKI\/pages\//, "")
-    .replace(/^pages\//, "");
-
-  // 2. detect type FIRST (before stripping incorrectly)
-  const isFolder = path.includes("folder.md");
-  const isPage = path.includes("page.md");
-
-  // 3. strip file names properly
-  path = path
-    .replace(/\/folder\.md$/, "")
-    .replace(/\/page\.md$/, "");
-
-  // 4. normalize accidental trailing slashes
-  path = path.replace(/\/$/, "");
-
-  // 5. route
-  if(isFolder) return loadFolder(path);
-  if(isPage) return loadPage(path);
-
-  // fallback
-  loadPage(path);
+    container.appendChild(wrapper);
+  }
 }
 
 /* ---------------- PAGE ---------------- */
@@ -204,7 +214,6 @@ async function loadPage(fullPath){
     text = convertPageLinks(text);
 
     page.innerHTML = marked.parse(text);
-
     restoreImages();
 
   } catch {
@@ -215,9 +224,6 @@ async function loadPage(fullPath){
 /* ---------------- FOLDER ---------------- */
 
 async function loadFolder(fullPath){
-  title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
-  page.innerHTML = "";
-
   const url = `${BASE_URL}pages/${fullPath}/folder.md`;
 
   try{
@@ -228,26 +234,13 @@ async function loadFolder(fullPath){
       text = convertAssets(fullPath,text);
       text = convertPageLinks(text);
 
-      const div = document.createElement("div");
-      div.innerHTML = marked.parse(text);
-      page.appendChild(div);
+      title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
+      page.innerHTML = marked.parse(text);
     }
   } catch {}
-
-  const children = pages.filter(p => p.startsWith(fullPath) && p !== fullPath);
-
-  const ul = document.createElement("ul");
-  children.forEach(c=>{
-    const li = document.createElement("li");
-    li.innerText = c.split("/").pop().replace(/_/g,' ');
-    li.onclick = ()=>loadPage(c);
-    ul.appendChild(li);
-  });
-
-  page.appendChild(ul);
 }
 
-/* ---------------- IMAGE SYSTEM (UNCHANGED + SAFE) ---------------- */
+/* ---------------- IMAGE SYSTEM ---------------- */
 
 function convertAssets(fullPath, text){
 
@@ -302,6 +295,25 @@ function convertPageLinks(text){
   return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(m,t,p)=>{
     return `<a href="#" onclick="openWikiPath('${p}')">${t.replace(/_/g,' ')}</a>`;
   });
+}
+
+function openWikiPath(rawPath){
+  let path = rawPath
+    .replace(/^GENSHIN-WIKI\/pages\//, "")
+    .replace(/^pages\//, "");
+
+  const isFolder = path.includes("folder.md");
+  const isPage = path.includes("page.md");
+
+  path = path
+    .replace(/\/folder\.md$/, "")
+    .replace(/\/page\.md$/, "")
+    .replace(/\/$/, "");
+
+  if(isFolder) return loadFolder(path);
+  if(isPage) return loadPage(path);
+
+  loadPage(path);
 }
 
 /* ---------------- UTIL ---------------- */
