@@ -17,7 +17,6 @@ The mp3:\: syntax is used for inserting mp3 files into a page. Please only use t
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/Hello.mp3
 ##### Page linking
 For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE\}
-During page linking, ensure that if you are linking to a folder, you include folder.md and if you are linking a page, include page.md
-Use the path of the page (For this page it would be GENSHIN-WIKI/pages/Usage/Syntax/page.md)
+During page linking, ensure that if you are linking to a page, you include page.md (For this page it would be GENSHIN-WIKI/pages/Usage/Syntax/page.md)
 ###### Example:
-{[This will link to the Usage folder.]page::GENSHIN-WIKI/pages/Usage/folder.md}
+{[This will link to the Usage folder.]page::GENSHIN-WIKI/pages/Usage}
