@@ -65,18 +65,10 @@ input {
   overflow-y:auto;
 }
 
-img {
-  max-width:100%;
-  border-radius:10px;
-}
+img { max-width:100%; border-radius:10px; }
+audio { width:100%; }
 
-audio {
-  width:100%;
-}
-
-a {
-  color:#60a5fa;
-}
+a { color:#60a5fa; }
 </style>
 </head>
 
@@ -101,11 +93,12 @@ const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
 let pages = [];
 let expanded = new Set();
 
-/* ---------------- UTIL: FIX PATH ---------------- */
+/* ---------------- PATH CLEANER ---------------- */
 
 function normalizePath(path){
   return path
     .replace(/^pages\//,"")
+    .replace(/\.md$/,"")
     .replace(/^\/+/,"")
     .replace(/\/+/g,"/");
 }
@@ -113,14 +106,14 @@ function normalizePath(path){
 /* ---------------- MARKED ---------------- */
 
 marked.setOptions({
-  breaks: true,
-  gfm: true,
-  headerIds: false,
-  mangle: false,
-  sanitize: false
+  breaks:true,
+  gfm:true,
+  headerIds:false,
+  mangle:false,
+  sanitize:false
 });
 
-/* ---------------- LOAD MANIFEST ---------------- */
+/* ---------------- LOAD ---------------- */
 
 async function loadPages(){
   const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
@@ -160,14 +153,14 @@ async function getBlueprint(fullPath){
   for(const ext of exts){
     const url = `${base}.${ext}`;
     try {
-      const res = await fetch(url, { method:"HEAD" });
+      const res = await fetch(url,{method:"HEAD"});
       if(res.ok) return url;
     } catch {}
   }
   return null;
 }
 
-/* ---------------- TREE RENDER ---------------- */
+/* ---------------- TREE ---------------- */
 
 function renderTree(){
   tree.innerHTML = "";
@@ -184,7 +177,7 @@ function renderTree(){
 function renderNode(node, container, depth){
   for(const key of Object.keys(node)){
     const item = node[key];
-    const fullPath = item.__path;
+    const fullPath = normalizePath(item.__path);
     const children = item.__children;
     const isFolder = Object.keys(children).length > 0;
 
@@ -204,25 +197,19 @@ function renderNode(node, container, depth){
     });
 
     div.onclick = ()=>{
-      const cleanPath = normalizePath(fullPath);
+      expanded.has(fullPath)
+        ? expanded.delete(fullPath)
+        : expanded.add(fullPath);
 
-      if(isFolder){
-        expanded.has(cleanPath)
-          ? expanded.delete(cleanPath)
-          : expanded.add(cleanPath);
-
-        openFolder(cleanPath);
-        renderTree();
-      } else {
-        openPage(cleanPath);
-      }
+      openPath(fullPath);
+      renderTree();
     };
 
     div.appendChild(icon);
     div.appendChild(label);
     container.appendChild(div);
 
-    if(isFolder && expanded.has(normalizePath(fullPath))){
+    if(isFolder && expanded.has(fullPath)){
       const child = document.createElement("div");
       renderNode(children, child, depth+1);
       container.appendChild(child);
@@ -230,111 +217,85 @@ function renderNode(node, container, depth){
   }
 }
 
-/* ---------------- RESOLVE ASSET ---------------- */
+/* ---------------- SINGLE SMART LOADER ---------------- */
 
-function resolveAsset(fullPath, file){
-  file = file.trim();
-
-  if(file.startsWith("http")) return file;
-
-  file = file.split("/").pop();
-
-  fullPath = normalizePath(fullPath);
-
-  return `${BASE_URL}pages/${fullPath}/${file}`;
-}
-
-/* ---------------- OPEN FOLDER (STRICT) ---------------- */
-
-async function openFolder(fullPath){
+async function openPath(fullPath){
 
   fullPath = normalizePath(fullPath);
 
   title.innerText = fullPath.split("/").pop();
 
-  const res = await fetch(`${BASE_URL}pages/${fullPath}/folder.md?t=${Date.now()}`);
+  const pageUrl = `${BASE_URL}pages/${fullPath}/page.md`;
+  const folderUrl = `${BASE_URL}pages/${fullPath}/folder.md`;
 
-  if(!res.ok){
-    page.innerHTML = "📁 Missing folder.md";
-    return;
+  try {
+    let res = await fetch(pageUrl + `?t=${Date.now()}`);
+
+    if(res.ok){
+      renderPage(await res.text(), fullPath);
+      return;
+    }
+
+    res = await fetch(folderUrl + `?t=${Date.now()}`);
+
+    if(res.ok){
+      renderPage(await res.text(), fullPath);
+      return;
+    }
+
+    page.innerHTML = "❌ Missing page.md or folder.md";
+
+  } catch {
+    page.innerHTML = "❌ Load error";
   }
-
-  const text = await res.text();
-  renderPage(text, fullPath);
 }
 
-/* ---------------- OPEN PAGE (STRICT) ---------------- */
-
-async function openPage(fullPath){
-
-  fullPath = normalizePath(fullPath);
-
-  title.innerText = fullPath.split("/").pop();
-
-  const res = await fetch(`${BASE_URL}pages/${fullPath}/page.md?t=${Date.now()}`);
-
-  if(!res.ok){
-    page.innerHTML = "❌ Missing page.md";
-    return;
-  }
-
-  const text = await res.text();
-  renderPage(text, fullPath);
-}
-
-/* ---------------- LINK FIX ---------------- */
+/* ---------------- LINKS (ONLY page:: NOW) ---------------- */
 
 function convertLinks(text){
   return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(m,label,path)=>{
-    path = normalizePath(path).replace(/\.md$/,"");
+    path = normalizePath(path);
     return `<a href="#" data-page="${path}">${label}</a>`;
   });
 }
 
-/* ---------------- RENDER ENGINE ---------------- */
+/* ---------------- PAGE RENDER ---------------- */
 
 function renderPage(text, fullPath){
 
   let audioMap = new Map();
   let audioIndex = 0;
 
-  /* IMAGES */
   text = text.replace(/image::([^\n]+)/g,(m,input)=>{
-    let [file, size] = input.split("::::");
-    const url = resolveAsset(fullPath, file);
-
-    return `<img src="${url}" style="${size ? `width:${size}%;` : ''}">`;
+    let [file,size] = input.split("::::");
+    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
+    return `<img src="${url}" style="${size?`width:${size}%;`:''}">`;
   });
 
-  /* AUDIO */
   text = text.replace(/mp3::([^\n]+)/g,(m,input)=>{
-    let [file, vol] = input.split("::::");
-
-    const url = resolveAsset(fullPath, file);
+    let [file,vol] = input.split("::::");
+    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
     const id = "aud_" + audioIndex++;
 
-    audioMap.set(id, {
+    audioMap.set(id,{
       url,
-      vol: vol ? Number(vol)/100 : 1
+      vol: vol?Number(vol)/100:1
     });
 
     return `<span id="${id}"></span>`;
   });
 
-  /* LINKS */
   text = convertLinks(text);
 
   page.innerHTML = marked.parse(text);
 
-  /* LINK EVENTS */
   page.querySelectorAll("a[data-page]").forEach(a=>{
-    a.onclick = (e)=>{
+    a.onclick = e=>{
       e.preventDefault();
-      openPage(a.dataset.page);
+      openPath(a.dataset.page);
     };
   });
 
-  /* AUDIO INJECTION */
   requestAnimationFrame(()=>{
     audioMap.forEach((data,id)=>{
       const el = document.getElementById(id);
@@ -348,14 +309,12 @@ function renderPage(text, fullPath){
       src.type = "audio/mpeg";
 
       audio.appendChild(src);
-
-      audio.addEventListener("loadedmetadata", ()=>{
+      audio.addEventListener("loadedmetadata",()=>{
         audio.volume = data.vol;
       });
 
       el.replaceWith(audio);
     });
-
     audioMap.clear();
   });
 }
