@@ -61,10 +61,59 @@ a { color:#60a5fa; cursor:pointer; }
 ul { padding-left:20px; }
 li { margin:4px 0; cursor:pointer; }
 li:hover { text-decoration:underline; }
+
+/* TOGGLE */
+#kindleToggleWrap{
+  position:fixed;
+  top:10px;
+  right:15px;
+  z-index:999;
+  background:#1f2937;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* KINDLE MODE */
+body.kindle {
+  background:white;
+  color:black;
+  font-size:200%;
+}
+
+body.kindle #sidebar {
+  display:none;
+}
+
+body.kindle #content {
+  background:white;
+  color:black;
+  line-height:1.8;
+  max-width:800px;
+  margin:auto;
+}
+
+body.kindle a { color:#1a0dab; }
+
+body.kindle img.icon { display:none; }
+
+body.kindle #backBtn {
+  display:block;
+  margin-bottom:15px;
+  padding:10px;
+  font-size:16px;
+}
 </style>
 </head>
 
 <body>
+
+<div id="kindleToggleWrap">
+  <label>
+    <input type="checkbox" id="kindleToggle" onchange="toggleKindle()">
+    Kindle Mode
+  </label>
+</div>
 
 <div id="layout">
   <div id="sidebar">
@@ -73,6 +122,7 @@ li:hover { text-decoration:underline; }
   </div>
 
   <div id="content">
+    <button id="backBtn" onclick="renderTree()" style="display:none;">⬅ Back</button>
     <h2 id="title">Wiki</h2>
     <div id="page">Select a page</div>
   </div>
@@ -86,8 +136,18 @@ const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
 let pages = [];
 let imageStore = [];
+let kindleMode = false;
 
-/* ---------------- LOAD PAGES ---------------- */
+/* ---------------- KINDLE ---------------- */
+
+function toggleKindle(){
+  kindleMode = document.getElementById("kindleToggle").checked;
+  document.body.classList.toggle("kindle", kindleMode);
+
+  document.getElementById("backBtn").style.display = kindleMode ? "block" : "none";
+}
+
+/* ---------------- LOAD ---------------- */
 
 async function loadPages(){
   try {
@@ -121,7 +181,7 @@ function renderTree(){
   renderNode(buildTree(filtered), tree);
 }
 
-/* ---------------- ICONS ---------------- */
+/* ---------------- ICON ---------------- */
 
 async function getIcon(path){
   for(const ext of ICON_EXTENSIONS){
@@ -157,32 +217,24 @@ function renderNode(node, container, depth=0){
   });
 }
 
-/* ---------------- ROUTER FIX ---------------- */
+/* ---------------- ROUTER ---------------- */
 
 function openWikiPath(rawPath){
-
-  // 1. remove repo prefix safely
   let path = rawPath
     .replace(/^GENSHIN-WIKI\/pages\//, "")
     .replace(/^pages\//, "");
 
-  // 2. detect type FIRST (before stripping incorrectly)
   const isFolder = path.includes("folder.md");
   const isPage = path.includes("page.md");
 
-  // 3. strip file names properly
   path = path
     .replace(/\/folder\.md$/, "")
-    .replace(/\/page\.md$/, "");
+    .replace(/\/page\.md$/, "")
+    .replace(/\/$/, "");
 
-  // 4. normalize accidental trailing slashes
-  path = path.replace(/\/$/, "");
-
-  // 5. route
   if(isFolder) return loadFolder(path);
   if(isPage) return loadPage(path);
 
-  // fallback
   loadPage(path);
 }
 
@@ -247,43 +299,26 @@ async function loadFolder(fullPath){
   page.appendChild(ul);
 }
 
-/* ---------------- IMAGE SYSTEM (UNCHANGED + SAFE) ---------------- */
+/* ---------------- ASSETS ---------------- */
 
 function convertAssets(fullPath, text){
 
   imageStore = [];
 
   text = text.replace(/image::([^\n]+)/g,(m,raw)=>{
-
-    let token = raw.trim();
-
-    const pct = token.match(/::::(\d+)%?$/);
-    if(pct){
-      const url = resolvePath(fullPath, clean(token.replace(/::::\d+%?$/,"")));
-      imageStore.push(`<img src="${url}" style="width:${pct[1]}%;height:auto;">`);
-      return `@@IMG${imageStore.length-1}@@`;
-    }
-
-    const px = token.match(/:::([\d]+)(?:,([\d]+))?$/);
-    if(px){
-      const url = resolvePath(fullPath, clean(token.replace(/:::[\d]+(,[\d]+)?$/,"")));
-
-      let style = "";
-      if(px[1]) style += `width:${px[1]}px;`;
-      if(px[2]) style += `height:${px[2]}px;`;
-
-      imageStore.push(`<img src="${url}" style="${style}">`);
-      return `@@IMG${imageStore.length-1}@@`;
-    }
-
-    const url = resolvePath(fullPath, clean(token));
+    const url = resolvePath(fullPath, raw.trim());
     imageStore.push(`<img src="${url}">`);
     return `@@IMG${imageStore.length-1}@@`;
   });
 
-  text = text.replace(/mp3::(.*)/g,(m,src)=>{
-    const url = resolvePath(fullPath,clean(src));
-    return url ? `<audio controls><source src="${url}" type="audio/mpeg"></audio>` : "";
+  text = text.replace(/mp3::(.*?)(?:::([^\n]+))?/g,(m,src,desc)=>{
+    const url = resolvePath(fullPath, src.trim());
+
+    if(kindleMode){
+      return `<p>🔊 ${desc ? desc : "Audio content"}</p>`;
+    }
+
+    return `<audio controls><source src="${url}" type="audio/mpeg"></audio>`;
   });
 
   return text;
@@ -306,18 +341,10 @@ function convertPageLinks(text){
 
 /* ---------------- UTIL ---------------- */
 
-function clean(str){ return str.replace(/\r/g,"").trim(); }
-
 function resolvePath(base,file){
   if(file.startsWith("http")) return file;
 
-  const stack = base.split("/");
-  file.split("/").forEach(p=>{
-    if(p==="..") stack.pop();
-    else if(p!==".") stack.push(p);
-  });
-
-  return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
+  return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${base}/${file}`;
 }
 
 /* ---------------- START ---------------- */
