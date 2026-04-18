@@ -14,8 +14,10 @@ image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Us
 
 ##### mp3:\:
 The mp3:\: syntax is used for inserting mp3 files into a page. Please only use the file format .mp3 for this. If you have a .ogg file, we have a converter [here](https://coolpython53.github.io/OGG-to-MP3/).
+For mp3 files, use this syntax:
+mp3::URL_HERE:::Description_Here
 ###### Example:
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/Hello.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/Hello.mp3:::Hello_There!
 ##### Page linking
 For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE}
 During page linking, ensure that if you are linking to a page, you include page.md (For this page it would be Usage/Syntax/page.md)
