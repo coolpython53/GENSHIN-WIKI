@@ -57,7 +57,6 @@ audio { width:100%; }
 
 a { color:#60a5fa; cursor:pointer; }
 
-ul { padding-left:20px; }
 li { margin:4px 0; cursor:pointer; }
 li:hover { text-decoration:underline; }
 </style>
@@ -85,26 +84,18 @@ const FALLBACK_ICON = BASE_URL + "blueprint.jpg";
 let pages = [];
 let expandedFolders = new Set();
 let imageStore = [];
-let iconCache = new Map();
-let iconPromises = new Map();
 
 /* ---------------- SEARCH ---------------- */
 
-let searchTimeout;
 search.oninput = () => {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(renderTree, 120);
+  renderTree();
 };
 
-/* ---------------- LOAD PAGES ---------------- */
+/* ---------------- LOAD ---------------- */
 
 async function loadPages(){
-  try {
-    const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
-    pages = await res.json();
-  } catch {
-    pages = [];
-  }
+  const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
+  pages = await res.json();
   renderTree();
 }
 
@@ -112,12 +103,13 @@ async function loadPages(){
 
 function buildTree(paths){
   const root = {};
+
   paths.forEach(path=>{
     const parts = path.split("/");
     let cur = root;
 
     parts.forEach((p,i)=>{
-      if(!cur[p]) {
+      if(!cur[p]){
         cur[p] = {
           __children:{},
           __path: parts.slice(0,i+1).join("/")
@@ -126,49 +118,42 @@ function buildTree(paths){
       cur = cur[p].__children;
     });
   });
+
   return root;
 }
 
-/* ---------------- ICON RESOLVER (NO CONSOLE ERRORS) ---------------- */
+/* ---------------- ICON REGISTRY (NO 404 EVER) ---------------- */
 
-async function resolveIcon(path){
-  if (iconCache.has(path)) return iconCache.get(path);
-  if (iconPromises.has(path)) return iconPromises.get(path);
+const iconRegistry = new Map();
 
-  const promise = (async () => {
-    const base = `${BASE_URL}pages/${path}/blueprint`;
-    const exts = ["jpg", "png", "webp", "jpeg"];
+async function findIcon(path){
+  if(iconRegistry.has(path)) return iconRegistry.get(path);
 
-    for (const ext of exts) {
-      const url = `${base}.${ext}`;
+  const base = `${BASE_URL}pages/${path}/blueprint`;
+  const exts = ["jpg","png","webp","jpeg"];
 
-      const ok = await new Promise(resolve => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = url;
-      });
+  for(const ext of exts){
+    const url = `${base}.${ext}`;
 
-      if (ok) {
-        iconCache.set(path, url);
+    try {
+      const res = await fetch(url, { method: "HEAD" });
+      if(res.ok){
+        iconRegistry.set(path, url);
         return url;
       }
-    }
+    } catch {}
+  }
 
-    iconCache.set(path, FALLBACK_ICON);
-    return FALLBACK_ICON;
-  })();
-
-  iconPromises.set(path, promise);
-  return promise;
+  iconRegistry.set(path, FALLBACK_ICON);
+  return FALLBACK_ICON;
 }
 
-/* ---------------- TREE RENDER ---------------- */
+/* ---------------- RENDER TREE ---------------- */
 
 function renderTree(){
-  const q = search.value.toLowerCase();
   tree.innerHTML = "";
 
+  const q = search.value.toLowerCase();
   const filtered = pages.filter(p => p.toLowerCase().includes(q));
   const treeData = buildTree(filtered);
 
@@ -177,8 +162,8 @@ function renderTree(){
 
 /* ---------------- NODE ---------------- */
 
-function renderNode(node, container, depth = 0){
-  for (const key of Object.keys(node)) {
+function renderNode(node, container, depth){
+  for(const key of Object.keys(node)){
     const item = node[key];
     const fullPath = item.__path;
     const children = item.__children;
@@ -192,10 +177,10 @@ function renderNode(node, container, depth = 0){
 
     const img = document.createElement("img");
     img.className = "icon";
-    img.alt = "";
+    img.src = FALLBACK_ICON; // safe default immediately
 
-    // 🔥 NO CONSOLE ERRORS: only sets src when valid
-    resolveIcon(fullPath).then(url => {
+    // ONLY replace if valid (no 404 ever)
+    findIcon(fullPath).then(url=>{
       img.src = url;
     });
 
@@ -203,11 +188,11 @@ function renderNode(node, container, depth = 0){
     label.className = hasChildren ? "folder" : "";
     label.textContent = key.replace(/_/g,' ');
 
-    div.onclick = (e) => {
+    div.onclick = (e)=>{
       e.stopPropagation();
 
-      if (hasChildren) {
-        if (expandedFolders.has(fullPath)) {
+      if(hasChildren){
+        if(expandedFolders.has(fullPath)){
           expandedFolders.delete(fullPath);
         } else {
           expandedFolders.add(fullPath);
@@ -220,12 +205,11 @@ function renderNode(node, container, depth = 0){
 
     div.appendChild(img);
     div.appendChild(label);
-
     wrapper.appendChild(div);
 
-    if (hasChildren && expandedFolders.has(fullPath)) {
+    if(hasChildren && expandedFolders.has(fullPath)){
       const childContainer = document.createElement("div");
-      renderNode(children, childContainer, depth + 1);
+      renderNode(children, childContainer, depth+1);
       wrapper.appendChild(childContainer);
     }
 
@@ -233,7 +217,7 @@ function renderNode(node, container, depth = 0){
   }
 }
 
-/* ---------------- PAGE LOAD ---------------- */
+/* ---------------- PAGE ---------------- */
 
 async function loadPage(fullPath){
   title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
@@ -241,21 +225,19 @@ async function loadPage(fullPath){
 
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
 
-  try{
-    const res = await fetch(url);
-    if(!res.ok) return page.innerHTML = "📁 Folder";
-
-    let text = await res.text();
-
-    text = convertAssets(fullPath, text);
-    text = convertPageLinks(text);
-
-    page.innerHTML = marked.parse(text);
-    restoreImages();
-
-  } catch {
+  const res = await fetch(url);
+  if(!res.ok){
     page.innerHTML = "📁 Folder";
+    return;
   }
+
+  let text = await res.text();
+
+  text = convertAssets(fullPath, text);
+  text = convertLinks(text);
+
+  page.innerHTML = marked.parse(text);
+  restoreImages();
 }
 
 /* ---------------- ASSETS ---------------- */
@@ -263,16 +245,14 @@ async function loadPage(fullPath){
 function convertAssets(fullPath, text){
   imageStore = [];
 
-  text = text.replace(/image::([^\n]+)/g,(m,raw)=>{
-    const file = raw.trim();
-    const url = `${BASE_URL}pages/${fullPath}/${file}`;
+  text = text.replace(/image::([^\n]+)/g,(m,file)=>{
+    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
     imageStore.push(`<img src="${url}">`);
     return `@@IMG${imageStore.length-1}@@`;
   });
 
-  text = text.replace(/mp3::(.*)/g,(m,src)=>{
-    const file = src.trim();
-    const url = `${BASE_URL}pages/${fullPath}/${file}`;
+  text = text.replace(/mp3::(.*)/g,(m,file)=>{
+    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
     return `<audio controls><source src="${url}" type="audio/mpeg"></audio>`;
   });
 
@@ -288,14 +268,14 @@ function restoreImages(){
 
 /* ---------------- LINKS ---------------- */
 
-function convertPageLinks(text){
+function convertLinks(text){
   return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(m,t,p)=>{
-    return `<a href="#" onclick="openWikiPath('${p}')">${t.replace(/_/g,' ')}</a>`;
+    return `<a href="#" onclick="openPage('${p}')">${t.replace(/_/g,' ')}</a>`;
   });
 }
 
-function openWikiPath(rawPath){
-  let path = rawPath.replace(/^pages\//,"").replace(/\/$/, "");
+function openPage(path){
+  path = path.replace(/^pages\//,"").replace(/\/$/,"");
   loadPage(path);
 }
 
