@@ -46,7 +46,6 @@ const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
 let pages = [];
 
-// Load manifest.json with cache busting
 async function loadPages() {
   try {
     const res = await fetch(BASE_URL + "manifest.json?t=" + new Date().getTime());
@@ -57,7 +56,6 @@ async function loadPages() {
   renderTree();
 }
 
-// Build tree structure
 function buildTree(paths) {
   const root = {};
   paths.forEach(path => {
@@ -71,7 +69,6 @@ function buildTree(paths) {
   return root;
 }
 
-// Render sidebar tree
 function renderTree() {
   const q = search.value.toLowerCase();
   tree.innerHTML = "";
@@ -80,7 +77,6 @@ function renderTree() {
   renderNode(treeData, tree);
 }
 
-// Check which blueprint exists
 async function getBlueprintUrl(fullPath) {
   for(const ext of ICON_EXTENSIONS){
     const url = `${BASE_URL}pages/${fullPath}/blueprint.${ext}`;
@@ -92,7 +88,6 @@ async function getBlueprintUrl(fullPath) {
   return FALLBACK_ICON;
 }
 
-// Render nodes recursively (folders now always load folder.md)
 function renderNode(node, container, depth=0){
   Object.keys(node).forEach(async key => {
     const item = node[key];
@@ -107,23 +102,18 @@ function renderNode(node, container, depth=0){
     div.innerHTML = `<img class="icon" src="${iconUrl}" onerror="this.src='${FALLBACK_ICON}'">
                      <span class="${hasChildren?'folder':''}">${key.replace(/_/g,' ')}</span>`;
 
-    if(hasChildren){
-      // Clicking folder loads folder.md in content
-      div.onclick = () => loadFolder(fullPath);
-    } else {
-      div.onclick = () => loadPage(fullPath);
-    }
+    div.onclick = () => hasChildren ? loadFolder(fullPath) : loadPage(fullPath);
 
     container.appendChild(div);
   });
 }
 
-// Load page.md
 async function loadPage(fullPath){
   const name = fullPath.split("/").pop();
   title.innerText = name.replace(/_/g,' ');
   page.innerHTML = "Loading...";
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
+
   try {
     const res = await fetch(url);
     if(res.ok){
@@ -139,12 +129,10 @@ async function loadPage(fullPath){
   }
 }
 
-// Load folder.md and list children
 async function loadFolder(fullPath){
   title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
   page.innerHTML = "";
 
-  // Load folder.md if exists
   const folderMdUrl = `${BASE_URL}pages/${fullPath}/folder.md`;
   try{
     const res = await fetch(folderMdUrl);
@@ -158,12 +146,12 @@ async function loadFolder(fullPath){
     }
   } catch{}
 
-  // List children under the folder.md content
   const children = pages.filter(p=>p.startsWith(fullPath) && p !== fullPath);
   if(children.length===0){
     page.innerHTML += "<br>📁 Empty Folder";
     return;
   }
+
   const ul = document.createElement("ul");
   children.forEach(c=>{
     const li = document.createElement("li");
@@ -174,32 +162,62 @@ async function loadFolder(fullPath){
   page.appendChild(ul);
 }
 
-// Convert assets inside markdown
 function clean(str){return str.replace(/\r/g,"").replace(/\n/g,"").trim();}
+
 function resolvePath(basePath,file){
   if(file.startsWith("http")) return file;
   if(file.startsWith("/")) return "";
+
   const stack = basePath.split("/");
   file.split("/").forEach(part=>{
     if(part==="..") stack.pop();
     else if(part!==".") stack.push(part);
   });
+
   return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
 }
+
 function convertAssets(fullPath,text){
-  text=text.replace(/image::(.*)/g,(m,src)=>{
-    const url = resolvePath(fullPath,clean(src));
-    return url?`![](${url})`:"";
+
+  // IMAGE SUPPORT:
+  // image::url
+  // image::url:::500,300
+  // image::url::::50
+
+  text = text.replace(/image::(.*?)(:::[:\d,]+)?/g, (m, src, size) => {
+    const url = resolvePath(fullPath, clean(src));
+    if(!url) return "";
+
+    if(!size) return `![](${url})`;
+
+    if(size.startsWith("::::")) {
+      const percent = size.replace("::::","").trim();
+      return `<img src="${url}" style="width:${percent}%;height:auto;">`;
+    }
+
+    if(size.startsWith(":::")) {
+      const dims = size.replace(":::","").split(",");
+      const w = dims[0]?.trim();
+      const h = dims[1]?.trim();
+
+      let style = "";
+      if(w) style += `width:${w}px;`;
+      if(h) style += `height:${h}px;`;
+
+      return `<img src="${url}" style="${style}">`;
+    }
+
+    return `![](${url})`;
   });
-  text=text.replace(/mp3::(.*)/g,(m,src)=>{
+
+  text = text.replace(/mp3::(.*)/g,(m,src)=>{
     const url = resolvePath(fullPath,clean(src));
     return url?`<audio controls><source src="${url}" type="audio/mpeg"></audio>`:"";
   });
+
   return text;
 }
 
-// Inline curly-brace page links with custom text
-// {[Your_Text_here]page::PAGE_PATH_HERE}
 function convertPageLinks(text){
   return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(match,linkText,path)=>{
     const cleanPath = path.replace(/\/page\.md$/,'');
@@ -207,7 +225,6 @@ function convertPageLinks(text){
   });
 }
 
-// Start
 loadPages();
 </script>
 
