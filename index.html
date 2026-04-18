@@ -87,9 +87,7 @@ let imageStore = [];
 
 /* ---------------- SEARCH ---------------- */
 
-search.oninput = () => {
-  renderTree();
-};
+search.oninput = () => renderTree();
 
 /* ---------------- LOAD ---------------- */
 
@@ -122,7 +120,13 @@ function buildTree(paths){
   return root;
 }
 
-/* ---------------- ICON REGISTRY (NO 404 EVER) ---------------- */
+/* ---------------- SAFE URL ---------------- */
+
+function safeUrl(path, file){
+  return encodeURI(`${BASE_URL}pages/${path}/${file.trim()}`);
+}
+
+/* ---------------- ICON SYSTEM ---------------- */
 
 const iconRegistry = new Map();
 
@@ -177,9 +181,8 @@ function renderNode(node, container, depth){
 
     const img = document.createElement("img");
     img.className = "icon";
-    img.src = FALLBACK_ICON; // safe default immediately
+    img.src = FALLBACK_ICON;
 
-    // ONLY replace if valid (no 404 ever)
     findIcon(fullPath).then(url=>{
       img.src = url;
     });
@@ -192,11 +195,10 @@ function renderNode(node, container, depth){
       e.stopPropagation();
 
       if(hasChildren){
-        if(expandedFolders.has(fullPath)){
-          expandedFolders.delete(fullPath);
-        } else {
-          expandedFolders.add(fullPath);
-        }
+        expandedFolders.has(fullPath)
+          ? expandedFolders.delete(fullPath)
+          : expandedFolders.add(fullPath);
+
         renderTree();
       } else {
         loadPage(fullPath);
@@ -224,8 +226,8 @@ async function loadPage(fullPath){
   page.innerHTML = "Loading...";
 
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
-
   const res = await fetch(url);
+
   if(!res.ok){
     page.innerHTML = "📁 Folder";
     return;
@@ -240,24 +242,37 @@ async function loadPage(fullPath){
   restoreImages();
 }
 
-/* ---------------- ASSETS ---------------- */
+/* ---------------- ASSETS FIXED ---------------- */
 
 function convertAssets(fullPath, text){
   imageStore = [];
 
+  // IMAGE FIX
   text = text.replace(/image::([^\n]+)/g,(m,file)=>{
-    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
-    imageStore.push(`<img src="${url}">`);
+    const url = safeUrl(fullPath, file);
+
+    imageStore.push(
+      `<img src="${url}" onerror="this.style.display='none'">`
+    );
+
     return `@@IMG${imageStore.length-1}@@`;
   });
 
-  text = text.replace(/mp3::(.*)/g,(m,file)=>{
-    const url = `${BASE_URL}pages/${fullPath}/${file.trim()}`;
-    return `<audio controls><source src="${url}" type="audio/mpeg"></audio>`;
+  // AUDIO FIX
+  text = text.replace(/mp3::([^\n]+)/g,(m,file)=>{
+    const url = safeUrl(fullPath, file);
+
+    return `
+      <audio controls>
+        <source src="${url}" type="audio/mpeg">
+      </audio>
+    `;
   });
 
   return text;
 }
+
+/* ---------------- RESTORE IMAGES ---------------- */
 
 function restoreImages(){
   const el = document.getElementById("page");
@@ -278,6 +293,12 @@ function openPage(path){
   path = path.replace(/^pages\//,"").replace(/\/$/,"");
   loadPage(path);
 }
+
+/* ---------------- DEBUG SAFETY NET ---------------- */
+
+window.onerror = (msg, src, line) => {
+  console.log("❌ Error:", msg, src, line);
+};
 
 /* ---------------- START ---------------- */
 
