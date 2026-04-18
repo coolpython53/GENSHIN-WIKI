@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Wiki Engine Fixed</title>
+<title>Wiki Engine</title>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -42,7 +42,13 @@ input {
   border-radius:6px;
 }
 
-.item:hover { background:#1f2937; }
+.item:hover {
+  background:#1f2937;
+}
+
+.folder {
+  font-weight:bold;
+}
 
 #content {
   flex:1;
@@ -59,7 +65,10 @@ audio {
   width:100%;
 }
 
-a { color:#60a5fa; }
+a {
+  color:#60a5fa;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -81,36 +90,102 @@ a { color:#60a5fa; }
 
 const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
 
-/* ---------------- SEARCH MOCK ---------------- */
 let pages = [];
+let expanded = new Set();
 
-search.oninput = renderTree;
+/* ---------------- MARKED SAFE HTML ---------------- */
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+  headerIds: false,
+  mangle: false
+});
 
 /* ---------------- LOAD PAGES ---------------- */
+
 async function loadPages(){
   const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
   pages = await res.json();
   renderTree();
 }
 
-/* ---------------- TREE (simple flat for stability) ---------------- */
+/* ---------------- TREE ---------------- */
+
+function buildTree(paths){
+  const root = {};
+
+  paths.forEach(path=>{
+    const parts = path.split("/");
+    let cur = root;
+
+    parts.forEach((p,i)=>{
+      if(!cur[p]){
+        cur[p] = {
+          __children:{},
+          __path: parts.slice(0,i+1).join("/")
+        };
+      }
+      cur = cur[p].__children;
+    });
+  });
+
+  return root;
+}
+
+/* ---------------- RENDER TREE ---------------- */
+
 function renderTree(){
   tree.innerHTML = "";
 
   const q = search.value.toLowerCase();
+  const filtered = pages.filter(p => p.toLowerCase().includes(q));
 
-  pages
-    .filter(p => p.toLowerCase().includes(q))
-    .forEach(p => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.textContent = p;
-      div.onclick = () => loadPage(p);
-      tree.appendChild(div);
-    });
+  const treeData = buildTree(filtered);
+  renderNode(treeData, tree, 0);
 }
 
-/* ---------------- SAFE ASSET RESOLVER ---------------- */
+/* ---------------- NODE RENDER ---------------- */
+
+function renderNode(node, container, depth){
+  for(const key of Object.keys(node)){
+    const item = node[key];
+    const fullPath = item.__path;
+    const children = item.__children;
+    const isFolder = Object.keys(children).length > 0;
+
+    const div = document.createElement("div");
+    div.className = "item";
+    div.style.marginLeft = depth * 16 + "px";
+
+    const label = document.createElement("span");
+    label.textContent = key.replace(/_/g,' ');
+    if(isFolder) label.className = "folder";
+
+    div.onclick = () => {
+      if(isFolder){
+        expanded.has(fullPath)
+          ? expanded.delete(fullPath)
+          : expanded.add(fullPath);
+
+        renderTree();
+      } else {
+        loadPage(fullPath);
+      }
+    };
+
+    div.appendChild(label);
+    container.appendChild(div);
+
+    if(isFolder && expanded.has(fullPath)){
+      const child = document.createElement("div");
+      renderNode(children, child, depth+1);
+      container.appendChild(child);
+    }
+  }
+}
+
+/* ---------------- SAFE PATH RESOLVER ---------------- */
+
 function resolveAsset(fullPath, file){
   file = file.trim();
 
@@ -119,12 +194,12 @@ function resolveAsset(fullPath, file){
   }
 
   file = file.split("/").pop();
-  fullPath = fullPath.replace(/^pages\//, "");
 
-  return encodeURI(`${BASE_URL}pages/${fullPath}/${file}`);
+  return `${BASE_URL}pages/${fullPath}/${file}`;
 }
 
 /* ---------------- PAGE LOADER ---------------- */
+
 async function loadPage(fullPath){
   title.innerText = fullPath.split("/").pop();
   page.innerHTML = "Loading...";
@@ -138,11 +213,13 @@ async function loadPage(fullPath){
 
   let text = await res.text();
 
+  /* IMAGE FIX */
   text = text.replace(/image::([^\n]+)/g,(m,file)=>{
     const url = resolveAsset(fullPath, file);
-    return `<img src="${url}" loading="lazy">`;
+    return `<img src="${url}" onerror="this.style.display='none'">`;
   });
 
+  /* AUDIO FIX */
   text = text.replace(/mp3::([^\n]+)/g,(m,file)=>{
     const url = resolveAsset(fullPath, file);
     return `
@@ -155,7 +232,12 @@ async function loadPage(fullPath){
   page.innerHTML = marked.parse(text);
 }
 
+/* ---------------- SEARCH ---------------- */
+
+search.oninput = renderTree;
+
 /* ---------------- START ---------------- */
+
 loadPages();
 
 </script>
