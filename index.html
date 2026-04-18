@@ -9,17 +9,55 @@
 <style>
 body { margin:0; font-family: Arial; background:#0b0f1a; color:white; }
 #layout { display:flex; height:100vh; }
-#sidebar { width:300px; background:#111827; padding:10px; overflow-y:auto; }
-input { width:100%; padding:10px; margin-bottom:10px; background:#0f172a; color:white; border:1px solid #333; border-radius:6px; }
-.item { display:flex; align-items:center; gap:8px; padding:6px; cursor:pointer; border-radius:6px; }
+
+#sidebar {
+  width:300px;
+  background:#111827;
+  padding:10px;
+  overflow-y:auto;
+}
+
+input {
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  background:#0f172a;
+  color:white;
+  border:1px solid #333;
+  border-radius:6px;
+}
+
+.item {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
 .item:hover { background:#1f2937; }
+
 .folder { font-weight:bold; }
 .indent { margin-left:16px; }
-img.icon { width:18px; height:18px; border-radius:4px; }
-#content { flex:1; padding:20px; overflow-y:auto; }
+
+img.icon {
+  width:18px;
+  height:18px;
+  border-radius:4px;
+}
+
+#content {
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+}
+
 img { max-width:100%; border-radius:10px; }
 audio { width:100%; }
+
 a { color:#60a5fa; cursor:pointer; }
+
 ul { padding-left:20px; }
 li { margin:4px 0; cursor:pointer; }
 li:hover { text-decoration:underline; }
@@ -49,7 +87,7 @@ const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 let pages = [];
 let imageStore = [];
 
-/* ---------------- LOAD ---------------- */
+/* ---------------- LOAD PAGES ---------------- */
 
 async function loadPages(){
   try {
@@ -82,6 +120,8 @@ function renderTree(){
   const filtered = pages.filter(p => p.toLowerCase().includes(q));
   renderNode(buildTree(filtered), tree);
 }
+
+/* ---------------- ICONS ---------------- */
 
 async function getIcon(path){
   for(const ext of ICON_EXTENSIONS){
@@ -117,21 +157,24 @@ function renderNode(node, container, depth=0){
   });
 }
 
-/* ---------------- ROUTER (IMPORTANT FIX) ---------------- */
+/* ---------------- ROUTER FIX ---------------- */
 
-function openWikiPath(pathWithFile){
+function openWikiPath(rawPath){
 
-  const isFolder = pathWithFile.endsWith("folder.md");
-  const isPage = pathWithFile.endsWith("page.md");
+  let path = rawPath
+    .replace(/^GENSHIN-WIKI\/pages\//, "")
+    .replace(/^pages\//, "");
 
-  const cleanPath = pathWithFile
-    .replace("/page.md","")
-    .replace("/folder.md","");
+  const isFolder = path.endsWith("folder.md");
+  const isPage = path.endsWith("page.md");
+
+  const cleanPath = path
+    .replace(/\/folder\.md$/, "")
+    .replace(/\/page\.md$/, "");
 
   if(isFolder) return loadFolder(cleanPath);
   if(isPage) return loadPage(cleanPath);
 
-  // fallback
   loadPage(cleanPath);
 }
 
@@ -183,7 +226,7 @@ async function loadFolder(fullPath){
     }
   } catch {}
 
-  const children = pages.filter(p=>p.startsWith(fullPath) && p!==fullPath);
+  const children = pages.filter(p => p.startsWith(fullPath) && p !== fullPath);
 
   const ul = document.createElement("ul");
   children.forEach(c=>{
@@ -196,7 +239,7 @@ async function loadFolder(fullPath){
   page.appendChild(ul);
 }
 
-/* ---------------- IMAGE ENGINE ---------------- */
+/* ---------------- IMAGE SYSTEM (UNCHANGED + SAFE) ---------------- */
 
 function convertAssets(fullPath, text){
 
@@ -206,16 +249,13 @@ function convertAssets(fullPath, text){
 
     let token = raw.trim();
 
-    // ---- percent ----
     const pct = token.match(/::::(\d+)%?$/);
     if(pct){
       const url = resolvePath(fullPath, clean(token.replace(/::::\d+%?$/,"")));
-      const html = `<img src="${url}" style="width:${pct[1]}%;height:auto;">`;
-      imageStore.push(html);
+      imageStore.push(`<img src="${url}" style="width:${pct[1]}%;height:auto;">`);
       return `@@IMG${imageStore.length-1}@@`;
     }
 
-    // ---- pixel ----
     const px = token.match(/:::([\d]+)(?:,([\d]+))?$/);
     if(px){
       const url = resolvePath(fullPath, clean(token.replace(/:::[\d]+(,[\d]+)?$/,"")));
@@ -224,14 +264,12 @@ function convertAssets(fullPath, text){
       if(px[1]) style += `width:${px[1]}px;`;
       if(px[2]) style += `height:${px[2]}px;`;
 
-      const html = `<img src="${url}" style="${style}">`;
-      imageStore.push(html);
+      imageStore.push(`<img src="${url}" style="${style}">`);
       return `@@IMG${imageStore.length-1}@@`;
     }
 
     const url = resolvePath(fullPath, clean(token));
-    const html = `<img src="${url}">`;
-    imageStore.push(html);
+    imageStore.push(`<img src="${url}">`);
     return `@@IMG${imageStore.length-1}@@`;
   });
 
@@ -242,8 +280,6 @@ function convertAssets(fullPath, text){
 
   return text;
 }
-
-/* ---------------- RESTORE IMAGES ---------------- */
 
 function restoreImages(){
   const el = document.getElementById("page");
@@ -262,7 +298,7 @@ function convertPageLinks(text){
 
 /* ---------------- UTIL ---------------- */
 
-function clean(str){return str.replace(/\r/g,"").trim();}
+function clean(str){ return str.replace(/\r/g,"").trim(); }
 
 function resolvePath(base,file){
   if(file.startsWith("http")) return file;
