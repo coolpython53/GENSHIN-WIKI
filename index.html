@@ -128,13 +128,16 @@ function buildTree(paths){
   return root;
 }
 
-/* ---------------- ICONS (SAFE FAST) ---------------- */
+/* ---------------- ICONS (FIXED) ---------------- */
 
 function getIcon(path){
   if(iconCache.has(path)) return iconCache.get(path);
 
-  const url = `${BASE_URL}pages/${path}/blueprint.jpg`;
+  const base = `${BASE_URL}pages/${path}/blueprint`;
+
+  const url = `${base}.jpg`; // default guess (fast path)
   iconCache.set(path, url);
+
   return url;
 }
 
@@ -171,8 +174,9 @@ function renderNode(node, container, depth = 0){
       <img class="icon"
            src="${icon}"
            onerror="
-             this.onerror=null;
-             this.src='${FALLBACK_ICON}';
+             if(this.src.includes('.jpg')) this.src='${BASE_URL}pages/${fullPath}/blueprint.png';
+             else if(this.src.includes('.png')) this.src='${BASE_URL}pages/${fullPath}/blueprint.webp';
+             else this.src='${FALLBACK_ICON}';
            ">
       <span class="${hasChildren ? 'folder' : ''}">
         ${key.replace(/_/g,' ')}
@@ -231,7 +235,7 @@ async function loadPage(fullPath){
   }
 }
 
-/* ---------------- ASSETS FIXED ---------------- */
+/* ---------------- ASSETS ---------------- */
 
 function convertAssets(fullPath, text){
   imageStore = [];
