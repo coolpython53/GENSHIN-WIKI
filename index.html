@@ -138,23 +138,38 @@ async function loadPage(fullPath){
     if(res.ok){
       let text = await res.text();
       text = convertAssets(fullPath,text);
-      text = convertPageLinks(text); // curly brace page links
+      text = convertPageLinks(text);
       page.innerHTML = marked.parse(text);
     } else {
-      page.innerHTML = "📁 Folder"; // no page.md
+      page.innerHTML = "📁 Folder"; 
     }
   } catch {
-    page.innerHTML = "📁 Folder"; // no page.md
+    page.innerHTML = "📁 Folder"; 
   }
 }
 
-// Load folder content as list
-function loadFolder(fullPath){
+// Load folder content as list with folder.md
+async function loadFolder(fullPath){
   title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
   page.innerHTML = "";
-  const children = pages.filter(p=>p.startsWith(fullPath));
+
+  // Load folder.md if exists
+  const folderMdUrl = `${BASE_URL}pages/${fullPath}/folder.md`;
+  try{
+    const res = await fetch(folderMdUrl);
+    if(res.ok){
+      let text = await res.text();
+      text = convertAssets(fullPath,text);
+      text = convertPageLinks(text);
+      const div = document.createElement("div");
+      div.innerHTML = marked.parse(text);
+      page.appendChild(div);
+    }
+  } catch{}
+
+  const children = pages.filter(p=>p.startsWith(fullPath) && p !== fullPath);
   if(children.length===0){
-    page.innerHTML="📁 Empty Folder";
+    page.innerHTML += "<br>📁 Empty Folder";
     return;
   }
   const ul = document.createElement("ul");
