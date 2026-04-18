@@ -19,4 +19,4 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usag
 For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE\}
 During page linking, ensure that if you are linking to a page, you include page.md (For this page it would be GENSHIN-WIKI/pages/Usage/Syntax/page.md)
 ###### Example:
-{[This will link to the Usage folder.]page::GENSHIN-WIKI/pages/Usage}
+{[This will link to the Usage folder.]page::GENSHIN-WIKI/pages/Usage/folder.md}
