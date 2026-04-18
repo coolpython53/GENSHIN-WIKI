@@ -8,15 +8,16 @@ The image:\: syntax is used for inserting images. To use this, the image should 
 Also, you can use image:\:URL_HERE:::50,50 (height and width)
 or
 image:\:URL_HERE::::50 (50% of max size)
-Please use the raw github url. We have a converter [here](https://coolpython53.github.io/GitHub-to-Pages/).
+Please use the raw github url. We have a converter [here](https://coolpython53.github.io/GitHub-to-Pages/). Also try to put a blank line after the image if you are sizing it down.
 ###### Example usage:
-image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/example.jpg
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/example.jpg::::50
+
 ##### mp3:\:
 The mp3:\: syntax is used for inserting mp3 files into a page. Please only use the file format .mp3 for this. If you have a .ogg file, we have a converter [here](https://coolpython53.github.io/OGG-to-MP3/).
 ###### Example:
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Usage/Syntax/Hello.mp3
 ##### Page linking
-For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE\}
+For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE}
 During page linking, ensure that if you are linking to a page, you include page.md (For this page it would be Usage/Syntax/page.md)
 ###### Example:
 {[This will link to the Usage folder.]page::Usage/folder.md}
