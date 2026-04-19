@@ -43,6 +43,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - 60,000 Mora
 - 4 Basalt Pillar
 - 6 Prithiva Topaz Fragment
+
 LIST FULL COST HERE
 
 ### Character Stories
