@@ -64,7 +64,9 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 #### Ascension phase 4
 - Max level: 70
 - Base HP: 10,118.89
-- 
+- Base Attack: 192.15
+- Base Defense: 670.34
+- Geo Damage Bonus: 14.4%
 
 LIST FULL COST HERE
 
