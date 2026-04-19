@@ -68,6 +68,13 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Base Defense: 670.34
 - Geo Damage Bonus: 14.4%
 
+#### Ascension phase 4 -> 5
+- 100,000 Mora
+- 12 Basalt Pillar
+- 6 Prithvia Topaz Chunk
+- 45 Cecilia
+- 12 Forbidden Curse Scroll
+
 LIST FULL COST HERE
 
 ### Character Stories
