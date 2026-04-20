@@ -75,6 +75,27 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - 45 Cecilia
 - 12 Forbidden Curse Scroll
 
+#### Ascension phase 5
+- Max Level: 80
+- Max HP: 11,668.63
+- Max Attack: 221.57
+- Max Defense: 773.01
+- Geo Damage Bonus: 21.6%
+
+#### Ascnsion phase 5 -> 6
+- 120,000 Mora
+- 20 Basalt Pillar
+- 6 Prithvia Topaz Gemstone
+- 50 Cecilia
+- 25 Forbidden Curse Scroll
+
+#### Ascension phase 6
+- Max Level: 90
+- Base HP: 13,225.58
+- Base Attack: 251.14
+- Base Defense: 876.15
+- Geo Damage Bonus: 28.8%
+
 LIST FULL COST HERE
 
 ### Character Stories
