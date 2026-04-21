@@ -497,5 +497,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Chat%20Investigation.mp3
 
+#### Chat: Investigation
+Going out into the world and investigating, turning the "unknown" into the "known." ...Ahhh, I missed this feeling.
+
+mp3::
 ### Images
 put images here...
