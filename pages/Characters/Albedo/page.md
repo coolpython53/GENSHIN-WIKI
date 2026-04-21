@@ -480,7 +480,10 @@ The Wanderer later gave his core to Sandrone so she could continue computing her
   - Albedo is one of three playable characters who wields a Flagship Event weapon in at least one of his Character Trial iterations (Festering Desire prior to Version 2.3, Cinnabar Spindle from 2.3 onwards), with the other characters with this distinction being Xianyun and Chiori.
   - Excluding Aloy (who is a crossover character lacking Character Trials) and the Traveler, he is also one of the only two 5-star characters who has never wielded a 5-star weapon in any of his Character Trial iterations to date. The other 5-star character with this distinction is Qiqi.
 ### Voice overs
-list voice overs and mp3s here...
+
+#### Hello
+I am Albedo, Chief Alchemist of the Knights of Favonius. You carry the aura of the stars, interesting... I would like to study you, if you do not mind. I'm certain we will have many opportunities to be alone in the future.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Hello.mp3
 
 ### Images
 put images here...
