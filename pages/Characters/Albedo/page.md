@@ -292,6 +292,7 @@ Description: Allow me to bear witness to this miracle.
 image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Princeps-Cretaceus.webp::::25
 
 Name: Princeps Cretaceus
+
 Meaning: Chalk Prince
 
 ### Quests and events
@@ -491,6 +492,10 @@ What a view... How about a quick break so I can sketch this beautiful scenery?
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Chat%20Still%20Life.mp3
 
+#### Chat: Investigation
+"The truth of this world"... *sigh* What could it be?
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Chat%20Investigation.mp3
 
 ### Images
 put images here...
