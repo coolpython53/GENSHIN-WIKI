@@ -489,6 +489,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Chat: Still Life
 What a view... How about a quick break so I can sketch this beautiful scenery?
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Chat%20Still%20Life.mp3
+
 
 ### Images
 put images here...
