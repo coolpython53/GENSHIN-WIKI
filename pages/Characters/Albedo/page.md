@@ -514,5 +514,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 #### When the Sun Is Out
 Ample light... active biological organisms... Yes, this is a good place to sketch.
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/When%20the%20Sun%20is%20Out.mp3
+
+#### Good Morning
 ### Images
 put images here...
