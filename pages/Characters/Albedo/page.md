@@ -468,17 +468,17 @@ The Wanderer later gave his core to Sandrone so she could continue computing her
 - Albedo is one of the few currently playable characters who acknowledges (or even seems aware) that the Traveler is from another world. He deduced this based on the Traveler's ability to control multiple elements without a Vision.
 - In Version 1.2, players noticed that Albedo didn't breathe like all the other characters did in Dragonspine. This turned out to be an error and was fixed in Version 1.3.
 - The Version 1.4 event Invitation of Windblume reveals that Albedo plays the lyre by ear and is apparently very good at it despite a lack of formal education in playing instruments.
-Albedo refers to Alice as "Aunt Alice," and considers her daughter Klee to be his younger sister. Additionally, he refers to Barbeloth as "Aunt Barbie."
-Throughout the course of the game, multiple characters have been made aware of Albedo's nature as a synthetic human:
-Albedo told the Traveler and Paimon in Shadows Amidst Snowstorms regardless of whether the player completed the quest or not.
-Albedo told Sucrose a few days before the events of Paralogism.
-Venti knew from the moment Rhinedottir and Alice brought Albedo to Mondstadt. Respectively, he is aware of Venti's status as Barbatos.
-Dahlia and likely Varka and Jean were made aware of his origins sometime before the events of Paralogism.
-Most, if not all members of the Hexenzirkel are aware of Albedo's status as a synthetic human.
-In his original character introduction illustration, Albedo is seen armed with a Sacrificial Sword. In-game, as of Shadows Amidst Snowstorms, he is seen wielding his signature Cinnabar Spindle in all cutscenes.
-As a Trial Character:
-Albedo is one of three playable characters who wields a Flagship Event weapon in at least one of his Character Trial iterations (Festering Desire prior to Version 2.3, Cinnabar Spindle from 2.3 onwards), with the other characters with this distinction being Xianyun and Chiori.
-Excluding Aloy (who is a crossover character lacking Character Trials) and the Traveler, he is also one of the only two 5-star characters who has never wielded a 5-star weapon in any of his Character Trial iterations to date. The other 5-star character with this distinction is Qiqi.
+- Albedo refers to Alice as "Aunt Alice," and considers her daughter Klee to be his younger sister. Additionally, he refers to Barbeloth as "Aunt Barbie."
+- Throughout the course of the game, multiple characters have been made aware of Albedo's nature as a synthetic human:
+  - Albedo told the Traveler and Paimon in Shadows Amidst Snowstorms regardless of whether the player completed the quest or not.
+  - Albedo told Sucrose a few days before the events of Paralogism.
+  - Venti knew from the moment Rhinedottir and Alice brought Albedo to Mondstadt. Respectively, he is aware of Venti's status as Barbatos.
+  - Dahlia and likely Varka and Jean were made aware of his origins sometime before the events of Paralogism.
+  - Most, if not all members of the Hexenzirkel are aware of Albedo's status as a synthetic human.
+- In his original character introduction illustration, Albedo is seen armed with a Sacrificial Sword. In-game, as of Shadows Amidst Snowstorms, he is seen wielding his signature Cinnabar Spindle in all cutscenes.
+- As a Trial Character:
+  - Albedo is one of three playable characters who wields a Flagship Event weapon in at least one of his Character Trial iterations (Festering Desire prior to Version 2.3, Cinnabar Spindle from 2.3 onwards), with the other characters with this distinction being Xianyun and Chiori.
+  - Excluding Aloy (who is a crossover character lacking Character Trials) and the Traveler, he is also one of the only two 5-star characters who has never wielded a 5-star weapon in any of his Character Trial iterations to date. The other 5-star character with this distinction is Qiqi.
 ### Voice overs
 list voice overs and mp3s here...
 
