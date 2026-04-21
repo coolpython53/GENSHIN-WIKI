@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Remove [number]</title>
+<meta charset="UTF-8">
+<title>Neon Text Cleaner</title>
+
+<style>
+  body {
+    background: radial-gradient(circle at center, #0a0f2c, #020611);
+    color: #bdeaff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+
+  h1 {
+    color: #00cfff;
+    text-shadow: 0 0 10px #00cfff, 0 0 25px #0077ff;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 80%;
+    max-width: 700px;
+    height: 150px;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #00cfff;
+    background: #050a1f;
+    color: #bdeaff;
+    font-size: 14px;
+    box-shadow: 0 0 10px #00cfff55 inset;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  textarea:focus {
+    box-shadow: 0 0 15px #00cfff, 0 0 25px #0077ff inset;
+  }
+
+  button {
+    background: linear-gradient(90deg, #00cfff, #0077ff);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px 0;
+    box-shadow: 0 0 15px #00cfff, 0 0 25px #0077ff;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00e5ff, 0 0 40px #3399ff;
+  }
+
+  .container {
+    background: rgba(0, 10, 40, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 0 30px #00cfff33;
+  }
+</style>
 </head>
+
 <body>
 
-<textarea id="input" rows="10" cols="60" placeholder="Paste your text here..."></textarea>
-<br><br>
+<div class="container">
+  <h1>✨ Neon Text Cleaner ✨</h1>
 
-<button onclick="cleanText()">Remove [number]</button>
+  <textarea id="input" placeholder="Paste your text here..."></textarea><br>
 
-<h3>Output:</h3>
-<textarea id="output" rows="10" cols="60"></textarea>
+  <button onclick="cleanText()">⚡ Remove [number]</button>
+
+  <textarea id="output" placeholder="Clean text appears here..."></textarea>
+</div>
 
 <script>
 function cleanText() {
   let text = document.getElementById("input").value;
-  
-  // Remove patterns like [1], [23], [999]
+
+  // Remove [number] patterns
   let cleaned = text.replace(/\[\d+\]/g, "");
-  
+
   document.getElementById("output").value = cleaned;
 }
 </script>
