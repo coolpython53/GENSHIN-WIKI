@@ -505,7 +505,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### When It Rains
 The soil is moist, ideal for collecting the roots of Boom Blossoms. No please, allow me to handle this.
 
-mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Albedo/Voice-overs/When%20It%20Rains.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/When%20It%20Rains.mp3
 
 #### When It Snows
 Master...
