@@ -50,3 +50,10 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - 12 Reinforced Drive Shaft
 
 #### Ascension Phase 3
+- Max Level: 60
+- Base HP: 7,379.41	
+- Base Attack: 159.52
+- Base Defense: 400.19
+- Elemental mastery: 48
+
+#### Ascension Cost 3 -> 4
