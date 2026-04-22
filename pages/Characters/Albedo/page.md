@@ -561,6 +561,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About the Vision
 My Vision? Ah, that's nothing more than a tool to aid in my experiments, no different from a beaker or crucible. The one thing about it that really intrigues me is the principle behind how it works... One day, I will uncover its secrets, it's only a matter of time.
 
-mp3::
+mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Albedo/Voice-overs/About%20the%20Vision.mp3
+
+
 ### Images
 put images here...
