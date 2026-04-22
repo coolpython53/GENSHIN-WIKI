@@ -556,6 +556,11 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Us: Assistant
 Would you oblige me by serving as my assistant? After observing so many experiments, you surely know a good deal about alchemy by now. Relax, we will work together. I don't think you will have any problems. I have faith in my ability to instruct you, and even more faith in your exceptional talents.
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Us%20-%20Assistant.mp3
+
+#### About the Vision
+My Vision? Ah, that's nothing more than a tool to aid in my experiments, no different from a beaker or crucible. The one thing about it that really intrigues me is the principle behind how it works... One day, I will uncover its secrets, it's only a matter of time.
+
 mp3::
 ### Images
 put images here...
