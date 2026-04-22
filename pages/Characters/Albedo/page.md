@@ -535,6 +535,11 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Good Night
 Good night, you go ahead and rest. I will just finish one last experiment before bed... If you are interested in the results, I can discuss them with you tomorrow.
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Good%20Night.mp3
 
+#### About Albedo: Genius
+Genius? ...A number of people call me that. But I don't think I'm any "genius."
+
+mp3::
 ### Images
 put images here...
