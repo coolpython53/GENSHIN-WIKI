@@ -71,6 +71,9 @@
             <button onclick="switchTab('github')" id="tab-github" class="px-6 py-3 font-semibold text-gray-500 transition-colors whitespace-nowrap">
                 GitHub URL Helper
             </button>
+            <button onclick="switchTab('cleaner')" id="tab-cleaner" class="px-6 py-3 font-semibold text-gray-500 transition-colors whitespace-nowrap">
+                Text Cleaner
+            </button>
         </div>
 
         <!-- Audio Converter Tab -->
@@ -158,6 +161,25 @@
             </div>
         </div>
 
+        <!-- Text Cleaner Tab -->
+        <div id="panel-cleaner" class="genshin-card rounded-2xl p-6 md:p-8 hidden">
+            <h2 class="text-xl font-bold mb-4">Wiki Text Cleaner</h2>
+            <p class="text-gray-600 mb-6">Paste text copied from a wiki to automatically remove citation brackets like [1], [2], etc.</p>
+            
+            <div class="space-y-4">
+                <textarea id="cleaner-input" rows="8" placeholder="Paste wiki text here..." class="w-full p-4 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none resize-none"></textarea>
+                
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button onclick="cleanText()" class="flex-1 btn-primary text-white font-bold py-3 px-6 rounded-lg">
+                        Clean Text
+                    </button>
+                    <button onclick="copyToClipboard('cleaner-input')" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 rounded-lg font-semibold transition-colors">
+                        Copy Result
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div id="toast" class="fixed bottom-8 right-8 bg-gray-800 text-white px-6 py-3 rounded-xl shadow-2xl transition-all opacity-0 pointer-events-none transform translate-y-4">
             Copied to clipboard!
         </div>
@@ -172,7 +194,7 @@
 
         // Tab Switching
         function switchTab(tab) {
-            const tabs = ['audio', 'github'];
+            const tabs = ['audio', 'github', 'cleaner'];
             tabs.forEach(t => {
                 document.getElementById(`tab-${t}`).classList.remove('tab-active');
                 document.getElementById(`panel-${t}`).classList.add('hidden');
@@ -289,6 +311,16 @@
                 pagesOutput.value = "Invalid URL";
             }
         });
+
+        // --- Text Cleaner Logic ---
+        function cleanText() {
+            const input = document.getElementById('cleaner-input');
+            const text = input.value;
+            // Regex to find things like [1], [23], [citation needed]
+            const cleaned = text.replace(/\[\d+\]|\[citation needed\]/gi, '');
+            input.value = cleaned;
+            showToast("Text cleaned!");
+        }
 
         // --- Utils ---
         function copyToClipboard(id) {
