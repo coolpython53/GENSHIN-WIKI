@@ -1,123 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Genshin Toolkit</title>
+<title>Toolkit</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 
 <style>
-body { font-family: sans-serif; background:#f0f2f5; }
-
-.card {
-    background:white;
-    border-radius:16px;
-    padding:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
+body { background:#0f172a; color:white; font-family:sans-serif; }
 
 .tab-active {
-    border-bottom:3px solid #4a90e2;
-    color:#4a90e2;
+    border-bottom:3px solid #3b82f6;
+    color:#3b82f6;
+}
+
+.panel { display:none; }
+.panel.active { display:block; }
+
+.drop {
+    border:2px dashed #3b82f6;
+    border-radius:16px;
+    padding:40px;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.drop:hover {
+    background:#1e293b;
+    box-shadow:0 0 20px #3b82f6;
+}
+
+.drop.drag {
+    background:#1e293b;
+    box-shadow:0 0 30px #60a5fa;
 }
 
 .btn {
-    background:#4a90e2;
-    color:white;
+    background:#3b82f6;
     padding:10px;
-    border-radius:8px;
-}
-
-.spinner {
-    border:3px solid #eee;
-    border-top:3px solid #4a90e2;
-    border-radius:50%;
-    width:20px;
-    height:20px;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0%{transform:rotate(0)}
-    100%{transform:rotate(360deg)}
+    border-radius:10px;
 }
 </style>
 </head>
 
 <body class="p-6">
 
-<h1 class="text-2xl font-bold mb-6">Wiki Toolkit</h1>
+<h1 class="text-xl mb-4">Toolkit</h1>
 
-<!-- Tabs -->
+<!-- TABS -->
 <div class="flex gap-6 mb-6 border-b">
-<button onclick="switchTab('audio')" id="tab-audio" class="tab-active">Audio</button>
-<button onclick="switchTab('github')" id="tab-github">GitHub</button>
-<button onclick="switchTab('cleaner')" id="tab-cleaner">Cleaner</button>
+<button id="tab-audio" onclick="switchTab('audio')" class="tab-active">Audio</button>
+<button id="tab-github" onclick="switchTab('github')">GitHub</button>
+<button id="tab-cleaner" onclick="switchTab('cleaner')">Cleaner</button>
 </div>
 
 <!-- AUDIO -->
-<div id="panel-audio" class="card">
+<div id="audio" class="panel active">
 
-<input type="file" id="file" class="mb-4">
+<div id="drop" class="drop">
+    <p id="fileText">Drop audio here or click</p>
+    <input type="file" id="file" class="hidden">
+</div>
 
-<select id="format" class="mb-4 p-2 border rounded">
+<select id="format" class="mt-4 text-black p-2 rounded">
 <option value="mp3">mp3</option>
 <option value="wav">wav</option>
 <option value="ogg">ogg</option>
-<option value="m4a">m4a</option>
 </select>
 
-<button class="btn" onclick="convert()">Convert</button>
+<button class="btn mt-4" onclick="convert()">Convert</button>
 
-<div class="mt-4 flex items-center gap-2">
-<div id="spin" class="spinner hidden"></div>
-<span id="status"></span>
-</div>
-
-<a id="download" class="btn mt-4 inline-block hidden">Download</a>
+<p id="status" class="mt-4 text-blue-300"></p>
+<a id="download" class="btn mt-4 hidden">Download</a>
 
 </div>
 
-<!-- GITHUB -->
-<div id="panel-github" class="card hidden">
+<!-- GITHUB TOOL -->
+<div id="github" class="panel">
 
-<input id="gh-input" placeholder="GitHub URL"
-class="w-full p-3 border rounded mb-4">
+<input id="gh-input" placeholder="Paste GitHub URL"
+class="w-full p-3 text-black rounded mb-4">
 
-<p class="text-sm">Raw URL</p>
-<input id="raw-output" class="w-full p-2 border mb-3" readonly>
+<p>Raw URL</p>
+<input id="raw-output" class="w-full p-2 text-black mb-3">
 
-<p class="text-sm">Pages URL</p>
-<input id="pages-output" class="w-full p-2 border" readonly>
+<p>Pages URL</p>
+<input id="pages-output" class="w-full p-2 text-black">
 
 </div>
 
 <!-- CLEANER -->
-<div id="panel-cleaner" class="card hidden">
+<div id="cleaner" class="panel">
 
 <textarea id="cleaner-input"
-class="w-full p-3 border rounded mb-4"
-rows="6"></textarea>
+class="w-full p-3 text-black rounded mb-4"
+rows="6"
+placeholder="Paste text..."></textarea>
 
 <button class="btn" onclick="cleanText()">Clean</button>
 
 </div>
 
 <script>
-/* ---------------- TABS ---------------- */
-function switchTab(tab) {
+/* -------- TAB SWITCH -------- */
+function switchTab(tab){
     ["audio","github","cleaner"].forEach(t=>{
-        document.getElementById("panel-"+t).classList.add("hidden");
+        document.getElementById(t).classList.remove("active");
         document.getElementById("tab-"+t).classList.remove("tab-active");
     });
-    document.getElementById("panel-"+tab).classList.remove("hidden");
+    document.getElementById(tab).classList.add("active");
     document.getElementById("tab-"+tab).classList.add("tab-active");
 }
 
-/* ---------------- FFmpeg ---------------- */
+/* -------- DRAG DROP -------- */
+const drop = document.getElementById("drop");
+const fileInput = document.getElementById("file");
+const fileText = document.getElementById("fileText");
+
+let selectedFile = null;
+
+drop.onclick = () => fileInput.click();
+
+fileInput.onchange = e => {
+    selectedFile = e.target.files[0];
+    fileText.innerText = selectedFile.name;
+};
+
+drop.ondragover = e => {
+    e.preventDefault();
+    drop.classList.add("drag");
+};
+
+drop.ondragleave = () => drop.classList.remove("drag");
+
+drop.ondrop = e => {
+    e.preventDefault();
+    drop.classList.remove("drag");
+
+    selectedFile = e.dataTransfer.files[0];
+    fileText.innerText = selectedFile.name;
+};
+
+/* -------- FFmpeg -------- */
 const createFFmpeg = FFmpeg.createFFmpeg;
 const fetchFile = FFmpeg.fetchFile;
 
@@ -126,95 +152,82 @@ const ffmpeg = createFFmpeg({
     corePath:"https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js"
 });
 
-ffmpeg.setProgress(({ratio})=>{
-    document.getElementById("status").innerText =
-        "Processing " + Math.round(ratio*100) + "%";
-});
-
 async function convert() {
-    const file = document.getElementById("file").files[0];
-    const format = document.getElementById("format").value;
-
-    if (!file) return alert("pick file");
+    if (!selectedFile) return alert("pick file");
 
     const status = document.getElementById("status");
-    const spin = document.getElementById("spin");
 
     try {
-        spin.classList.remove("hidden");
-        status.innerText = "Loading FFmpeg...";
+        status.innerText = "Loading...";
 
         if (!ffmpeg.isLoaded()) await ffmpeg.load();
 
-        const input = file.name;
-        const output = "output."+format;
+        const input = selectedFile.name;
+        const output = "out." + document.getElementById("format").value;
 
-        try{ffmpeg.FS("unlink",input)}catch{}
-        try{ffmpeg.FS("unlink",output)}catch{}
+        ffmpeg.FS("writeFile", input, await fetchFile(selectedFile));
 
-        ffmpeg.FS("writeFile", input, await fetchFile(file));
+        status.innerText = "Converting...";
 
         await ffmpeg.run("-i", input, output);
 
         const data = ffmpeg.FS("readFile", output);
 
-        const url = URL.createObjectURL(new Blob([data.buffer], {
-            type:"audio/"+format
-        }));
+        const url = URL.createObjectURL(new Blob([data.buffer]));
 
         const dl = document.getElementById("download");
         dl.href = url;
-        dl.download = "converted."+format;
+        dl.download = output;
         dl.classList.remove("hidden");
 
         status.innerText = "Done!";
     }
-    catch(e){
+    catch (e) {
         console.error(e);
-        status.innerText = "Error (F12)";
-    }
-    finally{
-        spin.classList.add("hidden");
+        status.innerText = "ERROR: " + e.message;
     }
 }
 
-/* ---------------- GITHUB TOOL ---------------- */
+/* -------- GITHUB TOOL -------- */
 function cleanEncode(s){
-    return encodeURIComponent(decodeURIComponent(s));
+    try { return encodeURIComponent(decodeURIComponent(s)); }
+    catch { return encodeURIComponent(s); }
 }
 
 document.getElementById("gh-input").addEventListener("input", e=>{
-    const val = e.target.value.trim();
-
-    if (!val.includes("github.com")) return;
+    const raw = document.getElementById("raw-output");
+    const pages = document.getElementById("pages-output");
 
     try {
-        const url = new URL(val);
-        const parts = url.pathname.split("/").filter(Boolean);
+        const url = new URL(e.target.value);
+        const p = url.pathname.split("/").filter(Boolean);
 
-        if (parts[2] !== "blob") throw "bad";
+        if (p[2] !== "blob") throw "bad";
 
-        const user = parts[0];
-        const repo = parts[1];
-        const branch = parts[3];
-        const path = parts.slice(4).map(cleanEncode).join("/");
+        const user = p[0];
+        const repo = p[1];
+        const branch = p[3];
+        const path = p.slice(4).map(cleanEncode).join("/");
 
-        document.getElementById("raw-output").value =
-            `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
-
-        document.getElementById("pages-output").value =
-            `https://${user}.github.io/${repo}/${path}`;
+        raw.value = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
+        pages.value = `https://${user}.github.io/${repo}/${path}`;
     }
     catch {
-        document.getElementById("raw-output").value = "Invalid URL";
-        document.getElementById("pages-output").value = "Invalid URL";
+        raw.value = "Invalid URL";
+        pages.value = "Invalid URL";
     }
 });
 
-/* ---------------- CLEANER ---------------- */
+/* -------- CLEANER -------- */
 function cleanText(){
     const el = document.getElementById("cleaner-input");
-    el.value = el.value.replace(/\[\d+\]|\[citation needed\]/gi,"");
+    let text = el.value;
+
+    text = text.replace(/\[(\d+|[a-z]|note\s*\d+|citation needed)\]/gi,"");
+    text = text.replace(/\s{2,}/g," ");
+    text = text.replace(/\s+([.,!?])/g,"$1");
+
+    el.value = text.trim();
 }
 </script>
 
