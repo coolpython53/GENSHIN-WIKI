@@ -14,7 +14,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: -
 
 #### Ascension phase 0 -> 1
-- 20,000 Mora
+- 20,000 {[Mora]page::Currencies/Mora}
 - 1 Prithiva Topaz Sliver
 - 3 Cecilia
 - 3 Divining Scroll
