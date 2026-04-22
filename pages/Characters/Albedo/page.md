@@ -527,6 +527,14 @@ Good afternoon. I heard your footsteps. My, it certainly is lively outside of th
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Good%20Afternoon.mp3
 
-####
+#### Good Evening
+*sigh* It's gotten quiet outside...
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Good%20Evening.mp3
+
+#### Good Night
+Good night, you go ahead and rest. I will just finish one last experiment before bed... If you are interested in the results, I can discuss them with you tomorrow.
+
+
 ### Images
 put images here...
