@@ -526,5 +526,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 Good afternoon. I heard your footsteps. My, it certainly is lively outside of the workshop.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Good%20Afternoon.mp3
+
+####
 ### Images
 put images here...

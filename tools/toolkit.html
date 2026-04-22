@@ -4,231 +4,247 @@
 <meta charset="UTF-8">
 <title>Toolkit</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+<script src="https://unpkg.com/lamejs@1.2.0/lame.min.js"></script>
 
 <style>
-body { background:#0f172a; color:white; font-family:sans-serif; }
-
-.tab-active {
-    border-bottom:3px solid #3b82f6;
-    color:#3b82f6;
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #312e81, #0f766e);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+  color: white;
 }
 
-.panel { display:none; }
-.panel.active { display:block; }
-
-.drop {
-    border:2px dashed #3b82f6;
-    border-radius:16px;
-    padding:40px;
-    text-align:center;
-    transition:0.3s;
-    cursor:pointer;
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.drop:hover {
-    background:#1e293b;
-    box-shadow:0 0 20px #3b82f6;
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px;
+  width: 360px;
+  text-align: center;
 }
 
-.drop.drag {
-    background:#1e293b;
-    box-shadow:0 0 30px #60a5fa;
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.btn {
-    background:#3b82f6;
-    padding:10px;
-    border-radius:10px;
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
+
+.tabs button.active {
+  border-bottom: 2px solid #22d3ee;
+}
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+.file-btn {
+  display: block;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.08);
+}
+.file-btn input { display:none; }
+
+button.main {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22c55e, #06b6d4);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  color: black;
+}
+
+#status { margin-top:10px; }
 </style>
 </head>
 
-<body class="p-6">
+<body>
 
-<h1 class="text-xl mb-4">Toolkit</h1>
+<div class="card">
 
-<!-- TABS -->
-<div class="flex gap-6 mb-6 border-b">
-<button id="tab-audio" onclick="switchTab('audio')" class="tab-active">Audio</button>
-<button id="tab-github" onclick="switchTab('github')">GitHub</button>
-<button id="tab-cleaner" onclick="switchTab('cleaner')">Cleaner</button>
+<div class="tabs">
+  <button class="active" onclick="switchTab('audio', this)">Audio</button>
+  <button onclick="switchTab('github', this)">GitHub</button>
+  <button onclick="switchTab('cleaner', this)">Cleaner</button>
 </div>
 
 <!-- AUDIO -->
 <div id="audio" class="panel active">
 
-<div id="drop" class="drop">
-    <p id="fileText">Drop audio here or click</p>
-    <input type="file" id="file" class="hidden">
-</div>
+<label class="file-btn">
+  <span id="fileLabel">🎵 Choose OGG</span>
+  <input type="file" id="file" accept=".ogg,audio/ogg">
+</label>
 
-<select id="format" class="mt-4 text-black p-2 rounded">
-<option value="mp3">mp3</option>
-<option value="wav">wav</option>
-<option value="ogg">ogg</option>
-</select>
+<button class="main" onclick="convert()">Convert to MP3</button>
 
-<button class="btn mt-4" onclick="convert()">Convert</button>
-
-<p id="status" class="mt-4 text-blue-300"></p>
-<a id="download" class="btn mt-4 hidden">Download</a>
+<p id="status">Waiting…</p>
 
 </div>
 
-<!-- GITHUB TOOL -->
+<!-- GITHUB -->
 <div id="github" class="panel">
 
-<input id="gh-input" placeholder="Paste GitHub URL"
-class="w-full p-3 text-black rounded mb-4">
+<input id="gh-input" placeholder="Paste GitHub URL">
 
 <p>Raw URL</p>
-<input id="raw-output" class="w-full p-2 text-black mb-3">
+<input id="raw-output" readonly>
 
 <p>Pages URL</p>
-<input id="pages-output" class="w-full p-2 text-black">
+<input id="pages-output" readonly>
 
 </div>
 
 <!-- CLEANER -->
 <div id="cleaner" class="panel">
 
-<textarea id="cleaner-input"
-class="w-full p-3 text-black rounded mb-4"
-rows="6"
-placeholder="Paste text..."></textarea>
+<textarea id="cleaner-input" rows="6" placeholder="Paste text..."></textarea>
 
-<button class="btn" onclick="cleanText()">Clean</button>
+<button class="main" onclick="cleanText()">Clean</button>
+
+</div>
 
 </div>
 
 <script>
+
 /* -------- TAB SWITCH -------- */
-function switchTab(tab){
-    ["audio","github","cleaner"].forEach(t=>{
-        document.getElementById(t).classList.remove("active");
-        document.getElementById("tab-"+t).classList.remove("tab-active");
-    });
-    document.getElementById(tab).classList.add("active");
-    document.getElementById("tab-"+tab).classList.add("tab-active");
+function switchTab(tab, el){
+  document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
+
+  document.getElementById(tab).classList.add("active");
+  el.classList.add("active");
 }
 
-/* -------- DRAG DROP -------- */
-const drop = document.getElementById("drop");
-const fileInput = document.getElementById("file");
-const fileText = document.getElementById("fileText");
-
-let selectedFile = null;
-
-drop.onclick = () => fileInput.click();
-
-fileInput.onchange = e => {
-    selectedFile = e.target.files[0];
-    fileText.innerText = selectedFile.name;
+/* -------- FILE LABEL -------- */
+document.getElementById("file").onchange = e=>{
+  const f = e.target.files[0];
+  if (f) document.getElementById("fileLabel").innerText = "🎵 " + f.name;
 };
 
-drop.ondragover = e => {
-    e.preventDefault();
-    drop.classList.add("drag");
-};
+/* -------- AUDIO CONVERT -------- */
+async function convert(){
+  const file = document.getElementById("file").files[0];
+  if (!file) return alert("pick file");
 
-drop.ondragleave = () => drop.classList.remove("drag");
+  const status = document.getElementById("status");
 
-drop.ondrop = e => {
-    e.preventDefault();
-    drop.classList.remove("drag");
+  try{
+    status.innerText = "Decoding...";
 
-    selectedFile = e.dataTransfer.files[0];
-    fileText.innerText = selectedFile.name;
-};
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const buf = await ctx.decodeAudioData(await file.arrayBuffer());
 
-/* -------- FFmpeg -------- */
-const createFFmpeg = FFmpeg.createFFmpeg;
-const fetchFile = FFmpeg.fetchFile;
+    const mp3 = new lamejs.Mp3Encoder(buf.numberOfChannels, buf.sampleRate, 128);
 
-const ffmpeg = createFFmpeg({
-    log:true,
-    corePath:"https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js"
-});
+    const left = buf.getChannelData(0);
+    const right = buf.numberOfChannels > 1 ? buf.getChannelData(1) : left;
 
-async function convert() {
-    if (!selectedFile) return alert("pick file");
+    let out = [];
+    const block = 1152;
 
-    const status = document.getElementById("status");
+    for(let i=0;i<left.length;i+=block){
+      const l = left.subarray(i,i+block);
+      const r = right.subarray(i,i+block);
 
-    try {
-        status.innerText = "Loading...";
+      const l16 = Int16Array.from(l.map(v=>v*32767));
+      const r16 = Int16Array.from(r.map(v=>v*32767));
 
-        if (!ffmpeg.isLoaded()) await ffmpeg.load();
+      const chunk = buf.numberOfChannels>1
+        ? mp3.encodeBuffer(l16,r16)
+        : mp3.encodeBuffer(l16);
 
-        const input = selectedFile.name;
-        const output = "out." + document.getElementById("format").value;
-
-        ffmpeg.FS("writeFile", input, await fetchFile(selectedFile));
-
-        status.innerText = "Converting...";
-
-        await ffmpeg.run("-i", input, output);
-
-        const data = ffmpeg.FS("readFile", output);
-
-        const url = URL.createObjectURL(new Blob([data.buffer]));
-
-        const dl = document.getElementById("download");
-        dl.href = url;
-        dl.download = output;
-        dl.classList.remove("hidden");
-
-        status.innerText = "Done!";
+      if(chunk.length) out.push(chunk);
     }
-    catch (e) {
-        console.error(e);
-        status.innerText = "ERROR: " + e.message;
-    }
+
+    const end = mp3.flush();
+    if(end.length) out.push(end);
+
+    const blob = new Blob(out,{type:"audio/mp3"});
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = file.name.replace(/\.ogg$/i,".mp3");
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    status.innerText = "Done!";
+  }
+  catch(e){
+    console.error(e);
+    status.innerText = "Error: "+e.message;
+  }
 }
 
 /* -------- GITHUB TOOL -------- */
-function cleanEncode(s){
-    try { return encodeURIComponent(decodeURIComponent(s)); }
-    catch { return encodeURIComponent(s); }
-}
-
 document.getElementById("gh-input").addEventListener("input", e=>{
-    const raw = document.getElementById("raw-output");
-    const pages = document.getElementById("pages-output");
+  const raw = document.getElementById("raw-output");
+  const pages = document.getElementById("pages-output");
 
-    try {
-        const url = new URL(e.target.value);
-        const p = url.pathname.split("/").filter(Boolean);
+  try{
+    const url = new URL(e.target.value);
+    const p = url.pathname.split("/").filter(Boolean);
 
-        if (p[2] !== "blob") throw "bad";
+    if(p[2]!=="blob") throw "bad";
 
-        const user = p[0];
-        const repo = p[1];
-        const branch = p[3];
-        const path = p.slice(4).map(cleanEncode).join("/");
+    const user=p[0], repo=p[1], branch=p[3];
+    const path=p.slice(4).join("/");
 
-        raw.value = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
-        pages.value = `https://${user}.github.io/${repo}/${path}`;
-    }
-    catch {
-        raw.value = "Invalid URL";
-        pages.value = "Invalid URL";
-    }
+    raw.value=`https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}`;
+    pages.value=`https://${user}.github.io/${repo}/${path}`;
+  }
+  catch{
+    raw.value="Invalid";
+    pages.value="Invalid";
+  }
 });
 
 /* -------- CLEANER -------- */
 function cleanText(){
-    const el = document.getElementById("cleaner-input");
-    let text = el.value;
+  let t = document.getElementById("cleaner-input").value;
 
-    text = text.replace(/\[(\d+|[a-z]|note\s*\d+|citation needed)\]/gi,"");
-    text = text.replace(/\s{2,}/g," ");
-    text = text.replace(/\s+([.,!?])/g,"$1");
+  t = t.replace(/\[(\d+|[a-z]|note\s*\d+|citation needed)\]/gi,"");
+  t = t.replace(/\s{2,}/g," ");
+  t = t.replace(/\s+([.,!?])/g,"$1");
 
-    el.value = text.trim();
+  document.getElementById("cleaner-input").value = t.trim();
 }
+
 </script>
 
 </body>
