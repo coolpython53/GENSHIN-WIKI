@@ -21,4 +21,8 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
  - 3 Portable Bearing
  - 3 Broken Drive Shaft
 
- 
+ #### Ascension phase 1
+ - Max level: 40
+ - Base HP: 4,664.78
+ - Base Attack: 100.84
+ - Base Defense: 252.97
