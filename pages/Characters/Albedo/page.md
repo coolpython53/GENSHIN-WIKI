@@ -563,6 +563,11 @@ My Vision? Ah, that's nothing more than a tool to aid in my experiments, no diff
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20the%20Vision.mp3
 
+#### Something to Share
+There's something I've always wanted to ask you, but feared rejection and disappointment...
+Eh-hem... I am very interested in your little floating companion. May I borrow her to investigate for a short while?
+
+
 
 ### Images
 put images here...
