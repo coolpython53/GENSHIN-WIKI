@@ -551,7 +551,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 You... want to accompany me while I experiment? I'm honored.
 Oh, don't be nervous. My experiments may be dangerous, but no one gets hurt... most of the time.
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Us%20-%20Experiments.ogg
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Us%20-%20Experiments.mp3
 
 #### About Us: Assistant
 Would you oblige me by serving as my assistant? After observing so many experiments, you surely know a good deal about alchemy by now. Relax, we will work together. I don't think you will have any problems. I have faith in my ability to instruct you, and even more faith in your exceptional talents.
