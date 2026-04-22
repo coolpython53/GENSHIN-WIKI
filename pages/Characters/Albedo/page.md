@@ -551,6 +551,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 You... want to accompany me while I experiment? I'm honored.
 Oh, don't be nervous. My experiments may be dangerous, but no one gets hurt... most of the time.
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Us%20-%20Experiments.ogg
+
+
 ### Images
 put images here...
