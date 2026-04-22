@@ -27,7 +27,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: -
 
 #### Ascension phase 1 -> 2
-- 40,000 Mora
+- 40,000 {[Mora]page::Currencies/Mora}
 - 2 Basalt Pillar
 - 3 Prithiva Topaz Fragment
 - 10 Cecilia
@@ -41,7 +41,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: 7.2%
 
 #### Ascension phase 2 -> 3
-- 60,000 Mora
+- 60,000 {[Mora]page::Currencies/Mora}
 - 4 Basalt Pillar
 - 6 Prithiva Topaz Fragment
 - 20 Cecilia
@@ -55,7 +55,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: 14.4%
 
 #### Ascension phase 3 -> 4
-- 80,000 Mora
+- 80,000 {[Mora]page::Currencies/Mora}
 - 8 Basalt Pillar
 - 3 Prithvia Topaz Chunk
 - 30 Cecilia
@@ -69,7 +69,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: 14.4%
 
 #### Ascension phase 4 -> 5
-- 100,000 Mora
+- 100,000 {[Mora]page::Currencies/Mora}
 - 12 Basalt Pillar
 - 6 Prithvia Topaz Chunk
 - 45 Cecilia
@@ -83,7 +83,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: 21.6%
 
 #### Ascnsion phase 5 -> 6
-- 120,000 Mora
+- 120,000 {[Mora]page::Currencies/Mora}
 - 20 Basalt Pillar
 - 6 Prithvia Topaz Gemstone
 - 50 Cecilia
@@ -97,7 +97,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Geo Damage Bonus: 28.8%
 
 #### Full cost
-- 420,000 Mora
+- 420,000 {[Mora]page::Currencies/Mora}
 - 46 Basalt Pillar
 - 1 Prithiva Topaz Sliver
 - 9 Prithiva Topaz Frag­ment
