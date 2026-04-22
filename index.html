@@ -2,184 +2,340 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Toolkit Fixed</title>
+<title>Unoficial Genshin Impact Wiki</title>
 
-<script src="https://unpkg.com/lamejs@1.2.0/lame.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
-body {
-  margin:0;
-  font-family:sans-serif;
-  height:100vh;
+body { margin:0; font-family: Arial; background:#0b0f1a; color:white; }
+#layout { display:flex; height:100vh; }
+
+#sidebar {
+  width:300px;
+  background:#111827;
+  padding:10px;
+  overflow-y:auto;
+}
+
+input {
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  background:#0f172a;
+  color:white;
+  border:1px solid #333;
+  border-radius:6px;
+}
+
+.item {
   display:flex;
   align-items:center;
-  justify-content:center;
-  background:linear-gradient(-45deg,#0f172a,#1e293b,#312e81,#0f766e);
-  background-size:400% 400%;
-  animation:bg 12s ease infinite;
-  color:white;
-}
-
-@keyframes bg {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-.card {
-  width:360px;
-  background:rgba(255,255,255,0.08);
-  padding:30px;
-  border-radius:18px;
-  text-align:center;
-  backdrop-filter:blur(14px);
-}
-
-.file-btn {
-  display:block;
-  padding:14px;
-  border-radius:14px;
-  background:rgba(255,255,255,0.08);
+  gap:8px;
+  padding:6px;
   cursor:pointer;
-  margin-bottom:15px;
-}
-.file-btn input { display:none; }
-
-button {
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:12px;
-  background:linear-gradient(135deg,#22c55e,#06b6d4);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
+  border-radius:6px;
 }
 
-#status { margin-top:12px; }
+.item:hover { background:#1f2937; }
+
+.folder { font-weight:bold; }
+
+img.icon {
+  width:18px;
+  height:18px;
+  border-radius:4px;
+}
+
+#content {
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+}
+
+img { max-width:100%; border-radius:10px; }
+audio { width:100%; }
+
+a { color:#60a5fa; cursor:pointer; }
+
+ul { padding-left:20px; }
+li { margin:4px 0; cursor:pointer; }
+li:hover { text-decoration:underline; }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h2>🎧 OGG → MP3</h2>
+<div id="layout">
+  <div id="sidebar">
+    <input id="search" placeholder="Search..." oninput="renderTree()" />
+    <div id="tree"></div>
+  </div>
 
-  <label class="file-btn">
-    <span id="label">🎵 Choose file</span>
-    <input type="file" id="file" accept=".ogg,audio/ogg">
-  </label>
-
-  <button onclick="convert()">Convert</button>
-
-  <p id="status">Waiting...</p>
+  <div id="content">
+    <h2 id="title">Wiki</h2>
+    <div id="page">Select a page</div>
+  </div>
 </div>
 
 <script>
-/* =========================
-   🔥 SINGLE SOURCE OF TRUTH
-========================= */
-let selectedFile = null;
 
-const fileInput = document.getElementById("file");
-const label = document.getElementById("label");
-const status = document.getElementById("status");
+const BASE_URL = "https://coolpython53.github.io/GENSHIN-WIKI/";
+const FALLBACK_ICON = BASE_URL + "blueprint.jpg";
+const ICON_EXTENSIONS = ["jpg","png","jpeg"];
 
-/* =========================
-   📂 FILE SELECT FIX
-========================= */
-fileInput.addEventListener("change", (e) => {
-    selectedFile = e.target.files?.[0] || null;
+let pages = [];
+let imageStore = [];
+let expandedFolders = new Set();
 
-    if (!selectedFile) return;
+/* ---------------- LOAD PAGES ---------------- */
 
-    label.innerText = "🎵 " + selectedFile.name;
-    status.innerText = "File loaded ✔";
-});
-
-/* =========================
-   📦 DRAG & DROP SUPPORT
-========================= */
-document.addEventListener("dragover", e => e.preventDefault());
-
-document.addEventListener("drop", e => {
-    e.preventDefault();
-
-    const file = e.dataTransfer.files?.[0];
-    if (!file) return;
-
-    selectedFile = file;
-    fileInput.files = e.dataTransfer.files;
-
-    label.innerText = "🎵 " + file.name;
-    status.innerText = "File loaded ✔";
-});
-
-/* =========================
-   🎧 CONVERT FUNCTION (FIXED)
-========================= */
-async function convert() {
-
-    if (!selectedFile) {
-        alert("Upload a file first!");
-        return;
-    }
-
-    try {
-        status.innerText = "Decoding...";
-
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const buffer = await ctx.decodeAudioData(await selectedFile.arrayBuffer());
-
-        const encoder = new lamejs.Mp3Encoder(
-            buffer.numberOfChannels,
-            buffer.sampleRate,
-            128
-        );
-
-        const left = buffer.getChannelData(0);
-        const right = buffer.numberOfChannels > 1
-            ? buffer.getChannelData(1)
-            : left;
-
-        let mp3Data = [];
-        const block = 1152;
-
-        for (let i = 0; i < left.length; i += block) {
-
-            const l = left.subarray(i, i + block);
-            const r = right.subarray(i, i + block);
-
-            const l16 = Int16Array.from(l, v => v * 32767);
-            const r16 = Int16Array.from(r, v => v * 32767);
-
-            const chunk = buffer.numberOfChannels > 1
-                ? encoder.encodeBuffer(l16, r16)
-                : encoder.encodeBuffer(l16);
-
-            if (chunk.length) mp3Data.push(chunk);
-        }
-
-        const end = encoder.flush();
-        if (end.length) mp3Data.push(end);
-
-        const blob = new Blob(mp3Data, { type: "audio/mp3" });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = selectedFile.name.replace(/\.ogg$/i, ".mp3");
-        a.click();
-
-        URL.revokeObjectURL(url);
-
-        status.innerText = "Done 🎉";
-
-    } catch (e) {
-        console.error(e);
-        status.innerText = "Error: " + e.message;
-    }
+async function loadPages(){
+  try {
+    const res = await fetch(BASE_URL + "manifest.json?t=" + Date.now());
+    pages = await res.json();
+  } catch {
+    pages = [];
+  }
+  renderTree();
 }
+
+/* ---------------- TREE ---------------- */
+
+function buildTree(paths){
+  const root = {};
+  paths.forEach(path=>{
+    const parts = path.split("/");
+    let cur = root;
+
+    parts.forEach((p,i)=>{
+      if(!cur[p]) {
+        cur[p] = {
+          __children:{},
+          __path: parts.slice(0,i+1).join("/")
+        };
+      }
+      cur = cur[p].__children;
+    });
+  });
+  return root;
+}
+
+function renderTree(){
+  const q = search.value.toLowerCase();
+  tree.innerHTML = "";
+
+  const filtered = pages.filter(p => p.toLowerCase().includes(q));
+  const treeData = buildTree(filtered);
+
+  renderNode(treeData, tree, 0);
+}
+
+/* ---------------- ICONS ---------------- */
+
+async function getIcon(path){
+  for(const ext of ICON_EXTENSIONS){
+    const url = `${BASE_URL}pages/${path}/blueprint.${ext}`;
+    try {
+      const res = await fetch(url, {method:'HEAD'});
+      if(res.ok) return url;
+    } catch {}
+  }
+  return FALLBACK_ICON;
+}
+
+/* ---------------- EXPANDABLE TREE ---------------- */
+
+async function renderNode(node, container, depth = 0) {
+  for (const key of Object.keys(node)) {
+    const item = node[key];
+    const fullPath = item.__path;
+    const children = item.__children;
+    const hasChildren = Object.keys(children).length > 0;
+    const isOpen = expandedFolders.has(fullPath);
+
+    const wrapper = document.createElement("div");
+
+    const div = document.createElement("div");
+    div.className = "item";
+    div.style.marginLeft = depth * 16 + "px";
+
+    const icon = await getIcon(fullPath);
+
+    div.innerHTML = `
+      <img class="icon" src="${icon}" onerror="this.src='${FALLBACK_ICON}'">
+      <span class="${hasChildren ? 'folder' : ''}">
+        ${key.replace(/_/g,' ')}
+      </span>
+    `;
+
+    div.onclick = async (e) => {
+      e.stopPropagation();
+
+      if (hasChildren) {
+        if (expandedFolders.has(fullPath)) {
+          expandedFolders.delete(fullPath);
+        } else {
+          expandedFolders.add(fullPath);
+          loadFolder(fullPath);
+        }
+        renderTree();
+      } else {
+        loadPage(fullPath);
+      }
+    };
+
+    wrapper.appendChild(div);
+
+    if (hasChildren && isOpen) {
+      const childContainer = document.createElement("div");
+      await renderNode(children, childContainer, depth + 1);
+      wrapper.appendChild(childContainer);
+    }
+
+    container.appendChild(wrapper);
+  }
+}
+
+/* ---------------- PAGE ---------------- */
+
+async function loadPage(fullPath){
+  title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
+  page.innerHTML = "Loading...";
+
+  const url = `${BASE_URL}pages/${fullPath}/page.md`;
+
+  try{
+    const res = await fetch(url);
+    if(!res.ok) return page.innerHTML = "📁 Folder";
+
+    let text = await res.text();
+
+    text = convertAssets(fullPath, text);
+    text = convertPageLinks(text);
+
+    page.innerHTML = marked.parse(text);
+    restoreImages();
+
+  } catch {
+    page.innerHTML = "📁 Folder";
+  }
+}
+
+/* ---------------- FOLDER ---------------- */
+
+async function loadFolder(fullPath){
+  const url = `${BASE_URL}pages/${fullPath}/folder.md`;
+
+  try{
+    const res = await fetch(url);
+    if(res.ok){
+      let text = await res.text();
+
+      text = convertAssets(fullPath,text);
+      text = convertPageLinks(text);
+
+      title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
+      page.innerHTML = marked.parse(text);
+    }
+  } catch {}
+}
+
+/* ---------------- IMAGE SYSTEM ---------------- */
+
+function convertAssets(fullPath, text){
+
+  imageStore = [];
+
+  text = text.replace(/image::([^\n]+)/g,(m,raw)=>{
+
+    let token = raw.trim();
+
+    const pct = token.match(/::::(\d+)%?$/);
+    if(pct){
+      const url = resolvePath(fullPath, clean(token.replace(/::::\d+%?$/,"")));
+      imageStore.push(`<img src="${url}" style="width:${pct[1]}%;height:auto;">`);
+      return `@@IMG${imageStore.length-1}@@`;
+    }
+
+    const px = token.match(/:::([\d]+)(?:,([\d]+))?$/);
+    if(px){
+      const url = resolvePath(fullPath, clean(token.replace(/:::[\d]+(,[\d]+)?$/,"")));
+
+      let style = "";
+      if(px[1]) style += `width:${px[1]}px;`;
+      if(px[2]) style += `height:${px[2]}px;`;
+
+      imageStore.push(`<img src="${url}" style="${style}">`);
+      return `@@IMG${imageStore.length-1}@@`;
+    }
+
+    const url = resolvePath(fullPath, clean(token));
+    imageStore.push(`<img src="${url}">`);
+    return `@@IMG${imageStore.length-1}@@`;
+  });
+
+  text = text.replace(/mp3::(.*)/g,(m,src)=>{
+    const url = resolvePath(fullPath,clean(src));
+    return url ? `<audio controls><source src="${url}" type="audio/mpeg"></audio>` : "";
+  });
+
+  return text;
+}
+
+function restoreImages(){
+  const el = document.getElementById("page");
+  imageStore.forEach((img,i)=>{
+    el.innerHTML = el.innerHTML.replaceAll(`@@IMG${i}@@`, img);
+  });
+}
+
+/* ---------------- LINKS ---------------- */
+
+function convertPageLinks(text){
+  return text.replace(/\{\[([^\]]+)\]page::([^\}]+)\}/g,(m,t,p)=>{
+    return `<a href="#" onclick="openWikiPath('${p}')">${t.replace(/_/g,' ')}</a>`;
+  });
+}
+
+function openWikiPath(rawPath){
+  let path = rawPath
+    .replace(/^GENSHIN-WIKI\/pages\//, "")
+    .replace(/^pages\//, "");
+
+  const isFolder = path.includes("folder.md");
+  const isPage = path.includes("page.md");
+
+  path = path
+    .replace(/\/folder\.md$/, "")
+    .replace(/\/page\.md$/, "")
+    .replace(/\/$/, "");
+
+  if(isFolder) return loadFolder(path);
+  if(isPage) return loadPage(path);
+
+  loadPage(path);
+}
+
+/* ---------------- UTIL ---------------- */
+
+function clean(str){ return str.replace(/\r/g,"").trim(); }
+
+function resolvePath(base,file){
+  if(file.startsWith("http")) return file;
+
+  const stack = base.split("/");
+  file.split("/").forEach(p=>{
+    if(p==="..") stack.pop();
+    else if(p!==".") stack.push(p);
+  });
+
+  return `https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/${stack.join("/")}`;
+}
+
+/* ---------------- START ---------------- */
+
+loadPages();
+
 </script>
 
 </body>
