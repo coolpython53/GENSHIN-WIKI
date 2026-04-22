@@ -68,6 +68,7 @@ If Mora is chosen as part of the BP Reward Plan, a total of 540,000 Mora can be 
     - "A Message in Time" Web Event Rewards ×100,000 from P・A・I・M・O・N on October 07, 2021
     - Blessing of the Welkin Moon Expiration Reminder ×1,000 from P・A・I・M・O・N
 
+## Trivia
 - The triangular symbol in the Mora coins is a triquetra.
 - The currency is named after the Geo Archon, Morax. However, in Liyue, he is called Rex Lapis by locals, and it is considered impolite for outsiders to refer to him as Morax. This is likely a matter of politeness, as Morax is the Geo Archon's name while Rex Lapis is more of a title.
 - Mora coins are identical on both sides, meaning that they cannot be used for coin flipping without marking one side to distinguish it from the other. Despite this hurdle, coin flipping is still a recognized way to settle disputes in Teyvat, and the two sides of the coin are still referred to as "heads" and "tails" despite neither side having a head.
