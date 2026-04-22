@@ -16,7 +16,7 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - Elemental mastery: -
 
 #### Ascension Cost 0 -> 1
-- 20,000 Mora
+- 20,000 {[Mora]page::Currencies/Mora}
 - 1 Va­ru­na­da La­zu­rite Sli­ver
 - 3 Portable Bearing
 - 3 Broken Drive Shaft
@@ -29,7 +29,7 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - Elemental mastery: -
 
 #### Ascension Cost 1 -> 2
-- 40,000 Mora
+- 40,000 {[Mora]page::Currencies/Mora}
 - 2 Precision Kuuvahki Stamping Die
 - 3 Varunada Lazurite Fragment
 - 10 Portable Bearing
@@ -43,7 +43,7 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - Elemental mastery: 24
 
 #### Ascension Cost 2 -> 3
-- 60,000 Mora
+- 60,000 {[Mora]page::Currencies/Mora}
 - 4 Precision Kuuvahki Stamping Die
 - 6 Varunada Lazurite Fragment
 - 20 Portable Bearing
