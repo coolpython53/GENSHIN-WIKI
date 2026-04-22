@@ -15,15 +15,30 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - Base Defense: 50.93
 - Elemental mastery: -
 
- #### Ascension Cost 0 -> 1
- - 20,000 Mora
- - 1 Va­ru­na­da La­zu­rite Sli­ver
- - 3 Portable Bearing
- - 3 Broken Drive Shaft
+#### Ascension Cost 0 -> 1
+- 20,000 Mora
+- 1 Va­ru­na­da La­zu­rite Sli­ver
+- 3 Portable Bearing
+- 3 Broken Drive Shaft
 
- #### Ascension phase 1
- - Max level: 40
- - Base HP: 4,664.78
- - Base Attack: 100.84
- - Base Defense: 252.97
- - Elemental mastery: -
+#### Ascension phase 1
+- Max level: 40
+- Base HP: 4,664.78
+- Base Attack: 100.84
+- Base Defense: 252.97
+- Elemental mastery: -
+
+#### Ascension Cost 1 -> 2
+- 40,000 Mora
+- 2 Precision Kuuvahki Stamping Die
+- 3 Varunada Lazurite Fragment
+- 10 Portable Bearing
+- 13 Broken Drive Shaft
+
+#### Ascension phase 2
+- Max Level: 50
+- Base HP: 5,939.01
+- Base Attack: 128.38
+- Base Defense: 322.08
+- Elemental mastery: 24
+
