@@ -545,6 +545,12 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Albedo: Socializing
 Relationships are... quite troublesome. Once you establish a relation with someone, you must continue to maintain it; if you lose contact, you must reestablish the relation. This taxing cycle requires a lot of time...
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Albedo%20-%20Socializing.mp3
+
+#### About Us: Experiments
+You... want to accompany me while I experiment? I'm honored.
+Oh, don't be nervous. My experiments may be dangerous, but no one gets hurt... most of the time.
+
 mp3::
 ### Images
 put images here...
