@@ -15,3 +15,10 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may b
 - Base Defense: 50.93
 - Elemental mastery: -
 
+ #### Ascension Cost 0 -> 1
+ - 20,000 Mora
+ - 1 Va­ru­na­da La­zu­rite Sli­ver
+ - 3 Portable Bearing
+ - 3 Broken Drive Shaft
+
+ 
