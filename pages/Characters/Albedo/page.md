@@ -540,6 +540,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Albedo: Genius
 Genius? ...A number of people call me that. But I don't think I'm any "genius."
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/About%20Albedo%20-%20Genius.mp3
+
+
 ### Images
 put images here...
