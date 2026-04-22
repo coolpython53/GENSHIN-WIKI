@@ -7,3 +7,11 @@ She is a child prodigy and the founder of the Clink-Clank Krumkake Craftshop who
 
 After reaching Friendship Level 6 with Aino, a Krumkake Bolt Krumkake Bolt may be obtained through the character menu.
 
+### ascension
+#### Ascension Phase 0
+- Max level: 20
+- Base HP: 939.14
+- Base Attack: 20.30
+- Base Defense: 50.93
+- Elemental mastery: -
+
