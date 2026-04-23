@@ -7,8 +7,6 @@ Amakumo Fruits are a Local Specialty of Inazuma found in the wild on Seirai Isla
 ## How to Obtain
 Amakumo Fruits grow in pairs on a single stem. They are found in the wild exclusively on Seirai Island, mostly around their namesake Amakumo Peak.
 
-See the gallery or the Teyvat Interactive Map for specific locations.
-
 ## Shops
 No shops sell Amakumo Fruits.
 
