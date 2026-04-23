@@ -1,5 +1,5 @@
 # Alhaitham
-
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Alhaitham.jpg::::25
 
 Alhaitham is a playable Dendro character in Genshin Impact.
 
