@@ -141,3 +141,97 @@ Katya wrapped her tiny, injured hands in clean old cloth, and only then did the 
 From that day on, little Aino stayed at the Speranza and became a member of the Conch Gang.
 
 #### Character Story 2
+
+The members of the Conch Gang are all young children. The kind-hearted Katya provides them with shelter and jobs as shop assistants, while giving these children plenty of freedom during their breaks.
+
+At the age when they were most energetic and adventurous, the other children roamed the tundra forests in packs like Chic Badger cubs, but little Aino was the only one who preferred to be alone.
+
+This wasn't due to a lack of childlike curiosity. On the contrary, her curiosity was so vast that only an entire world could contain it — a world made with precise, logical lines, craftsmanship, mechanisms, and curios. Any metal component was enough to make Aino stop in her tracks, and the noise of clinking and clanking from the "Rossum Workshop" workshop was the song she came to be most familiar with.
+
+This is how she met her lifelong best friend — Lyulka, the daughter of the owner of the "Nuts and Bolts." When Lyulka discovered that this girl, who visited their shop almost daily, had the same sparkle in her eyes as herself, she excitedly took her by the hand, suddenly eager to share her mechanical contraptions and half-finished prototypes.
+
+One day, after they became close, Aino suddenly pointed at a machine in the store, and said, "Adjusting this part a little should increase the kuuvahki consumption efficiency by 2.8%. I've been running simulations in my head for a while, and I think it's got a good chance of working... So, wanna try?"
+
+Lyulka was stunned. That was exactly the bottleneck she'd been struggling with for days. Although she felt slightly hesitant that an untrained child had pointed out the issue so easily, she still nodded in agreement.
+
+When the modification was complete, the test data was precise, showing an improvement of exactly 2.8%. As she stared at the truth laid out by the data, Lyulka's skepticism dissolved into amazement.
+
+"Aino's never studied a day of mechanical theory in her life, and yet she identified and resolved a critical issue. Now, if she DOES study, she might be able to work miracles..."
+
+#### Character Story 3
+
+An opportunity for Aino to study soon arrived. A Snezhnayan mechanic known as "Papa Wrench" happened to visit Nasha Town, and while dining at the Speranza, he was drawn to the group of child workers. Papa Wrench, being a man full of compassion, decided to stay for a while to regale the children with Snezhnayan fairy tales.
+
+But he quickly and keenly noticed that one of the children was not quite like the others — while they were immersed in his stories, Aino's gaze was firmly fixed on the tools he carried.
+
+This discovery filled Papa Wrench's heart with joy, and with Katya's approval, he set up a small class during the restaurant's downtime to teach mechanical know-how to children who were interested.
+
+When Lyulka heard of this class, she excitedly joined the children. However, after just a few days, Lyulka realized that the things Aino asked Papa Wrench were starting to become as incomprehensible as some arcane tome.
+
+Before, Aino had been like a tranquil stream, silently meandering forward... But now it seemed that she had finally found a vast, boundless ocean to call her own.
+
+Utterly in her element, a mysterious change overcame Aino, as though some fae of legend had touched her with a blessed hand, bestowing upon her secret gifts. Aino's fingers danced between various parts, an intricate machine seemingly flying into being at her expert touch. It was hard to imagine her dexterous digits had ever been blistered with frostbite.
+
+And as her hands grew more lively, so too did the conversations she made. Aino began to speak more and more, her little head seemingly filled with endless novel ideas waiting to be shared with the world. Most adults who heard her would find the child peculiar and dismiss her ideas with a gentle smile, but Papa Wrench believed that she might one day truly turn all of her imaginative concepts into reality.
+
+And when Papa Wrench's knowledge collided with Aino's wild ideas, the result was an explosion of ingenuity that brightened the lives of those around them...
+
+The Conch Gang's broken alarm clocks were fixed, but suddenly grew wings and would fly around their rooms in the mornings, ringing all the while. Only catching them would put an end to the cacophony, and from then on, there were no more sleepyheads among the children.
+
+The broken trash can in the back kitchen was also patched up with tin plates. When fed with garbage, it would chew up everything contentedly, then let loose a playful burp of satisfaction. At first, everyone suspected it was a prank, but after discovering that the sounds were actually coming from the trash can itself, taking out the garbage became the children's most popular chore.
+
+#### Character Story 4
+
+However, those happy and joyful days didn't last long, as farewell arrived at the door sooner than expected.
+
+The mission-bound Papa Wrench received an order from his merchant convoy to depart. Reluctant to leave, he placed a screw in Aino's palm and told the girl two important things: To never underestimate her talents, nor to ever put down her tools. This wasn't Aino's first farewell. The cold wind seemed to leave her throat sandpaper-dry, and besides a cursory "thank you," "goodbye," and "take care," Aino didn't know what else she could say. In this turbulent land, every farewell could very well be their last. This unspoken rule was understood — and keenly felt — all over Nod-Krai.
+
+After bidding farewell to her teacher, Aino sat alone behind closed doors, repeatedly running her fingertips over the grooves of the screw. After her tears had dried, she threaded the screw into her hair. From then on, this screw served both as an iron hairpin and a guiding light, keeping up the bangs that had once obscured her vision. Now, the path before her was clearer than ever.
+
+After this farewell, the wheel of fate began to spin once more.
+
+The members of the Conch Gang had always come and gone freely. After bidding farewell to several familiar friends in the howling cold winds, Aino bade farewell to the Gang as well. Lyulka had reached out to her, asking if she would like to move in with her, and perhaps even set up a workshop together. After much deliberation, Aino shook her head. While conducting stable research with a friend would be nice, she wanted to journey farther, see more, and create fascinating machines that none had ever made before.
+
+Aino had heard from some adventure-loving children that if one were to leave Nasha Town and head west, there was a place piled high with abandoned metal scrap — perfect for young explorers to use as a secret base. However, the mead-drunk, grizzled adventurers of the town saw it differently. They claimed it was a mechanical boneyard that had fallen into ruin during Nod-Krai's golden years, its name long eroded by the river of time.
+
+"Discarded metal scrap, a mechanical boneyard... Well, time for me to breathe some new life into it...!"
+
+Though she had never been there, Aino was filled with longing for that storied location. Perhaps the answers she sought amidst an ocean of imagination might be found scrawled on cold, distant shores of iron.
+
+#### Character Story 5
+
+At dawn, Aino clutched a small robot in her arms. Followed by an automated toolbox with wheels, and guided by members of the Conch Gang, she arrived at a massive structure on the outskirts of town. This weather-beaten mechanical beast lay sprawled along the silent ridges, waiting for its master to awaken.
+
+"This is the place! From now on, I'm calling it the Clink-Clank Krumkake Craftshop. Here, I'll invent a machine that can make the most delicious krumkakes!" With one hand on her hip, Aino made her declaration. The giant's rusty mechanical arms swayed in the breeze, as if in greeting.
+
+The smoke from Speranza drifted away, the laughter of the Conch Gang faded, and the large, long-silent workshop found itself a tiny, noisy new master.
+
+And so time slipped away amidst countless clinks and clanks.
+
+The next time Katya saw Aino, she was holding hands with a robot girl named Ineffa and had come to buy some sweets from the restaurant. Just like any good parent, Aino carefully taught her "child" how to make purchases... even though said "child" was several heads taller than her "parent."
+
+"Be good and hold my hand, Ineffa! It would be really bad if you ran off and got lost."
+
+"Now let's learn about shopping! First, come here, say hello to Aunty Katya, then ask for two Midsommar Tortes. Remember to pay with the Mora I gave you this morning! Once you're done, say bye-bye to Aunty Katya."
+
+"Executing Midsommar Torte purchase command... Hello, Aunty Katya. I would like to buy two Midsommar Tortes. Here is the Mora. Thank you, Aunty Katya. Bye-bye, Aunty Katya."
+
+Listening to the robot girl fluently repeating Aino's words, Katya realized how much the little girl had changed.
+
+Her once gaunt cheeks had filled out into a healthy roundness, and she walked with an exuberant spring in her step, fitting for a child her age. Her eyes no longer stayed glued to the ground, but instead sparkled brightly — like an ingot of gold tempered by flame, radiating a brilliance that belonged only to her.
+
+"Hehe, you're such a good girl, Ineffa! Oh, wait, I almost forgot. Aunty Katya, could you take the change and gimme some sugar for it? I'm gonna have Ineffa make me some of the BEST krumkakes in the whole world!"
+
+But despite all the change, Aino's sweet tooth had stayed constant. Katya couldn't help but smile as she placed several packets of sugar into the robot girl's hands — far more than what would have been commensurate with the Mora.
+
+"Calculating price difference... The amount of Mora paid is insufficient. I must compensate..." Before the robot girl could finish, Aino interrupted her.
+
+"That there is Aunty Katya's love! Just take it, Ineffa. She'll be sad if we try to pay for it. So thanks, Aunty Katya!"
+
+"Love?"
+
+"Yeah! It's something you can't measure with Mora — it's the care we have for each other, just like how I take care of you, and you take care of me!"
+
+...
+
+The fate of Nod-Krai might one day truly be changed by this little pink-haired girl... Or perhaps, that change had already begun from the very first moment she picked up a wrench.
