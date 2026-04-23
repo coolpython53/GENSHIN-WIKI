@@ -96,7 +96,7 @@ A synthetic human made by the alchemist Rhinedottir, the mysterious Albedo is th
 - Base Defense: 876.15
 - Geo Damage Bonus: 28.8%
 
-#### Full cost
+#### Full Cost
 - 420,000 {[Mora]page::Currencies/Mora}
 - 46 Basalt Pillar
 - 1 Prithiva Topaz Sliver
