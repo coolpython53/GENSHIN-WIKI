@@ -10,4 +10,15 @@ Beryl Conch is found all over Fontaine.
 ## Shops
 There are 2 shops that sell Beryl Conch:
 
-- Hinterman (Cost: 1,000 {[Mora]page::Currencies/Mora})
+- Hinterman (Cost: 1,000 {[Mora]page::Currencies/Mora}) 5 in stock
+  - Refreshes every 3 days
+- Xana (Cost: Strange Part ×1) 1 in stock
+
+## Crafting
+There is 1 recipe that uses Beryl Conch:
+- Hydro Treasure Compass
+  - Materials:
+    - Golden Raven Insignia ×10
+    - Beryl Conch ×30
+    - Crystal Chunk ×50
+    - {[Mora]page::Currencies/Mora} ×50,000
