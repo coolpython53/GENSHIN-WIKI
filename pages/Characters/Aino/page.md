@@ -62,3 +62,26 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt may be obtained thr
 - 3 Varunada Lazurite Fragment
 - 30 Portable Bearing
 - 18 Reinforced Drive Shaft
+
+#### Ascension Phase 4
+- Max Level: 70
+- Base HP: 8,652.70	
+- Base Attack: 187.04
+- Base Defense: 469.24
+- Elemental mastery: 48
+
+#### Ascension Cost 4 -> 5
+- 100,000 {[Mora]page::Currencies/Mora}
+- 12 Precision Kuuvahki Stamping Die
+- 6 Varunada Lazurite Fragment
+- 45 Portable Bearings
+- 12 Presicion Drive Shaft
+
+#### Ascension Phase 5
+- Max Level: 80
+- Base HP: 	9,926.93	
+- Base Attack: 214.59
+- Base Defense: 538.34
+- Elemental mastery: 72
+
+#### Ascension Cost 5 -> 6
