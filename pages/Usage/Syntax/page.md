@@ -21,3 +21,25 @@ For page linking, use the syntax {[YOUR_TEXT_HERE]page:\:LINK_PAGE_HERE}
 During page linking, ensure that if you are linking to a page, you include page.md (For this page it would be Usage/Syntax/page.md)
 ###### Example:
 {[This will link to the Usage folder.]page::Usage/folder.md}
+
+##### Simple Markdown
+
+The syntax # is used to do headings.
+
+\# is used to make a title heading (heading 1)
+# Hello
+\## is used to make a subtitle (heading 2)
+## Bye
+\### is used to make a heading 3
+### Kaboom!
+And so on...
+
+\- is a bullet point
+- Hello
+
+\  - (2 spaces and a dash) is a sub bullet point
+- Hola
+  - hello
+    - ni hao
+
+and so on
