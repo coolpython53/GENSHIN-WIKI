@@ -86,7 +86,7 @@ textarea, input {
   color: black;
 }
 
-#status { margin-top:10px; }
+#status, #imgStatus { margin-top:10px; }
 </style>
 </head>
 
@@ -96,6 +96,7 @@ textarea, input {
 
 <div class="tabs">
   <button class="active" onclick="switchTab('audio', this)">Audio</button>
+  <button onclick="switchTab('image', this)">Image</button>
   <button onclick="switchTab('github', this)">GitHub</button>
   <button onclick="switchTab('cleaner', this)">Cleaner</button>
 </div>
@@ -111,6 +112,20 @@ textarea, input {
 <button class="main" onclick="convert()">Convert to MP3</button>
 
 <p id="status">Waiting…</p>
+
+</div>
+
+<!-- IMAGE -->
+<div id="image" class="panel">
+
+<label class="file-btn">
+  <span id="imgLabel">🖼️ Choose WEBP</span>
+  <input type="file" id="imgFile" accept="image/webp">
+</label>
+
+<button class="main" onclick="convertImage()">Convert to JPG</button>
+
+<p id="imgStatus">Waiting…</p>
 
 </div>
 
@@ -149,10 +164,15 @@ function switchTab(tab, el){
   el.classList.add("active");
 }
 
-/* -------- FILE LABEL -------- */
+/* -------- FILE LABELS -------- */
 document.getElementById("file").onchange = e=>{
   const f = e.target.files[0];
   if (f) document.getElementById("fileLabel").innerText = "🎵 " + f.name;
+};
+
+document.getElementById("imgFile").onchange = e=>{
+  const f = e.target.files[0];
+  if (f) document.getElementById("imgLabel").innerText = "🖼️ " + f.name;
 };
 
 /* -------- AUDIO CONVERT -------- */
@@ -208,6 +228,49 @@ async function convert(){
   catch(e){
     console.error(e);
     status.innerText = "Error: "+e.message;
+  }
+}
+
+/* -------- IMAGE CONVERT -------- */
+async function convertImage(){
+  const file = document.getElementById("imgFile").files[0];
+  if (!file) return alert("pick image");
+
+  const status = document.getElementById("imgStatus");
+
+  try{
+    status.innerText = "Loading image...";
+
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+
+    img.onload = ()=>{
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+
+      status.innerText = "Converting...";
+
+      canvas.toBlob(blob=>{
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = file.name.replace(/\.webp$/i,".jpg");
+        a.click();
+
+        status.innerText = "Done!";
+      }, "image/jpeg", 0.95);
+    };
+
+    img.onerror = ()=> status.innerText = "Failed to load image";
+
+    img.src = url;
+  }
+  catch(e){
+    console.error(e);
+    status.innerText = "Error: " + e.message;
   }
 }
 
