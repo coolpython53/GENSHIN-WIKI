@@ -4,7 +4,7 @@ Materials are items in Genshin Impact that can be collected and used. It is the 
 ## Local Specialties
 Local Specialty materials can only be obtained in certain regions. They can be used for various things like character ascensions, weapon ascension, cooking, and alchemy. There is a category for each region's local specialties.
 
-- {[Amakumo_Fruit]page::Items/Local_Specialties/Amakumo_Fruit}
+- {[Amakumo_Fruit]page::Items/Materials/Local_Specialties/Amakumo_Fruit}
 
 ## Fishing Materials
 Materials used or acquired through Fishing.
