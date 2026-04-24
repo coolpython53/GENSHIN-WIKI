@@ -265,7 +265,7 @@ Meaning: Flying Vulture
     - Where the Boat of Consciousness Lies (cutscene)
     - A Toast to Victory
 
-    #### Story Quests
+ #### Story Quests
 
 - Lupus Aureus Chapter (Cyno)
   - Act II: Oathkeeper
@@ -277,4 +277,57 @@ Meaning: Flying Vulture
     - A Thorough Investigation
     - Pride and Prejudice
 
-    
+#### Hangout Events
+
+- Kaveh
+  - Act I: The Pendulum of Weal and Woe
+    - The First Ideal
+    - Wondrous Times
+
+#### Events
+
+- A Parade of Providence
+  - Act I: Comings and Goings
+    - Opening Festivities
+  - Act II: Beginnings and Endings
+    - Competition on the Sands
+  - Act III: Gatherings and Partings
+      - To Claim the Crown
+      - The Arc of Intellect
+    - When the Curtains Close
+  - Summertide Scales and Tales
+    - An Odd Textual Mystery
+  - Chromatic Ode of Candies and Roses
+    - Give Her Sweetness
+    - Give Her Memories
+  - Ruins Exploration: Fieldwise Center
+    - Ruins Exploration
+      - Act I: Return From the Mysterious Realm
+      - Act II: Headlong Into the Sands
+
+#### Web Events
+
+- The Six Faces of Wisdom
+- Discover Teyvat
+- Starlit Letter
+
+#### Personality
+
+Alhaitham is a scholar who is fueled by a desire to understand the underlying principles of the world around him. He greatly values the pursuit of knowledge and dislikes meaningless noise and matters that distract or divert him from his chosen pursuits. To this end, while he is unambitious and enjoys leisure, he will do what he deems necessary to maintain a comfortable life. As a result, he is not fond of being a leader, refusing the position of Grand Sage and when thrust upon the position of Acting Grand Sage, expresses an intent to resign as soon as possible.
+
+ Alhaitham focuses greatly on himself at all times. However, he does not do so out of a disregard for others; instead, it is a result of his rationality. For example, he believes that as it is impossible to save everyone, it is important to focus on one's own well-being first. As a result, he frequently squabbles with Kaveh due to their contrasting ideals and personalities. Contrary to what his peers think, Alhaitham does not look down upon anyone and tends to give equal weight to everyone, be they human or god. He also places great importance in the value of humanity and has astute insight into human nature. While he does not keep this a secret, he rarely bothers to correct others' unfavorable assumptions unless it would prove more troublesome to allow them to persist.
+
+ #### Appearence
+ Alhaitham uses the tall male model. He has pale skin, gray hair that turns lighter at the ends and with a few locks that have pale turquoise undersides, and light turquoise eyes with orange-ringed yellow pupils. He wears a pair of gold and green headphones, plugged into his custom music player.
+
+ #### Official Introduction
+ The current scribe of the Sumeru Akademiya. This title may sound very impressive, but it's really because the Akademiya has a culture of using official titles to inflate one's ego.
+
+The role of a scribe may seem prestigious, but the truth is, a scribe does not have to be present at all major meetings, nor does he participate in core decision-making. The scribe is simply responsible for classifying and archiving important documents, and his presence is not required at all times. It is for these exact reasons that in Sumeru, where books and manuscript documents were once managed as a resource, the scribe is one of the people in the entire Akademiya who is in the know about various matters. In fact, one can say that this position is rather similar to that of the Grand Conservator. After all, the person who manages the various texts is the one who has privileged access to profound wisdom. Alhaitham, the current scribe of the Sumeru Akademiya checks all the boxes above. Not many people know who he is, but he knows a lot of information that is unknown to everyone. He does not attend any non-essential meeting, and when he does, he only records key points, jotting down other minute details based on his mood. People don't often pay attention to him, let alone know how much detail this scribe can detect in a simple meeting.
+
+A capable person who keeps a low profile for too long is often perceived as someone with a mysterious identity and ulterior purposes. Alhaitham himself is a powerful rebuttal to all these cliché views: he is a brilliant man, but he is only an ordinary employee of the Akademiya, with a stable job and a cushy house in Sumeru, leading a carefree and comfortable life.
+
+#### Etymology
+- Alhaitham's name is likely derived from the Islamic Golden Age polymath Ḥasan Ibn al-Haytham, whose name is also Latinized as Alhazen. He is best known for his work in optics and for establishing a number of core concepts of the modern scientific method, in particular arguing the importance of experimentation and the use of control groups.
+  - In Cry From the Eleazar Hospital, Alhaitham is shown reading from Aristotle's Physics. The real al-Haytham wrote Treatise on Place (Risala fi'l-makan) critiquing this work.
+  - Much like how in Jnagarbha Day, Alhaitham feigned a bout of madness during his confrontation with Azar, legend dictates that the historical al-Haytham did the same to fool Cairene authorities.-
