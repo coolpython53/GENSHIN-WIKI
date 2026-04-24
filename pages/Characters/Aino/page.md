@@ -286,7 +286,7 @@ Description:
 When a "Cool Your Jets Ducky" is overheating, does Aino throw out another Ducky to cool its jets, or does she just say "Whoopsie Ducksie" and leave it at that?
 
 #### Constellation
-image::
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/page.md::::25
 
 Name: Cistellula Mira
 
