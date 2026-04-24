@@ -284,3 +284,10 @@ image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ch
 Reward for reaching Friendship Level 10 with Aino
 Description:
 When a "Cool Your Jets Ducky" is overheating, does Aino throw out another Ducky to cool its jets, or does she just say "Whoopsie Ducksie" and leave it at that?
+
+#### Constellation
+image::
+
+Name: Cistellula Mira
+
+Meaning: Miraculous Casket
