@@ -22,3 +22,4 @@ There is 1 recipe that uses Beryl Conch:
     - Beryl Conch ×30
     - Crystal Chunk ×50
     - {[Mora]page::Currencies/Mora} ×50,000
+    
