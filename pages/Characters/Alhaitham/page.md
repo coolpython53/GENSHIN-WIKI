@@ -14,7 +14,7 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - Dendro DMG Bonus: -
 
 #### Ascension Cost 0 -> 1
-- 20,000 Mora
+- 20,000 {[Mora]page::Currencies/Mora}
 - 1 Nagadus Emerald Silver
 - 3 Sand Grease Pupa
 - 3 Faded Red Satin 
@@ -27,7 +27,7 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - Dendro DMG Bonus: -
 
 #### Ascension Cost 1 -> 2
-- 40,000 Mora
+- 40,000 {[Mora]page::Currencies/Mora}
 - 2 Pseudo-Stamens
 - 3 Nagadus Emerald Fragment
 - 10 Sand Grease Pupa
