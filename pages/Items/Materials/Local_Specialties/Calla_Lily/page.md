@@ -24,3 +24,14 @@ There are 3 recipes that use Calla Lily:
   - Mint x2
 - Rainbow Aster
   - Milk x3
+  - Lavender Melon x2
+  - Calla Lily x2
+  - Mint x1
+
+## Ascension
+- Dahlia
+- Diona
+- Kaeya
+
+## Description
+A flower that grows near water sources. When cooked, the petals have a chunky texture, yet are sweet and a little bitter. Modern medicine recognizes Calla Lily's antidotal properties, but its astringent flavor is repulsive to many people.
