@@ -41,7 +41,7 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - Dendro DMG Bonus: 7.2%
 
 #### Ascension Cost 2 -> 3
-- 60,000 Mora 
+- 60,000 {[Mora]page::Currencies/Mora} 
 - 4 Pseudo-Stamens
 - 6 Nagadus Emerald Fragment
 - 20 Sand Grease Pupa
@@ -53,3 +53,57 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - Base ATK: 203.25
 - Base DEF: 507.04
 - Dendro DMG Bonus: 14.4%
+
+#### Ascension Cost 3 -> 4
+- 80,00 {[Mora]page::Currencies/Mora}
+- 8 Pseudo-Stamens
+- 3 Nagadus Emerald Chunk
+- 30 Sand Grease Pupa
+- 18 Trimmed Red Silk
+
+#### Ascension Phase 4
+- Max Level: 70
+- Base HP: 10,212.58
+- Base ATK: 239.72
+- Base DEF: 598.02
+- Dendro DMG Bonus: 14.4%
+
+#### Ascension Cost 4 -> 5
+- 100,000 {[Mora]page::Currencies/Mora}
+- 12 Pseudo-Stamens
+- 6 Nagadus Emerald Chunk
+- 45 Sand Grease Pupa
+- 12 Rich Red Brocade
+
+#### Ascension Phase 5
+- Max Level: 80
+- Base HP: 11,776.67	
+- Base ATK: 276.44	
+- Base DEF: 689.61
+- Dendro DMG Bonus: 21.6%
+
+#### Ascension Cost 5 -> 6
+- 120,000 {[Mora]page::Currencies/Mora}
+- 20 Pseudo-Stamens
+- 6 Nagadus Emerald Gemstone
+- 60 Sand Grease Pupa
+- 24 Rich Red Brocade
+
+#### Ascension Phase 6
+- Max Level: 90
+- Base HP: 13,348.04
+- Base ATK: 313.32
+- Base DEF: 781.62
+- Dendro DMG Bonus: 28.8%
+
+#### Full Cost
+- 420,000 {[Mora]page::Currencies/Mora}
+- 46 Pseudo-Stamens
+- 1 Nagadus Emerald Silver
+- 9 Nagadus Emerald Fragment
+- 9 Nagadus Emerald Chunk
+- 6 Nagadus Emerald Gemstone
+- 168 Sand Grease Pupa
+- 18 Faded Red Satin
+- 30 Trimmed Red Silk
+- 36 Rich Red Brocade
