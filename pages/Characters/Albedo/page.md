@@ -583,7 +583,10 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 There's something I've always wanted to ask you, but feared rejection and disappointment...
 Eh-hem... I am very interested in your little floating companion. May I borrow her to investigate for a short while?
 
+### Interesting things
+You would like to know more about petrified trees? Erm... Actually, the petrified trees you have come across in domains aren't that ancient. Truly ancient trees usually grow to around one or two miles in height. Oh, and there's a kind of large spider that lives around their roots — if you tie one up in cape jasmine and lemongrass and sprinkle on some cardamom, smoke it for a few hours — you get a fragrant taste that's simply... unforgettable.
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Interesting_Things.mp3
 
 ### Images
 put images here...
