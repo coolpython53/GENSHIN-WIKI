@@ -233,3 +233,4 @@ And just like the knowledge he has acquired, what he has obtained shall always r
 
 ### Namecard and Constellations
 #### Namecard
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Item_Alhaitham_Enlightenment.jpg::::25
