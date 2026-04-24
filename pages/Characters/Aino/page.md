@@ -322,8 +322,42 @@ Meaning: Miraculous Casket
   - Welkin Moon's Homecoming
 
 #### Story Quests
-Lupus Majoris Chapter (Varka)
- Act I: To Those Who Embark on the Expedition
-  Fated Warrior
+- Lupus Majoris Chapter (Varka)
+ - Act I: To Those Who Embark on the Expedition
+  - Fated Warrior
 
- ####
+#### World Quests
+- Silvermoon Hall: Selenic Chronicles
+ - Moonlight Sonata
+- A Whole New Craftshop
+- Problem-Sorting Robot
+
+#### Anecdotes
+- Anecdote Chronicles: Aino
+ - Aino: Go, Go, Ineffa!
+ - Aino: The Rescue
+ - Aino: A Better Choice...
+ - Aino: Cats Equal Cuteness!
+ - Aino: Time to Say Farewell
+- Anecdote Chronicles: Illuga
+ - Illuga: One Class After Another
+- Anecdote Chronicles: Ineffa
+ - Ineffa: A Matter of Language
+- Anecdote Chronicles: Jahoda
+ - Jahoda: Sorry, Ineffa...
+- Anecdote Chronicles: Yoimiya
+ - Yoimiya: Like Being a Child Again
+
+#### Events
+- Clink Clank Clash
+ - Crisis: Dun Dun Dunnn! A Major Crisis!
+ - Clamor: Boong Boong Bwoooom! A Grand Plot!
+ - Conclusion: Boom Boom Boooom! A Grand Battle!
+ - Epilogue: Ding Ding Dinggg! A Great Feast!
+ - A Mysterious Outsourced Contract
+ - An Adventurer's Woes
+ - Backup Plans
+ - Misplaced Creativity
+- Lightgleaner's Journey
+
+### Personality and Appearance
