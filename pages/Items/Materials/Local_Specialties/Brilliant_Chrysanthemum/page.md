@@ -25,3 +25,4 @@ A flower with a shape like floating wings. Its petals sway in an unbelievably re
 Those individuals that sort through woven scrolls have conducted research on this flower, and noted that since it was first recorded, its shape has not changed in the slightest. It is said that long ago, plants would covertly transform themselves by mimicking the shapes of animals. Perhaps then, by observing its current form, we may glimpse an impression of the creatures that once roamed this very land.
 
 ## Other images
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Items/Materials/Local_Specialties/Brilliant_Chrysanthemum/Item_Brilliant_Chrysanthemum_Wild.jpg::::25
