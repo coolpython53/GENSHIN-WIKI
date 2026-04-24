@@ -34,4 +34,15 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - 15 Faded Red Satin 
 
 #### Ascension Phase 2
+- Max Level: 50
+- Base HP: 6,902.47
+- Base ATK: 162.03
+- Base DEF: 404.19
+- Dendro DMG Bonus: 7.2%
+
+#### Ascension Cost 2 -> 3
+- 60,000 Mora 
+- 4 Pseudo-Stamens
+- 6 Nagadus Emerald Fragment
+- 20 Sand Grease Pupa
 - 
