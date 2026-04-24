@@ -360,4 +360,17 @@ Meaning: Miraculous Casket
  - Misplaced Creativity
 - Lightgleaner's Journey
 
-### Personality and Appearance
+### Official Introduction, Personality, and Appearance
+#### Official Introduction
+"A chaotic place, lashed by howling, frigid winds." For many, this is their first impression of Nod-Krai. But once you familiarize yourself with its rules and patiently explore the land, you'll come to know that it is full of marvelous, wonderful things as well. As you shop, you may meet a robot girl making purchases like anyone else while the clanking of curiously-shaped foundries echoes through the markets. If you're lucky, you may also catch a glimpse of robots speeding by... Ask around, and you'll learn that these are all Aino's creations.
+
+If this piques your curiosity, and you wish to meet this genius inventor, it's no tall order. Just walk out of Nasha Town and head to the outskirts, where a giant metal building awaits. Before even stepping inside, you'll be greeted by a unique aroma — a blend of machine oil, metal, and krumkakes, the smell of home for Aino, who stays here with Ineffa, her all-purpose household robot. Aino lives life by a simple creed: Invent interesting mechanical wonders for fun, and when not tinkering away, enjoy the best snack in the world — Ineffa's freshly-baked krumkakes.
+
+However, not all are lucky enough to meet this genius mechanic. Any who do not appreciate her creations will see the Craftshop's door slam shut in their face. So, before flooding her with endless new requests, maybe shower Aino's designs with some well-deserved praise first. Otherwise... Well, wouldn't it be a shame if disgusting krumkakes started popping out of your next mechanical device for whatever reason?
+
+#### Personality
+n spite of her young age, Aino is an extremely talented mechanic, claiming that she had both dismantled and reassembled just about any machine in Nod-Krai. Despite the use of scrap metal from every nation and purposely using only secondhand scavenged parts, Aino's creations are considerably powerful, being on par with more modern equivalents, such as Knuckle Duckle, said to be on par with the Fatui's modern machinery, the Boom and Blast Kuuvahki Cannon, which protects the people of Nasha Town from The Wild Hunt if they become too dangerous, and Ineffa, her personal robot maid.
+
+Aino still shows several childish behaviors, such as an obsession with sweets (like krumkakes and chocolate), going on tantrums and a desire for companionship, which she fulfills with the creation of numerous robots, viewing them as both her creations and family. This was shown after she let Ineffa leave for Natlan to find the Traveler, as Demyan explains that Varka discovered that Aino went "wild" on snacks without Ineffa to monitor her diet, causing the concerned knight to step in and help make some arrangements for at least one balanced meal for her per day until Ineffa returned. Likewise, when Krum-Clank 70% Sweet was abducted, Aino became enraged and sought to seek the party that stole it, with Ineffa claiming that she would have caused a huge crisis if it were not for her and the Traveler's intervention.
+
+#### 
