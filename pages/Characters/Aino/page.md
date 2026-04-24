@@ -278,3 +278,5 @@ Hearing someone calling her to wake up, Aino rubbed her aching head, blinking th
 
 Though Ineffa did not answer, what responded to Aino was the faint shimmer of her Vision — the very same one that Aino had mistaken for a mechanical part earlier.
 
+### Namecard and Constellation
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Aino_namecard.jpg::::25
