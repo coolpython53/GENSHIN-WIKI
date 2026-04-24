@@ -235,3 +235,46 @@ But despite all the change, Aino's sweet tooth had stayed constant. Katya couldn
 ...
 
 The fate of Nod-Krai might one day truly be changed by this little pink-haired girl... Or perhaps, that change had already begun from the very first moment she picked up a wrench.
+
+#### "My First Family"
+The first time Ineffa helped Aino clean up the workshop, she scanned a special little robot placed on Aino's desk. Its weathered metal shell had long since lost its luster, and its stiff limbs were unresponsive to external stimuli. Clearly, it was not one of Aino's recent works.
+
+After living with Aino for a long time, Ineffa discovered that, corroded by time, rust had spread like snaking vines across the joints of the little robot. The last screw on its body had come loose and fallen off, and according to her analysis, even the most meticulous polishing and maintenance could no longer restore life to its decaying body.
+
+Aino carefully put the little robot away. She asked Ineffa to support her as she solemnly moved it to the cabinet in her bedroom. It was then that Ineffa learned the story behind the broken-down machine.
+
+It was the first robot that Aino had ever assembled by herself.
+
+It wasn't equipped with any intelligence modules and could only make jingling sounds when it was shaken. Its sole purpose was companionship — to accompany a little girl who had experienced all too frequent farewells in her short life, who would sometimes find her heart swelling with loneliness.
+
+Placed beside Aino's many modern ingenuities, it looks dull and sloppy. But even caked in rust, it continues to serve its purpose... to simply be there for her.
+
+Because it is still family, and hence, still a part of her home.
+
+#### Vision
+In the dead of night, as the moon hung high among the stars, even as the Sniffer Moles slumbered, the workshop continued to rattle away in its typical clink-clank fashion.
+
+Since embarking on her mechanical journey, Aino had always been praised as a genius by others. She could complete most simple mechanical constructions with her eyes closed, and it was rare to see her this focused.
+
+But today, her surroundings were pitch black, with only Aino's workbench blazing bright as day. Her long sleeves had been hastily rolled up, and her temples were covered in sweat, stained with oil, and brushed by dust from who-knows-where, but the only thing Aino could focus on — and frown at — was the problem she faced. On the workshop's floor, open bags of snacks lay scattered, but even the wafting, saccharine scents could not tempt Aino from her task.
+
+On the workbench lay a robot girl. Around her lay piles of parts of various sizes, silent testaments to Aino's countless iterative loops.
+
+"Maybe I should give her a learning module. Family members need to learn and grow together so they can stick together..."
+
+This idea suddenly popped into Aino's head. Although applying such a theory to machinery was unprecedented for her, Aino didn't hesitate at all and immediately got to work. While reaching for a crucial component, Aino, busy as she was, didn't even look to see what she had grabbed, but she could tell by its unfamiliar texture that it wasn't what she wanted. So, without even a glance, she tossed it under her workbench and continued focusing on her creation.
+
+With a soft click, the final piece fit precisely into the last groove. There was a clatter as Aino's tools fell to the ground, followed by a dull thud — having maintained intense focus for so long, Aino had finally reached her limit. Exhaustion consumed the little genius like the night itself, and she fell into a deep sleep. Resting her head on the robot girl's arm, she herself looked like a little robot whose battery had run flat.
+
+...
+
+"Good morning, Aino."
+
+"Time to wake up, I have made your favorite krumkakes for breakfast."
+
+Hearing someone calling her to wake up, Aino rubbed her aching head, blinking the sleep out of her bleary eyes... But all she saw was the robot girl next to her, eyes still peacefully closed. It seemed like it was just a dream.
+
+"But it'll come true soon, won't it, Ineffa...?"
+
+Though Ineffa did not answer, what responded to Aino was the faint shimmer of her Vision — the very same one that Aino had mistaken for a mechanical part earlier.
+
