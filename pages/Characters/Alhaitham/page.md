@@ -34,3 +34,4 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - 15 Faded Red Satin 
 
 #### Ascension Phase 2
+- 
