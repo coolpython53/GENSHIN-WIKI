@@ -234,3 +234,47 @@ And just like the knowledge he has acquired, what he has obtained shall always r
 ### Namecard and Constellations
 #### Namecard
 image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Item_Alhaitham_Enlightenment.jpg::::25
+
+Reward for reaching Friendship Level 10 with Alhaitham
+Description:
+"The only things researchers should abide by are debates and dialectics. Only by questioning everything at all times can one avoid falling into prejudice."
+
+#### Constellations
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Vultur_Volans.jpg::::25
+
+Name: Vultur Volans
+
+Meaning: Flying Vulture
+
+### Quests and Events
+#### Archon Quests
+
+- Chapter III
+  - Act I: Through Mists of Smoke and Forests Dark
+    - Lost in Prosperity
+    - Ever So Close
+  - Act III: Dreams, Emptiness, Deception
+    - The Four at Loggerheads
+  - Act IV: King Deshret and the Three Magi
+    - Cry From the Eleazar Hospital
+    - Secret of the Scorching Desert
+  - Act V: Akasha Pulses, the Kalpa Flame Rises
+    - Through the Predawn Night
+    - As by a God's Side
+    - Jnagarbha Day
+    - Where the Boat of Consciousness Lies (cutscene)
+    - A Toast to Victory
+
+    #### Story Quests
+
+- Lupus Aureus Chapter (Cyno)
+  - Act II: Oathkeeper
+    - After Repose
+    - The Dead Past is the Living Present
+-  Vultur Volans Chapter (Alhaitham)
+  - Act I: The Illusions of the Mob
+    - Fragmented Testimony
+    - A Thorough Investigation
+    - Pride and Prejudice
+
+    
