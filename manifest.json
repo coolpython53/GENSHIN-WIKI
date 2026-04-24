@@ -6,7 +6,9 @@
   "Currencies/Mora",
   "Items/Materials/Local_Specialties/Amakumo_Fruit",
   "Items/Materials/Local_Specialties/Beryl_Conch",
+  "Items/Materials/Local_Specialties/Brilliant_Chrysanthemum",
   "Usage/Rules",
   "Usage/Syntax",
-  "Usage/Page_Format/Character_Page_Format"
+  "Usage/Page_Format/Character_Page_Format",
+  "Usage/Page_Format/Items"
 ]
