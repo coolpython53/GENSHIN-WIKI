@@ -45,4 +45,11 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - 4 Pseudo-Stamens
 - 6 Nagadus Emerald Fragment
 - 20 Sand Grease Pupa
-- 
+- 12 Trimmed Red Silk
+
+#### Ascension Phase 3 
+- Max Level: 60
+- Base HP: 8,658.88
+- Base ATK: 203.25
+- Base DEF: 507.04
+- Dendro DMG Bonus: 14.4%
