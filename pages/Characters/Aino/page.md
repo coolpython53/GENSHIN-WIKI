@@ -279,4 +279,8 @@ Hearing someone calling her to wake up, Aino rubbed her aching head, blinking th
 Though Ineffa did not answer, what responded to Aino was the faint shimmer of her Vision — the very same one that Aino had mistaken for a mechanical part earlier.
 
 ### Namecard and Constellation
+#### Namecard
 image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Aino_namecard.jpg::::25
+Reward for reaching Friendship Level 10 with Aino
+Description:
+When a "Cool Your Jets Ducky" is overheating, does Aino throw out another Ducky to cool its jets, or does she just say "Whoopsie Ducksie" and leave it at that?
