@@ -37,3 +37,5 @@ There are 3 recipes that use Calla Lily:
 A flower that grows near water sources. When cooked, the petals have a chunky texture, yet are sweet and a little bitter. Modern medicine recognizes Calla Lily's antidotal properties, but its astringent flavor is repulsive to many people.
 
 ## Other Images
+image::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Items/Materials/Local_Specialties/Calla_Lily/Item_Calla_Lily_Wild.webp::::25
+image
