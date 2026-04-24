@@ -373,4 +373,19 @@ n spite of her young age, Aino is an extremely talented mechanic, claiming that 
 
 Aino still shows several childish behaviors, such as an obsession with sweets (like krumkakes and chocolate), going on tantrums and a desire for companionship, which she fulfills with the creation of numerous robots, viewing them as both her creations and family. This was shown after she let Ineffa leave for Natlan to find the Traveler, as Demyan explains that Varka discovered that Aino went "wild" on snacks without Ineffa to monitor her diet, causing the concerned knight to step in and help make some arrangements for at least one balanced meal for her per day until Ineffa returned. Likewise, when Krum-Clank 70% Sweet was abducted, Aino became enraged and sought to seek the party that stole it, with Ineffa claiming that she would have caused a huge crisis if it were not for her and the Traveler's intervention.
 
-#### 
+#### Appearance
+Aino uses the short female model. She has long salmon pink hair, a pulled back fringe with a screw at the top and a large ahoge. Her eyes are purplish gray. Some parts of her hair have yellow highlights.
+
+### History
+#### Past
+Aino does not remember her parents and was abandoned for unknown reasons. She was eventually discovered by Katya, who took her in as a member of the Conch Gang.
+
+Unlike the other children who loved to play and explore, Aino preferred to be alone and showed an interest in mechanics. This led her to befriending Lyulka at Rossum Workshop, where she solved an issue the young researcher was having despite having no training of her own. Eventually, a mechanic from Snezhnaya known as Papa Wrench arrived at the Speranza, where he discovered Aino's interest in his tools. He began teaching mechanical classes during the restaurant's downtime, which Aino and Lyulka gladly attended. Unfortunately, he had to leave for a mission, but before he did so, he gave Aino a special wrench that she tied into her hair, wearing it in the present day. She soon left the Conch Guild to create her own path.
+
+Lyulka offered Aino a place at the workshop to continue research and development, but Aino declined. She soon learned of an abandoned scrapyard west of Nasha Town and decided to settle there, creating the present-day Clink-Clank Krumkake Craftshop. Aino would make numerous creations from the scrap metals she scavenged from the area, as evident by the numerous Amazing 'Bots, Knuckle Duckle and the Boom and Blast Kuuvahki Cannon. Eventually, she discovered a Secret Source core and with other scrap material, created Ineffa. Aino would teach Ineffa how to shop and care for her, seeing all of her creations as family. She also received a Hydro Vision after creating a learning module for Ineffa. She also taught Hintsa some basics.
+
+The Knights of Favonius would later arrive at Nod-Krai in order to combat the threat of the Wild Hunt. Aino met with Varka and took a liking to him. Around this point, Ineffa began to suffer from various glitches as a result of a "curse" placed on her by her originator. Varka, aware that the Traveler's journeys were concluding in Natlan, asked Aino to have a message sent to them. Aino stored the letter in a cryptex and gave it to Ineffa, tearfully sending her away so she could deliver the letter and discover her past.
+
+Aino would also become acquainted with both Flins and Illuga, who (and presumably the other Lightkeepers) would attend her sessions to learn how to repair machinery without needing her attention. Unfortunately, the lessons were hard to stick and they would frequently try to wiggle their way out of them through various means.
+
+Without Ineffa to monitor her intake, Aino went "feral," consuming large amounts of sweets and prompting Varka to ask Demyan to give her at least once balanced meal a day until Ineffa returned.
