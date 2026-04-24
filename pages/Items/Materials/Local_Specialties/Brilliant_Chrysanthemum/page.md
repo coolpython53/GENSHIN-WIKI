@@ -1,4 +1,5 @@
 # Brilliant Chrysanthemum
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Items/Materials/Local_Specialties/Brilliant_Chrysanthemum/blueprint.jpg::::25
 
 Brilliant Chrysanthemum is a Local Specialty found in Natlan.
 
