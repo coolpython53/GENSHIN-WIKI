@@ -401,13 +401,29 @@ Meaning: Chalk Prince
   - Part III: Variations on the Song of the Dragon and Freedom
 - Homeward, He Who Caught the Wind/A Chat Over Fine Drinks
 
-### Personality and Appearance
+### Official Introduction, Personality, and Appearance
+#### Official Introduction
+Despite his great achievements in the field of alchemy, he does not speak of the nature of things too hastily.
+
+Wandering among ordinary folk oblivious to various truths of this world, he treats them with nothing but sincerity and kindness.
+
+Polite and graceful, he seems withdrawn on the surface, but never hesitates to lend a helping hand. No matter if you go way back, or he has just befriended you, he can always find time to draw an exquisite portrait for a friend.
+
+The Chief Alchemist of the Knights of Favonius, Albedo, is a truly remarkable young man. All admire his scholarly attainments — citizens of Mondstadt and members of the Knights of Favonius alike.
+
+"Genius," "Kreideprinz," or "Captain of the Investigation Team"... Such titles and honors are of no consequence to him when there is so much more research to conduct.
+
+The pursuit of fortune and connections cannot hold a candle to his heart's desire — acquiring the limitless, obscure knowledge left behind by previous generations of scholars.
+
 #### Personality
 Having gained fame for his alchemical talents, Albedo is a reclusive person, spending most of his time in Dragonspine. He isn't fond of most social interactions and thus rarely travels to the city of Mondstadt unless it is to meet up with his fellow alchemists or other acquaintances. Yet he's also shown to at least be fascinated or interested in them in some way, often willingly appearing in events that have some sort of social setting going on and helping out the people around him in any way he can. While he does seem to enjoy company and seeing how people interact in a social setting, he finds relationships stressful and tiresome because of the amount of effort needed to maintain them. This doesn't mean he dislikes the relationships he has with others, he simply struggles with them and can get tired out from trying to keep track of everything to keep the relationship from falling apart. He prefers being around children, especially Klee, seeing her as a younger sister. Klee in turn sees him as an older brother figure.
 
 Fueled by the feeling of enlightenment, he researches about the things that pique his interest, and once the feeling is gone, either by uncovering its truth or otherwise, he loses all interest, left with a bittersweet sensation in his mind. Along with his alchemical genius, Albedo is also a respectable artist. Having initially learned the talent as a way to help with his experiments, it is now a form of relaxation for him. He is Xingqiu's illustrator and regards him as a good author.
 
 As much of a positive demeanor he gives off, the people of Mondstadt do not know anything about his personal life and he is particularly secretive about it towards them. To the Traveler, he does not mind sharing most of his secrets with them due to feeling a kinship of sorts as they are both not of Teyvat, him being an artificial lifeform and the Traveler a visitor from afar. He considers himself to be dangerous due to his knowledge on the Art of Khemia, something which Venti and Dainsleif are well too aware of.
+
+#### Appearance
+Albedo uses the medium male model. He has bright teal eyes with three dots in each iris, pale skin, and pale blond hair reaching below his shoulders. Due to being a synthetic human, a gold diamond marking can be found on his neck.
 
 ### History
 #### With Rhinedottir
