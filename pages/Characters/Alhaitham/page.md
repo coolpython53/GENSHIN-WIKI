@@ -32,3 +32,5 @@ Alhaitham is a member of the Haravatat of the Sumeru Akademiya and the Akademiya
 - 3 Nagadus Emerald Fragment
 - 10 Sand Grease Pupa
 - 15 Faded Red Satin 
+
+#### Ascension 
