@@ -38,4 +38,4 @@ A flower that grows near water sources. When cooked, the petals have a chunky te
 
 ## Other Images
 image::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Items/Materials/Local_Specialties/Calla_Lily/Item_Calla_Lily_Wild.webp::::25
-image
+image::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Items/Materials/Local_Specialties/Calla_Lily/Namecard_Background_Achievement_Full_Bloom.webp::::25
