@@ -351,4 +351,11 @@ A capable person who keeps a low profile for too long is often perceived as some
   - Glorious Emerald Tapestry Glorious Emerald Tapestry
 
   #### Voice Overs
+
+  #### Hello
+  I'm Alhaitham, the Akademiya's scribe. If you wish to access an archived file, please submit an application according to the prescribed format. Oh, your form isn't ready? Not to worry. You can come again on the next working day. My work hours are posted outside the office.
+
+  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Facts.mp3 
+
   
+
