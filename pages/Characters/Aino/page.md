@@ -296,30 +296,30 @@ Meaning: Miraculous Casket
 #### Archon Quests
 
 - Song of the Welkin Moon
- - Prelude: The Journey Home
-  - Flamelets (flashback-only, voice-only)
-  - Searing (flashback-only, voice-only)
- - Act I: A Dance of Snowy Tides and Hoarfrost Groves
-  - Where the Moon Rises
- - Act II: Elegy of Dust and Lamplight
-  - Fulminations and Undercurrents
-  - One There Was, Who Hunted the Moon
-  - The Ashen-White Order Burns
-  - Rest Beyond Reach
- - Act III: A Nation That Doesn't Exist
-  - Hidden in the Shadows
-  - Everlasting As the Moon
- - Act IV: An Elegy for Faded Moonlight
-  - Echoes of Fate
- - Act V: A Nocturne of the Far North
-  - Ripples That Will Never Reach
- - Act VI: Melting Moonlight in the Morning Mist
-  - The Night the Moon Returns Home
- - Act VII: A Traveler on a Winter's Night
-  - Moonless Night
-  - Where Our Space and Time Intersect
- - Act VIII: True Moon
-  - Welkin Moon's Homecoming
+   - Prelude: The Journey Home
+      - Flamelets (flashback-only, voice-only)
+      - Searing (flashback-only, voice-only)
+   - Act I: A Dance of Snowy Tides and Hoarfrost Groves
+      - Where the Moon Rises
+   - Act II: Elegy of Dust and Lamplight
+      - Fulminations and Undercurrents
+      - One There Was, Who Hunted the Moon
+      - The Ashen-White Order Burns
+      - Rest Beyond Reach
+   - Act III: A Nation That Doesn't Exist
+      - Hidden in the Shadows
+      - Everlasting As the Moon
+   - Act IV: An Elegy for Faded Moonlight
+      - Echoes of Fate
+   - Act V: A Nocturne of the Far North
+      - Ripples That Will Never Reach
+   - Act VI: Melting Moonlight in the Morning Mist
+      - The Night the Moon Returns Home
+   - Act VII: A Traveler on a Winter's Night
+      - Moonless Night
+      - Where Our Space and Time Intersect
+   - Act VIII: True Moon
+      - Welkin Moon's Homecoming
 
 #### Story Quests
 - Lupus Majoris Chapter (Varka)
@@ -389,3 +389,26 @@ The Knights of Favonius would later arrive at Nod-Krai in order to combat the th
 Aino would also become acquainted with both Flins and Illuga, who (and presumably the other Lightkeepers) would attend her sessions to learn how to repair machinery without needing her attention. Unfortunately, the lessons were hard to stick and they would frequently try to wiggle their way out of them through various means.
 
 Without Ineffa to monitor her intake, Aino went "feral," consuming large amounts of sweets and prompting Varka to ask Demyan to give her at least once balanced meal a day until Ineffa returned.
+
+#### Present
+Ineffa returned from Natlan, solving her glitches and being given a Moon Wheel as a sign of her newfound freedom. She brought the Traveler to the workshop to meet with Aino, who was relieved to see Ineffa safe and sound and also meeting the Traveler for the first time. Ineffa scolded Aino for eating too much sweets, but nonetheless both were glad to see each other again. Aino took a liking to the Traveler and they asked her if she ever found a spaceship. Aino told them she did not, as she would've known having scavenged all across the region and suggested that the Frostmoon Scions might know something about it. 
+
+Following the emergence of the Wild Hunt at Starsand Shoal, Aino was prompted to perform maintenance on the Boom and Blast Kuuvahki Cannon. She loaned Birgitta to them and Sousi so they could calibrate the cannon while she and Ineffa did the other tasks. The Traveler later returned from Hiisi Island with more intelligence on their enemy; Aino was unconcerned, stating that her cannon would handle it. She was then reminded by Ineffa about the news and she told them that Sousi had been found dead in his office. When the Traveler realized that Rerir planned to strengthen himself by having the cannon fire on him, Aino rushed back to Nasha Town with Ineffa, Nefer, Lauma and Jahoda. Lauma calmed the panicking people while Ineffa carried her to the cannon. On the way, they ran into a seemingly malfunctioning Knuckle Duckle and had to subdue it before they got to the cannon. Realizing it was too late to shut it down, Aino ordered Ineffa to "manually calibrate" the cannon until its ammo reserves depleted. 
+
+Columbina later asked the Traveler to bring a broken lyre to the workshop for repair. When the Traveler arrived to give it to Aino, she became terrified, stating that it kept appearing in front of her doorstep and inexplicably disappeared after it was repaired. The Traveler explained that a friend of theirs was too shy to come in-person, which she accepted. As the lyre was being worked on, Columbina arrived, followed by Ineffa. Aino fixed the lyre and came out to the unusual scene, learning that the person hiding behind them was the friend they mentioned. Columbina gave Aino some components as a gesture to Aino, who appreciated them. As they left, Ineffa realized that Columbina was the Moon Goddess, much to Aino's skepticism. 
+
+Aino was additionally working on a new family member, Krum-Clank 70% Sweet, when it was stolen, leaving her completely furious as she sought to discover the culprit. Ineffa put a notice at Nasha Town in the hopes of getting someone to help, which the Traveler answered. They found Aino leading a group of Amazing 'Bots, but they convinced her to stand down with some sweets and telling her to not act rashly. Aino had the automatons stop and agreed to their plan, though in part due to her inexperience, would grow agitated. With Jahoda's help, they discovered that it was being held by the Frostmoon Scions, who had taken it from the Treasure Hoarders. Lauma called Aatso and another member over, who told them what happened. Aatso wanted the robot destroyed, leaving Aino furious as she attempted to confront him, only for the Traveler to stop her. Suddenly, several recon bots appeared and despite their efforts, one managed to escape with the automaton. 
+
+Despite Jahoda's efforts, she could not find any new information, only for them to get a letter directing them to Dori. Dori sent them to Sedile, who helped track the culprits to Maroon Basin. Aino brought out her newly modified Zip-Zap Spy-Bot Number 1 (calling it Zip-Zap War-Bot) and they soon met the mastermind, Eustachy, who had disassembled Krum-Clank and wanted to replicate its core to sell it to the highest bidder. The landcruiser did not attack, as Aino explained that Krum-Clank ran on desserts. Eustachy ordered his technician to remove it, but they could not, as it was embedded too deep in the system. Sedile returned with reinforcements and defeated Eustachy's men, but he was able to escape in the aftermath, though news of the incident would ensure his reputation would be ruined. 
+
+Around the same time, one of Aino's Amazing 'Bots began acting odd, prompting her to find the culprit among the bots in her possession. The Traveler found the malfunctioning bot, which called itself Chard Lombro. Aino was surprised to see a sentient bot, since the ones she had in her possession were made with simple components. A quick study caused her to realize that the core was incredibly advanced but highly damaged. Learning from Ineffa that some strange Treasure Hoarders had stolen the core from the Fatui and stuffed it in the bot, Aino was worried about the Fatui coming back for it. To this end, she arranged several bots and had the Traveler use kuuvahki to put Chard in the centre, tasking it with sorting out salvage for her. 
+
+When an injured Rimehorn Deer arrived at the workshop, Aino and Ineffa took care of its injuries. Eventually, as the deer began to get better, Ineffa told Aino that they would need to call Lauma to bring it back to its herd, which Aino reluctantly allowed. 
+
+The group later attempted to investigate Rerir's motives, with Aino suggesting to separate despite not wanting to stray too far with a Sinner around. She and Ineffa returned from their investigation and found the Traveler, Lauma, Flins and Jahoda in trouble, so she and Ineffa assisted them in repelling the Wild Hunt. Varka later arrived to relieve them, bringing them to the Secret Base and they filled each other on intel. Ineffa took a quick scan of Columbina's biometrics and Aino used it to create simulacrums to distract Rerir while the rest of the group tried to investigate his past and what they could do to stop him. When the time came, Aino supported the Traveler but was eventually thrown out alongside Lauma and Flins. Fortunately, the group was able to distract Rerir long enough for Columbina to regain enough power to face him on equal terms and expel him with Dainsleif's help. When Nicole sought people to enter the Hyperborean ruins by testing their kuuvahki levels, Aino attempted to volunteer, only to be shut down by her as Nicole stated that the Hexenzirkel would not perform the test on children. Nonetheless, Aino and Ineffa made sure to take care of the Traveler, Lauma and Arlecchino while they were fasting. She later partook in the Moon-Prayer Night festivities with the Traveler, Ineffa and Columbina. When Dottore interrupted Columbina's return and stole the Moon Marrows, Aino and the others promised to stop him and find her. Arlecchino later tracked Dottore to his research facility to the north, where she and Sandrone would go to confront him first. Aino decided to remain behind but gave the Traveler her equipment to help them. When the group returned, barring the Traveler, they learned what Dottore was doing in Nod-Krai. Aino and Ineffa volunteered to help evacuate people from the unaffected areas and later returned after he was defeated, where she and Ineffa helped serve food on behalf of the Frostmoon Scions.
+
+#### Trivia
+- Aino is the very first Hydro character to be a claymore user.
+- She is seen wielding the ascended version of Master Key in her Character Trailer.
+- Aside from the Traveler and characters who have a red background, Aino is the first character who was initially released with only a set number of copies available: One copy of Aino could be obtained via The Clink Clank Whiz-Kid! when Version "Luna I" began, but as she was part of the second half's Character Event Wishes but not the first half's, additional copies could not be obtained until the second half of Version "Luna I."
+   - Aino is also the only character with a set birthday aside from Aloy who has sent a birthday mail without also having official birthday artwork on the same day, as she celebrated her birthday during the first half of Version "Luna I." This may be because of the aforementioned release situation; it is otherwise unclear why this would happen.
