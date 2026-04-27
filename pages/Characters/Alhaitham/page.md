@@ -336,16 +336,16 @@ A capable person who keeps a low profile for too long is often perceived as some
 - Alhaitham is the first character to dual-wield weapons.
   - However, he only uses his secondary sword during the third and fifth sequences of his Normal Attacks and his Charged Attack.
 - Alhaitham shares the same Chinese voice actor and similar appearance as Su from Honkai Impact 3rd, another HoYoverse game.
-Alhaitham is seen wielding Xiphos' Moonlight in his fight against Cyno in the quest The Four at Loggerheads, and uses Light of Foliar Incision in his official character demo.
-Alhaitham shares a birthday, February 11, with his English voice actor, Nazeeh Tarsha.
-Messages between Alhaitham and Kaveh can be read in the Mahamata Bulletin Board, Puspa Café Message Board, and the Port Ormos Bulletin Board.
-Using Nahida's All Schemes to Know on Kaveh post-quest of Alhaitham's Story Quest, Vultur Volans Chapter: Act I - The Illusions of the Mob reveals that he has no memory of these conversations, as he privately hopes that Alhaitham is unaware he's been writing on message boards while drunk.
-The abandoned joint study that Alhaitham and Kaveh worked on together, mentioned in Character Story 4, is elaborated upon in Kaveh's own Character Story 5. Self-evident to the title, "Decoding the Runes and Architectural Philosophy of the Ruins of King Deshret's Civilization," their research was able to fill in gaps of understanding in ancient languages and revolutionize architecture in areas of Sumeru with unique terrain.
-The house they now share was originally a research center provided by the Akademiya for their studies, which was converted into a proper home after it fell into disuse due to a lack of manpower and a united vision for their studies.
-Alhaitham's first idle has him finding a key on his person that isn't his. This was later revealed in Kaveh's first idle on his release to be the house key that Kaveh can't find on his person (yet again, apparently).
-Kaveh's Character Story 5 reveals that Alhaitham is Kaveh's junior by two years. The Chinese version makes it clear that these two years are in terms of age rather than academic progression. Based on the timeline of Kaveh's stories, Kaveh is likely in his mid-to-late twenties, making Alhaitham very likely to currently be in his early-to-mid twenties based on Kaveh's approximate age.
-The taglines in the Chinese character introductions for Alhaitham (Chinese: 学识、思考及处事之道; English: The art of learning, thinking, and doing) and Kaveh (Chinese: 体悟、仁爱与识美之知; English: Knowledge of comprehension, benevolence, and aesthetics) appear to form a duilian couplet, but lack an inverse tone pattern which is required for a traditional duilian.
-Alhaitham is known by these aliases or titles:
-Acting Grand Sage (formerly)[8]
-Alhaitham is mentioned in the description of the following Furnishing:
-Glorious Emerald Tapestry Glorious Emerald Tapestry
+- Alhaitham is seen wielding Xiphos' Moonlight in his fight against Cyno in the quest The Four at Loggerheads, and uses Light of Foliar Incision in his official character demo.
+- Alhaitham shares a birthday, February 11, with his English voice actor, Nazeeh Tarsha.
+- Messages between Alhaitham and Kaveh can be read in the Mahamata Bulletin Board, Puspa Café Message Board, and the Port Ormos Bulletin Board.
+  - Using Nahida's All Schemes to Know on Kaveh post-quest of Alhaitham's Story Quest, Vultur Volans Chapter: Act I  The Illusions of the Mob reveals that he has no memory of these conversations, as he privately hopes that Alhaitham is unaware he's been writing on message boards while drunk.
+- The abandoned joint study that Alhaitham and Kaveh worked on together, mentioned in Character Story 4, is elaborated upon in Kaveh's own Character Story 5. Self-evident to the title, "Decoding the Runes and Architectural Philosophy of the Ruins of King Deshret's Civilization," their research was able to fill in gaps of understanding in ancient languages and revolutionize architecture in areas of Sumeru with unique terrain.
+  - The house they now share was originally a research center provided by the Akademiya for their studies, which was converted into a proper home after it fell into disuse due to a lack of manpower and a united vision for their studies.
+    - Alhaitham's first idle has him finding a key on his person that isn't his. This was later revealed in Kaveh's first idle on his release to be the house key that Kaveh can't find on his person (yet again, apparently).
+- Kaveh's Character Story 5 reveals that Alhaitham is Kaveh's junior by two years. The Chinese version makes it clear that these two years are in terms of age rather than academic progression. Based on the timeline of Kaveh's stories, Kaveh is likely in his mid-to-late twenties, making Alhaitham very likely to currently be in his early-to-mid twenties based on Kaveh's approximate age.
+- The taglines in the Chinese character introductions for Alhaitham (Chinese: 学识、思考及处事之道; English: The art of learning, thinking, and doing) and Kaveh (Chinese: 体悟、仁爱与识美之知; English: Knowledge of comprehension, benevolence, and aesthetics) appear to form a duilian couplet, but lack an inverse tone pattern which is required for a traditional duilian.
+- Alhaitham is known by these aliases or titles:
+  - Acting Grand Sage (formerly)[8]
+- Alhaitham is mentioned in the description of the following Furnishing:
+  - Glorious Emerald Tapestry Glorious Emerald Tapestry
