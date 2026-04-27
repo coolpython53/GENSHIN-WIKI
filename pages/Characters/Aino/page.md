@@ -323,41 +323,41 @@ Meaning: Miraculous Casket
 
 #### Story Quests
 - Lupus Majoris Chapter (Varka)
- - Act I: To Those Who Embark on the Expedition
-  - Fated Warrior
+   - Act I: To Those Who Embark on the Expedition
+      - Fated Warrior
 
 #### World Quests
 - Silvermoon Hall: Selenic Chronicles
- - Moonlight Sonata
+   - Moonlight Sonata
 - A Whole New Craftshop
 - Problem-Sorting Robot
 
 #### Anecdotes
 - Anecdote Chronicles: Aino
- - Aino: Go, Go, Ineffa!
- - Aino: The Rescue
- - Aino: A Better Choice...
- - Aino: Cats Equal Cuteness!
- - Aino: Time to Say Farewell
+   - Aino: Go, Go, Ineffa!
+   - Aino: The Rescue
+   - Aino: A Better Choice...
+   - Aino: Cats Equal Cuteness!
+   - Aino: Time to Say Farewell
 - Anecdote Chronicles: Illuga
- - Illuga: One Class After Another
+   - Illuga: One Class After Another
 - Anecdote Chronicles: Ineffa
- - Ineffa: A Matter of Language
+   - Ineffa: A Matter of Language
 - Anecdote Chronicles: Jahoda
- - Jahoda: Sorry, Ineffa...
+   - Jahoda: Sorry, Ineffa...
 - Anecdote Chronicles: Yoimiya
- - Yoimiya: Like Being a Child Again
+   - Yoimiya: Like Being a Child Again
 
 #### Events
 - Clink Clank Clash
- - Crisis: Dun Dun Dunnn! A Major Crisis!
- - Clamor: Boong Boong Bwoooom! A Grand Plot!
- - Conclusion: Boom Boom Boooom! A Grand Battle!
- - Epilogue: Ding Ding Dinggg! A Great Feast!
- - A Mysterious Outsourced Contract
- - An Adventurer's Woes
- - Backup Plans
- - Misplaced Creativity
+   - Crisis: Dun Dun Dunnn! A Major Crisis!
+   - Clamor: Boong Boong Bwoooom! A Grand Plot!
+   - Conclusion: Boom Boom Boooom! A Grand Battle!
+   - Epilogue: Ding Ding Dinggg! A Great Feast!
+   - A Mysterious Outsourced Contract
+   - An Adventurer's Woes
+   - Backup Plans
+   - Misplaced Creativity
 - Lightgleaner's Journey
 
 ### Official Introduction, Personality, and Appearance
@@ -405,10 +405,20 @@ Around the same time, one of Aino's Amazing 'Bots began acting odd, prompting he
 
 When an injured Rimehorn Deer arrived at the workshop, Aino and Ineffa took care of its injuries. Eventually, as the deer began to get better, Ineffa told Aino that they would need to call Lauma to bring it back to its herd, which Aino reluctantly allowed. 
 
-The group later attempted to investigate Rerir's motives, with Aino suggesting to separate despite not wanting to stray too far with a Sinner around. She and Ineffa returned from their investigation and found the Traveler, Lauma, Flins and Jahoda in trouble, so she and Ineffa assisted them in repelling the Wild Hunt. Varka later arrived to relieve them, bringing them to the Secret Base and they filled each other on intel. Ineffa took a quick scan of Columbina's biometrics and Aino used it to create simulacrums to distract Rerir while the rest of the group tried to investigate his past and what they could do to stop him. When the time came, Aino supported the Traveler but was eventually thrown out alongside Lauma and Flins. Fortunately, the group was able to distract Rerir long enough for Columbina to regain enough power to face him on equal terms and expel him with Dainsleif's help. When Nicole sought people to enter the Hyperborean ruins by testing their kuuvahki levels, Aino attempted to volunteer, only to be shut down by her as Nicole stated that the Hexenzirkel would not perform the test on children. Nonetheless, Aino and Ineffa made sure to take care of the Traveler, Lauma and Arlecchino while they were fasting. She later partook in the Moon-Prayer Night festivities with the Traveler, Ineffa and Columbina. When Dottore interrupted Columbina's return and stole the Moon Marrows, Aino and the others promised to stop him and find her. Arlecchino later tracked Dottore to his research facility to the north, where she and Sandrone would go to confront him first. Aino decided to remain behind but gave the Traveler her equipment to help them. When the group returned, barring the Traveler, they learned what Dottore was doing in Nod-Krai. Aino and Ineffa volunteered to help evacuate people from the unaffected areas and later returned after he was defeated, where she and Ineffa helped serve food on behalf of the Frostmoon Scions.
+The group later attempted to investigate Rerir's motives, with Aino suggesting to separate despite not wanting to stray too far with a Sinner around. She and Ineffa returned from their investigation and found the Traveler, Lauma, Flins and Jahoda in trouble, so she and Ineffa assisted them in repelling the Wild Hunt. Varka later arrived to relieve them, bringing them to the Secret Base and they filled each other on intel. Ineffa took a quick scan of Columbina's biometrics and Aino used it to create simulacrums to distract Rerir while the rest of the group tried to investigate his past and what they could do to stop him. When the time came, Aino supported the Traveler but was eventually thrown out alongside Lauma and Flins. Fortunately, the group was able to distract Rerir long enough for Columbina to regain enough power to face him on equal terms and expel him with Dainsleif's help. 
+
+When Nicole sought people to enter the Hyperborean ruins by testing their kuuvahki levels, Aino attempted to volunteer, only to be shut down by her as Nicole stated that the Hexenzirkel would not perform the test on children. Nonetheless, Aino and Ineffa made sure to take care of the Traveler, Lauma and Arlecchino while they were fasting. She later partook in the Moon-Prayer Night festivities with the Traveler, Ineffa and Columbina. When Dottore interrupted Columbina's return and stole the Moon Marrows, Aino and the others promised to stop him and find her. 
+
+Arlecchino later tracked Dottore to his research facility to the north, where she and Sandrone would go to confront him first. Aino decided to remain behind but gave the Traveler her equipment to help them. When the group returned, barring the Traveler, they learned what Dottore was doing in Nod-Krai. Aino and Ineffa volunteered to help evacuate people from the unaffected areas and later returned after he was defeated, where she and Ineffa helped serve food on behalf of the Frostmoon Scions.
 
 #### Trivia
 - Aino is the very first Hydro character to be a claymore user.
 - She is seen wielding the ascended version of Master Key in her Character Trailer.
 - Aside from the Traveler and characters who have a red background, Aino is the first character who was initially released with only a set number of copies available: One copy of Aino could be obtained via The Clink Clank Whiz-Kid! when Version "Luna I" began, but as she was part of the second half's Character Event Wishes but not the first half's, additional copies could not be obtained until the second half of Version "Luna I."
    - Aino is also the only character with a set birthday aside from Aloy who has sent a birthday mail without also having official birthday artwork on the same day, as she celebrated her birthday during the first half of Version "Luna I." This may be because of the aforementioned release situation; it is otherwise unclear why this would happen.
+
+   ### Voice Overs
+   #### Hello
+    Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
+
+    mp3::
