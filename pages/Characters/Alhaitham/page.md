@@ -430,4 +430,9 @@ A capable person who keeps a low profile for too long is often perceived as some
      #### About Us: Greetings
      Don't be offended if you try to greet me on the street and I don't respond. It's simply because I'm wearing my soundproof earpieces, that's all.
 
-     mp3::
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Greetings.mp3 
+
+     #### About Us: Helping Each Other 
+     It seems you're perfectly capable of taking care of yourself, so much so that you even look after that little companion of yours. I don't have any suggestions to offer you, and frankly, you probably don't need my help.
+
+     mp3:: 
