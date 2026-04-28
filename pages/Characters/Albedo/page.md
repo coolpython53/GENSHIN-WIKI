@@ -668,4 +668,19 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Least Favorite Food
  What food do I dislike? ...Large portions of meat at restaurants. I have a rather small appetite, so a meal like that only ends up in tragedy — either I overeat and the joy of the taste is lost, or I don't finish it and the food is wasted. I decided to simply not go to restaurants, although that has also meant I must spend more time preparing my own food...
 
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Least_Favorite_Food.mp3
+
+ #### Receiving a Gift: I
+ If flavors were colors... this one would be gold.
+
+ mp3::
+
+ #### Receiving a Gift: II
+ You're willing to spend so much time on improving your cooking, and that's precisely how you're able to make it taste so good.
+
+ mp3::
+
+ #### Receiving a Gift: III
+ This is more than I can manage... maybe we could split it between us?
+
  mp3::
