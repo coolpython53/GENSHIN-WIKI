@@ -641,7 +641,7 @@ The time required to sketch portraits closely correlates with one's mood. I coul
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_03.mp3
 
 #### More About Albedo: IV
-
+ What do I do besides sketching and research...? I will occasionally read novels from Inazuma and Liyue. They contain many fascinating ideas which can sometimes provide me with unexpected inspirations for my own creations.
 
 mp3::
 
