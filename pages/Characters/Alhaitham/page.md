@@ -380,3 +380,8 @@ A capable person who keeps a low profile for too long is often perceived as some
   #### When Thunder Strikes
    It's just a natural phenomenon, so there's nothing to be afraid of... unless you're beneath a tree.
 
+   mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_Thunder_Strikes.mp3 
+
+   #### When It Snows
+    It's getting cold, you say? I feel fine.
+
