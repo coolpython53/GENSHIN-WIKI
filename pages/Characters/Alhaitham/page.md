@@ -399,3 +399,11 @@ A capable person who keeps a low profile for too long is often perceived as some
 
      #### Good Morning
       It's a little early for me... Let me get a cup of coffee first.
+
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Morning.mp3
+     
+     #### Good Afternoon
+      If there's nothing to do, then I'll just put on my soundproof earpieces and nap for a while.
+
+      mp3::
+    
