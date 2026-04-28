@@ -357,5 +357,11 @@ A capable person who keeps a low profile for too long is often perceived as some
 
   mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Facts.mp3 
 
-  
+  #### Chat: Work
+  The scribe's work is simple, which is exactly why I took the position.
+
+  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Work.mp3 
+
+  #### Chat: Reading 
+  Book learning alone is not enough to cultivate intelligence. All those scholars in the Akademiya are prime examples.
 
