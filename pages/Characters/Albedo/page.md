@@ -653,7 +653,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Albedo's Hobbies
  Hmm... Besides research, the activity I spend most of my time on is probably sketching. At first I saw it simply as a way to better study the structure of living things and materials so as to aid me in my experiments, but it eventually became a hobby of mine. Indeed, it is a very good way to relax.
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Hobbies.mp3
 
 #### Albedo's Troubles
  There's just never enough time, is there? Even when I remove the most troublesome matters from my schedule, I still can't find enough time for everything.
