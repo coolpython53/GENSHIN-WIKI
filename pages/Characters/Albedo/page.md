@@ -613,6 +613,11 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
  #### About Klee
  Indeed, I view Klee as my younger sister. Whenever she gets herself into some explosive sort of trouble, I can only console myself with the fact that her current destructiveness is nothing compared to that of Miss Alice.
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Klee.mp3
+
+#### About Xingqiu
+ Oh, Xingqiu? I find his written works quite interesting. The Yae Publishing House in Inazuma has been asking that I cooperate with a different author for greater royalties. Hmph, do I seem the type to be swayed by a few extra Mora?
+
+ mp3::
 ### Images
 put images here...
