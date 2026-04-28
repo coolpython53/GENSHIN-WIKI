@@ -375,3 +375,8 @@ A capable person who keeps a low profile for too long is often perceived as some
   #### When It Rains
   Going out on a rainy day is the worst.
 
+  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Rains.mp3 
+
+  #### When Thunder Strikes
+   It's just a natural phenomenon, so there's nothing to be afraid of... unless you're beneath a tree.
+
