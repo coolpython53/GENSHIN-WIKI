@@ -593,7 +593,11 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Family
  Family? Although Alice has always asked me to call her mother.... when I think of the idea of "family," my master comes to mind first. My earliest memories in life are of going on adventures with her. She taught me the art of alchemy and much knowledge about the world. Perhaps... even the words "family" and "master" are incapable of fully expressing her meaning to me.
 
- mp3::
- 
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Family.mp3
+
+#### About Sucrose: Direction
+ Sucrose? I think I more or less understand why she is so dedicated to her research in bio-alchemy... Either way, I'm happy to see her succeed more and more in her endeavors.
+
+mp3::
 ### Images
 put images here...
