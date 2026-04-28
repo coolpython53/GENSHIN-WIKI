@@ -585,10 +585,15 @@ Eh-hem... I am very interested in your little floating companion. May I borrow h
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO-Albedo-Something-to-Share.mp3
 
-### Interesting things
+#### Interesting things
 You would like to know more about petrified trees? Erm... Actually, the petrified trees you have come across in domains aren't that ancient. Truly ancient trees usually grow to around one or two miles in height. Oh, and there's a kind of large spider that lives around their roots — if you tie one up in cape jasmine and lemongrass and sprinkle on some cardamom, smoke it for a few hours — you get a fragrant taste that's simply... unforgettable.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Interesting_Things.mp3
 
+#### About Family
+ Family? Although Alice has always asked me to call her mother.... when I think of the idea of "family," my master comes to mind first. My earliest memories in life are of going on adventures with her. She taught me the art of alchemy and much knowledge about the world. Perhaps... even the words "family" and "master" are incapable of fully expressing her meaning to me.
+
+ mp3::
+ 
 ### Images
 put images here...
