@@ -415,4 +415,9 @@ A capable person who keeps a low profile for too long is often perceived as some
      #### Good Night 
      I hope my roommate won't be hammering away on another one of his projects in the dead of night... Actually, I'd prefer if he wasn't home at all. I really don't want to wear my soundproof earpieces to bed.
 
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Night.mp3 
+
+     #### About Alhaitham: Facts
+     Rather than lacing my words with rhetoric, I prefer speaking factually.
+
      mp3::
