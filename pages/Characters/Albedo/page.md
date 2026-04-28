@@ -630,5 +630,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_01.mp3
 
-### Images
-put images here...
+#### More About Albedo: II
+ Oh, by the way. Did you know that without human manipulation, you would need to harness the power of a sun eight times the size of our own in order to naturally create gold?
+
+ mp3::
