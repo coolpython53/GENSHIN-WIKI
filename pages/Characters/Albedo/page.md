@@ -648,6 +648,21 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### More About Albedo: V
  Even now, I find the nigredo processing stage of alchemy passed down by my master to be full of mystery. What did my master want to create using this technique...? My research is far from over, I will require your help to investigate further.
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_05.mp3
+
+#### Albedo's Hobbies
+ Hmm... Besides research, the activity I spend most of my time on is probably sketching. At first I saw it simply as a way to better study the structure of living things and materials so as to aid me in my experiments, but it eventually became a hobby of mine. Indeed, it is a very good way to relax.
+
+mp3::
+
+#### Albedo's Troubles
+ There's just never enough time, is there? Even when I remove the most troublesome matters from my schedule, I still can't find enough time for everything.
+
+mp3::
+
+#### Favorite Food
+ I really do enjoy having dessert. How can I put it...? When both physical and mental capacity are spent, high-energy materials further provide a kind of primordial, highly-effective boost.
+
 mp3::
 
 ####
