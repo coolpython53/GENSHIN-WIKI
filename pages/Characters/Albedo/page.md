@@ -658,7 +658,7 @@ mp3::
 #### Albedo's Troubles
  There's just never enough time, is there? Even when I remove the most troublesome matters from my schedule, I still can't find enough time for everything.
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Troubles.mp3
 
 #### Favorite Food
  I really do enjoy having dessert. How can I put it...? When both physical and mental capacity are spent, high-energy materials further provide a kind of primordial, highly-effective boost.
