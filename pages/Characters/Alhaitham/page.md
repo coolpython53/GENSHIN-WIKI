@@ -370,3 +370,8 @@ A capable person who keeps a low profile for too long is often perceived as some
   #### Chat: Thinking
   Hmm, there have been many poorly written applications lately. I guess I'll just have to reject them all.
 
+  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Thinking.mp3 
+
+  #### When It Rains
+  Going out on a rainy day is the worst.
+
