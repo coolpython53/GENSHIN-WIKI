@@ -618,6 +618,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Xingqiu
  Oh, Xingqiu? I find his written works quite interesting. The Yae Publishing House in Inazuma has been asking that I cooperate with a different author for greater royalties. Hmph, do I seem the type to be swayed by a few extra Mora?
 
- mp3::
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Xingqiu.mp3
+
+ #### About Barbara
+  Barbara? She's a very earnest Deaconess. I once had the opportunity to sketch her a simple portrait... What happened to the sketch? Ah yes... Albert offered to purchase it, but I rejected his bid and gave it to the Acting Grand Master. Social relations... really require a lot of effort.
 ### Images
 put images here...
