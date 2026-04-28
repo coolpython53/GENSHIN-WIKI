@@ -425,4 +425,9 @@ A capable person who keeps a low profile for too long is often perceived as some
      #### About Alhaitham: Rumors
      Oh? You're concerned about all the rumors you've heard about me? Don't bother, because I don't care whether you believe those rumors. Just don't throw extra trouble my way, and we'll be fine.
 
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Rumors.mp3 
+
+     #### About Us: Greetings
+     Don't be offended if you try to greet me on the street and I don't respond. It's simply because I'm wearing my soundproof earpieces, that's all.
+
      mp3::
