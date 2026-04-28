@@ -405,5 +405,9 @@ A capable person who keeps a low profile for too long is often perceived as some
      #### Good Afternoon
       If there's nothing to do, then I'll just put on my soundproof earpieces and nap for a while.
 
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3 
-    
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3
+
+     #### Good Evening
+     I'll be taking some time for myself now. Goodbye.
+
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Evening.mp3 
