@@ -385,3 +385,10 @@ A capable person who keeps a low profile for too long is often perceived as some
    #### When It Snows
     It's getting cold, you say? I feel fine.
 
+    mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Snows.mp3 
+
+    #### When The Sun Is Out
+     This weather is perfect for doing nothing at all.
+
+     mp3:: 
+
