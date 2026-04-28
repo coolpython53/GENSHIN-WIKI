@@ -390,5 +390,9 @@ A capable person who keeps a low profile for too long is often perceived as some
     #### When The Sun Is Out
      This weather is perfect for doing nothing at all.
 
-     mp3:: 
+     mp3:: https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_the_Sun_Is_Out.mp3
+
+     #### In The Desert 
+     Curses, there's sand in my shoes.
+     
 
