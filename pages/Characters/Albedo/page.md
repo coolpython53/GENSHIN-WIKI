@@ -622,5 +622,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
  #### About Barbara
   Barbara? She's a very earnest Deaconess. I once had the opportunity to sketch her a simple portrait... What happened to the sketch? Ah yes... Albert offered to purchase it, but I rejected his bid and gave it to the Acting Grand Master. Social relations... really require a lot of effort.
+
+  mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Barbara.ogg
+  
 ### Images
 put images here...
