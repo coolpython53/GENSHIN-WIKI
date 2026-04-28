@@ -643,10 +643,10 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### More About Albedo: IV
  What do I do besides sketching and research...? I will occasionally read novels from Inazuma and Liyue. They contain many fascinating ideas which can sometimes provide me with unexpected inspirations for my own creations.
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_04.mp3
 
 #### More About Albedo: V
-
+ Even now, I find the nigredo processing stage of alchemy passed down by my master to be full of mystery. What did my master want to create using this technique...? My research is far from over, I will require your help to investigate further.
 
 mp3::
 
