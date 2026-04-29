@@ -436,3 +436,8 @@ A capable person who keeps a low profile for too long is often perceived as some
      It seems you're perfectly capable of taking care of yourself, so much so that you even look after that little companion of yours. I don't have any suggestions to offer you, and frankly, you probably don't need my help.
 
      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Helping_Each_Other.mp3
+
+     #### About The Vision
+      To be completely honest, this Dendro Vision isn't of much help to my research... However, there's no denying the effectiveness of elemental powers when settling a physical dispute, so it still proves useful at times.
+
+      mp3:: 
