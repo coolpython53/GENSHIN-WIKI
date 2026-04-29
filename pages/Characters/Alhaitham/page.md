@@ -450,4 +450,4 @@ A capable person who keeps a low profile for too long is often perceived as some
       #### Interesting Things
       There are many things in this world that may catch our eye, but don't always believe what you see. If what we see in the world were all there was to it, then there'd be no need to think, would there?
 
-      mp3::
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3 
