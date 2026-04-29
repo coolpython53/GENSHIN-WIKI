@@ -397,15 +397,10 @@ A capable person who keeps a low profile for too long is often perceived as some
      
      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_In_the_Desert.mp3
 
-     #### Good Morning
-      It's a little early for me... Let me get a cup of coffee first.
+     #### Good Morning.
+     It's a little early for me... Let me get a cup of coffee first.
 
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Morning.mp3
-     
-     #### Good Afternoon
-      If there's nothing to do, then I'll just put on my soundproof earpieces and nap for a while.
-
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Morning.mp3
 
      #### Good Evening
      I'll be taking some time for myself now. Goodbye.
