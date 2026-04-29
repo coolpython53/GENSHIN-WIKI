@@ -455,4 +455,5 @@ A capable person who keeps a low profile for too long is often perceived as some
       #### About Lesser Lord Kusanali
       One should neither dismiss nor overly revere the divine. Gods require followers, and they are also part of a biological hierarchy. That's why I don't take any pride in the fact that I helped rescue a god. I hope Lesser Lord Kusanali doesn't take offense.
 
-      mp3:: 
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
+
