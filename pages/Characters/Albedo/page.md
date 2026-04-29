@@ -678,7 +678,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
  #### Receiving a Gift: II
  You're willing to spend so much time on improving your cooking, and that's precisely how you're able to make it taste so good.
 
- mp3::
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_02.mp3
 
  #### Receiving a Gift: III
  This is more than I can manage... maybe we could split it between us?
