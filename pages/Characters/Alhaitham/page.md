@@ -442,18 +442,4 @@ A capable person who keeps a low profile for too long is often perceived as some
 
       mp3:: https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3 
 
-      #### Something To Share
-       Truth serves no master. Humankind is not a vehicle for knowledge, nor is knowledge the aim of humankind.
-
- mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Something_to_Share.mp3
-
-      #### Interesting Things
-      There are many things in this world that may catch our eye, but don't always believe what you see. If what we see in the world were all there was to it, then there'd be no need to think, would there?
-
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3 
-
-      #### About Lesser Lord Kusanali
-      One should neither dismiss nor overly revere the divine. Gods require followers, and they are also part of a biological hierarchy. That's why I don't take any pride in the fact that I helped rescue a god. I hope Lesser Lord Kusanali doesn't take offense.
-
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
-
+      
