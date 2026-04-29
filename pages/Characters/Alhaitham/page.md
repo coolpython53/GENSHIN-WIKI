@@ -435,6 +435,6 @@ A capable person who keeps a low profile for too long is often perceived as some
      #### About The Vision
       To be completely honest, this Dendro Vision isn't of much help to my research... However, there's no denying the effectiveness of elemental powers when settling a physical dispute, so it still proves useful at times.
 
-      mp3:: https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3 
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_the_Vision.mp3 
 
       
