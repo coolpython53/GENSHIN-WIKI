@@ -683,4 +683,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
  #### Receiving a Gift: III
  This is more than I can manage... maybe we could split it between us?
 
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_03.mp3
+
+ #### Birthday
+ Happy birthday. You look especially happy, would you mind if I sketched you? The capacity of our brains is limited, so we are bound to forget things. But when an image is transferred onto paper or canvas, the sketch becomes an extension of our memory. We can remember that past feeling when we later look at the sketch.
+
  mp3::
