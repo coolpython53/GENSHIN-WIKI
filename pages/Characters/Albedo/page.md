@@ -496,6 +496,7 @@ The Wanderer later gave his core to Sandrone so she could continue computing her
 - As a Trial Character:
   - Albedo is one of three playable characters who wields a Flagship Event weapon in at least one of his Character Trial iterations (Festering Desire prior to Version 2.3, Cinnabar Spindle from 2.3 onwards), with the other characters with this distinction being Xianyun and Chiori.
   - Excluding Aloy (who is a crossover character lacking Character Trials) and the Traveler, he is also one of the only two 5-star characters who has never wielded a 5-star weapon in any of his Character Trial iterations to date. The other 5-star character with this distinction is Qiqi.
+
 ### Voice overs
 
 #### Hello
@@ -591,17 +592,17 @@ You would like to know more about petrified trees? Erm... Actually, the petrifie
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Interesting_Things.mp3
 
 #### About Family
- Family? Although Alice has always asked me to call her mother.... when I think of the idea of "family," my master comes to mind first. My earliest memories in life are of going on adventures with her. She taught me the art of alchemy and much knowledge about the world. Perhaps... even the words "family" and "master" are incapable of fully expressing her meaning to me.
+Family? Although Alice has always asked me to call her mother.... when I think of the idea of "family," my master comes to mind first. My earliest memories in life are of going on adventures with her. She taught me the art of alchemy and much knowledge about the world. Perhaps... even the words "family" and "master" are incapable of fully expressing her meaning to me.
 
- mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Family.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Family.mp3
 
 #### About Sucrose: Direction
- Sucrose? I think I more or less understand why she is so dedicated to her research in bio-alchemy... Either way, I'm happy to see her succeed more and more in her endeavors.
+Sucrose? I think I more or less understand why she is so dedicated to her research in bio-alchemy... Either way, I'm happy to see her succeed more and more in her endeavors.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Sucrose_-_Direction.mp3
 
 #### About Sucrose: Habits
- Working with Sucrose on alchemy research is quite pleasant, but she has some... stubborn qualities in regards to certain aspects unrelated to research. For example, I have told her numerous times to just call me "Albedo" since we are hardly generations apart, but she insists on addressing me in an excessively formal manner. *sigh* ...Whatever she prefers, I guess.
+Working with Sucrose on alchemy research is quite pleasant, but she has some... stubborn qualities in regards to certain aspects unrelated to research. For example, I have told her numerous times to just call me "Albedo" since we are hardly generations apart, but she insists on addressing me in an excessively formal manner. *sigh* ...Whatever she prefers, I guess.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_About_Sucrose_-_Habits.mp3
 
@@ -641,32 +642,32 @@ The time required to sketch portraits closely correlates with one's mood. I coul
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_03.mp3
 
 #### More About Albedo: IV
- What do I do besides sketching and research...? I will occasionally read novels from Inazuma and Liyue. They contain many fascinating ideas which can sometimes provide me with unexpected inspirations for my own creations.
+What do I do besides sketching and research...? I will occasionally read novels from Inazuma and Liyue. They contain many fascinating ideas which can sometimes provide me with unexpected inspirations for my own creations.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_04.mp3
 
 #### More About Albedo: V
- Even now, I find the nigredo processing stage of alchemy passed down by my master to be full of mystery. What did my master want to create using this technique...? My research is far from over, I will require your help to investigate further.
+Even now, I find the nigredo processing stage of alchemy passed down by my master to be full of mystery. What did my master want to create using this technique...? My research is far from over, I will require your help to investigate further.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_More_About_Albedo_-_05.mp3
 
 #### Albedo's Hobbies
- Hmm... Besides research, the activity I spend most of my time on is probably sketching. At first I saw it simply as a way to better study the structure of living things and materials so as to aid me in my experiments, but it eventually became a hobby of mine. Indeed, it is a very good way to relax.
+Hmm... Besides research, the activity I spend most of my time on is probably sketching. At first I saw it simply as a way to better study the structure of living things and materials so as to aid me in my experiments, but it eventually became a hobby of mine. Indeed, it is a very good way to relax.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Hobbies.mp3
 
 #### Albedo's Troubles
- There's just never enough time, is there? Even when I remove the most troublesome matters from my schedule, I still can't find enough time for everything.
+There's just never enough time, is there? Even when I remove the most troublesome matters from my schedule, I still can't find enough time for everything.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Troubles.mp3
 
 #### Favorite Food
- I really do enjoy having dessert. How can I put it...? When both physical and mental capacity are spent, high-energy materials further provide a kind of primordial, highly-effective boost.
+I really do enjoy having dessert. How can I put it...? When both physical and mental capacity are spent, high-energy materials further provide a kind of primordial, highly-effective boost.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Favorite_Food.mp3
 
 #### Least Favorite Food
- What food do I dislike? ...Large portions of meat at restaurants. I have a rather small appetite, so a meal like that only ends up in tragedy — either I overeat and the joy of the taste is lost, or I don't finish it and the food is wasted. I decided to simply not go to restaurants, although that has also meant I must spend more time preparing my own food...
+What food do I dislike? ...Large portions of meat at restaurants. I have a rather small appetite, so a meal like that only ends up in tragedy — either I overeat and the joy of the taste is lost, or I don't finish it and the food is wasted. I decided to simply not go to restaurants, although that has also meant I must spend more time preparing my own food...
 
  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Least_Favorite_Food.mp3
 
