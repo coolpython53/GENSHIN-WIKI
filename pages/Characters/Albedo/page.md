@@ -670,34 +670,42 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Least_Favorite_Food.mp3
 
- #### Receiving a Gift: I
- If flavors were colors... this one would be gold.
+#### Receiving a Gift: I
+If flavors were colors... this one would be gold.
 
- mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_01.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_01.mp3
 
- #### Receiving a Gift: II
- You're willing to spend so much time on improving your cooking, and that's precisely how you're able to make it taste so good.
+#### Receiving a Gift: II
+You're willing to spend so much time on improving your cooking, and that's precisely how you're able to make it taste so good.
 
- mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_02.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_02.mp3
 
- #### Receiving a Gift: III
- This is more than I can manage... maybe we could split it between us?
+#### Receiving a Gift: III
+This is more than I can manage... maybe we could split it between us?
 
- mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_03.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_03.mp3
 
- #### Birthday
- Happy birthday. You look especially happy, would you mind if I sketched you? The capacity of our brains is limited, so we are bound to forget things. But when an image is transferred onto paper or canvas, the sketch becomes an extension of our memory. We can remember that past feeling when we later look at the sketch.
+#### Birthday
+Happy birthday. You look especially happy, would you mind if I sketched you? The capacity of our brains is limited, so we are bound to forget things. But when an image is transferred onto paper or canvas, the sketch becomes an extension of our memory. We can remember that past feeling when we later look at the sketch.
 
- mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Birthday.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Birthday.mp3
 
- #### Feelings About Ascension: Intro
-  Nigredo is the first step in alchemy, drawing from primordial forms. As beings who live in this world, we must find our own meaning.
+#### Feelings About Ascension: Intro
+Nigredo is the first step in alchemy, drawing from primordial forms. As beings who live in this world, we must find our own meaning.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_01.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_01.mp3
 
- #### Feelings About Ascension: Building Up
-  Albedo is the step in which change begins. Clearing away the excess so we can take on all the knowledge that is available. Would you like to investigate this world with me?
+#### Feelings About Ascension: Building Up
+Albedo is the step in which change begins. Clearing away the excess so we can take on all the knowledge that is available. Would you like to investigate this world with me?
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_02.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_02.mp3
 
-  ####
+#### Feelings About Ascension: Climax
+
+
+mp3::
+
+#### Feelings About Ascension: Conclusion
+
+
+mp3::
