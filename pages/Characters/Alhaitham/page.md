@@ -437,5 +437,10 @@ A capable person who keeps a low profile for too long is often perceived as some
 
      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_the_Vision.mp3 
 
+     #### Something to Share
+      Truth serves no master. Humankind is not a vehicle for knowledge, nor is knowledge the aim of humankind.
+
+      mp3::
+
      
       
