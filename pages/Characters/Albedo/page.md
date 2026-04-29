@@ -693,4 +693,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
  #### Feelings About Ascension: Intro
   Nigredo is the first step in alchemy, drawing from primordial forms. As beings who live in this world, we must find our own meaning.
 
+  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_01.mp3
+
+ #### Feelings About Ascension: Building Up
+  Albedo is the step in which change begins. Clearing away the excess so we can take on all the knowledge that is available. Would you like to investigate this world with me?
+
   mp3::
