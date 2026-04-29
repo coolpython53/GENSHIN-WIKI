@@ -673,7 +673,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
  #### Receiving a Gift: I
  If flavors were colors... this one would be gold.
 
- mp3::
+ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Receiving_a_Gift_-_01.mp3
 
  #### Receiving a Gift: II
  You're willing to spend so much time on improving your cooking, and that's precisely how you're able to make it taste so good.
