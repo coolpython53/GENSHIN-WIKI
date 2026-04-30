@@ -407,6 +407,11 @@ A capable person who keeps a low profile for too long is often perceived as some
 
      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3
 
+     #### Good Evening
+     I'll be taking some time for myself now. Goodbye.
+    
+     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Evening.mp3
+     
      #### Good Night 
      I hope my roommate won't be hammering away on another one of his projects in the dead of night... Actually, I'd prefer if he wasn't home at all. I really don't want to wear my soundproof earpieces to bed.
 
@@ -447,5 +452,13 @@ A capable person who keeps a low profile for too long is often perceived as some
 
       mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3
 
-     #### 
+     #### About Lesser Lord Kusanali
+      One should neither dismiss nor overly revere the divine. Gods require followers, and they are also part of a biological hierarchy. That's why I don't take any pride in the fact that I helped rescue a god. I hope Lesser Lord Kusanali doesn't take offense.
+
+      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
+
+      #### About Kaveh: Overly Sensitive
+       Kaveh tends to be overly sensitive about everyone and everything he crosses paths with, and he's constantly making a fuss about nothing. Maybe it's because he's too emotionally fragile...
+
+       mp3::
       
