@@ -460,5 +460,5 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### About Kaveh: Overly Sensitive
 Kaveh tends to be overly sensitive about everyone and everything he crosses paths with, and he's constantly making a fuss about nothing. Maybe it's because he's too emotionally fragile...
 
-mp3::
+
 
