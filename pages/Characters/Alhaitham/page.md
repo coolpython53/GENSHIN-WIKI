@@ -350,115 +350,115 @@ A capable person who keeps a low profile for too long is often perceived as some
 - Alhaitham is mentioned in the description of the following Furnishing:
   - Glorious Emerald Tapestry Glorious Emerald Tapestry
 
-  #### Voice Overs
+#### Voice Overs
 
-  #### Hello
-  I'm Alhaitham, the Akademiya's scribe. If you wish to access an archived file, please submit an application according to the prescribed format. Oh, your form isn't ready? Not to worry. You can come again on the next working day. My work hours are posted outside the office.
+#### Hello
+I'm Alhaitham, the Akademiya's scribe. If you wish to access an archived file, please submit an application according to the prescribed format. Oh, your form isn't ready? Not to worry. You can come again on the next working day. My work hours are posted outside the office.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Hello.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Hello.mp3
 
-  #### Chat: Work
-  The scribe's work is simple, which is exactly why I took the position.
+#### Chat: Work
+The scribe's work is simple, which is exactly why I took the position.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Work.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Work.mp3 
 
-  #### Chat: Reading 
-  Book learning alone is not enough to cultivate intelligence. All those scholars in the Akademiya are prime examples.
+#### Chat: Reading 
+Book learning alone is not enough to cultivate intelligence. All those scholars in the Akademiya are prime examples.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Reading.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Reading.mp3 
 
-  #### Chat: Thinking
-  Hmm, there have been many poorly written applications lately. I guess I'll just have to reject them all.
+#### Chat: Thinking
+Hmm, there have been many poorly written applications lately. I guess I'll just have to reject them all.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Thinking.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Chat_-_Thinking.mp3 
 
-  #### When It Rains
-  Going out on a rainy day is the worst.
+#### When It Rains
+Going out on a rainy day is the worst.
 
-  mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Rains.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Rains.mp3 
 
-  #### When Thunder Strikes
-   It's just a natural phenomenon, so there's nothing to be afraid of... unless you're beneath a tree.
+#### When Thunder Strikes
+It's just a natural phenomenon, so there's nothing to be afraid of... unless you're beneath a tree.
 
-   mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_Thunder_Strikes.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_Thunder_Strikes.mp3
 
-   #### When It Snows
-    It's getting cold, you say? I feel fine.
+#### When It Snows
+It's getting cold, you say? I feel fine.
 
-    mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Snows.mp3 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_It_Snows.mp3 
 
-    #### When The Sun Is Out
-     This weather is perfect for doing nothing at all.
+#### When The Sun Is Out
+This weather is perfect for doing nothing at all.
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_the_Sun_Is_Out.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_When_the_Sun_Is_Out.mp3
 
-     #### In The Desert 
-     Curses, there's sand in my shoes.
-     
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_In_the_Desert.mp3
+#### In The Desert 
+Curses, there's sand in my shoes.
 
-     #### Good Morning
-     It's a little early for me... Let me get a cup of coffee first.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_In_the_Desert.mp3
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Morning.mp3
+#### Good Morning
+It's a little early for me... Let me get a cup of coffee first.
 
-     #### Good Afternoon
-     If there's nothing to do, then I'll just put on my soundproof earpieces and nap for a while.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Morning.mp3
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3
+#### Good Afternoon
+If there's nothing to do, then I'll just put on my soundproof earpieces and nap for a while.
 
-     #### Good Evening
-     I'll be taking some time for myself now. Goodbye.
-    
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Evening.mp3
-     
-     #### Good Night 
-     I hope my roommate won't be hammering away on another one of his projects in the dead of night... Actually, I'd prefer if he wasn't home at all. I really don't want to wear my soundproof earpieces to bed.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Afternoon.mp3
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Night.mp3 
+#### Good Evening
+I'll be taking some time for myself now. Goodbye.
 
-     #### About Alhaitham: Facts
-     Rather than lacing my words with rhetoric, I prefer speaking factually.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Evening.mp3
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Facts.mp3 
+#### Good Night 
+I hope my roommate won't be hammering away on another one of his projects in the dead of night... Actually, I'd prefer if he wasn't home at all. I really don't want to wear my soundproof earpieces to bed.
 
-     #### About Alhaitham: Rumors
-     Oh? You're concerned about all the rumors you've heard about me? Don't bother, because I don't care whether you believe those rumors. Just don't throw extra trouble my way, and we'll be fine.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Good_Night.mp3 
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Rumors.mp3 
+#### About Alhaitham: Facts
+Rather than lacing my words with rhetoric, I prefer speaking factually.
 
-     #### About Us: Greetings
-     Don't be offended if you try to greet me on the street and I don't respond. It's simply because I'm wearing my soundproof earpieces, that's all.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Facts.mp3 
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Greetings.mp3 
+#### About Alhaitham: Rumors
+Oh? You're concerned about all the rumors you've heard about me? Don't bother, because I don't care whether you believe those rumors. Just don't throw extra trouble my way, and we'll be fine.
 
-     #### About Us: Helping Each Other 
-     It seems you're perfectly capable of taking care of yourself, so much so that you even look after that little companion of yours. I don't have any suggestions to offer you, and frankly, you probably don't need my help.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Alhaitham_-_Rumors.mp3 
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Helping_Each_Other.mp3
+#### About Us: Greetings
+Don't be offended if you try to greet me on the street and I don't respond. It's simply because I'm wearing my soundproof earpieces, that's all.
 
-     #### About The Vision
-     To be completely honest, this Dendro Vision isn't of much help to my research... However, there's no denying the effectiveness of elemental powers when settling a physical dispute, so it still proves useful at times.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Greetings.mp3 
 
-     mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_the_Vision.mp3 
+#### About Us: Helping Each Other 
+It seems you're perfectly capable of taking care of yourself, so much so that you even look after that little companion of yours. I don't have any suggestions to offer you, and frankly, you probably don't need my help.
 
-     #### Something to Share
-      Truth serves no master. Humankind is not a vehicle for knowledge, nor is knowledge the aim of humankind.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Us_-_Helping_Each_Other.mp3
 
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Something_to_Share.mp3
+#### About The Vision
+To be completely honest, this Dendro Vision isn't of much help to my research... However, there's no denying the effectiveness of elemental powers when settling a physical dispute, so it still proves useful at times.
 
-     #### Interesting Things
-      There are many things in this world that may catch our eye, but don't always believe what you see. If what we see in the world were all there was to it, then there'd be no need to think, would there?
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_the_Vision.mp3 
 
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3
+#### Something to Share
+Truth serves no master. Humankind is not a vehicle for knowledge, nor is knowledge the aim of humankind.
 
-     #### About Lesser Lord Kusanali
-      One should neither dismiss nor overly revere the divine. Gods require followers, and they are also part of a biological hierarchy. That's why I don't take any pride in the fact that I helped rescue a god. I hope Lesser Lord Kusanali doesn't take offense.
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Something_to_Share.mp3
 
-      mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
+#### Interesting Things
+There are many things in this world that may catch our eye, but don't always believe what you see. If what we see in the world were all there was to it, then there'd be no need to think, would there?
 
-     #### About Kaveh: Overly Sensitive
-       Kaveh tends to be overly sensitive about everyone and everything he crosses paths with, and he's constantly making a fuss about nothing. Maybe it's because he's too emotionally fragile...
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3
 
-       mp3::
-      
+#### About Lesser Lord Kusanali
+One should neither dismiss nor overly revere the divine. Gods require followers, and they are also part of a biological hierarchy. That's why I don't take any pride in the fact that I helped rescue a god. I hope Lesser Lord Kusanali doesn't take offense.
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
+
+#### About Kaveh: Overly Sensitive
+Kaveh tends to be overly sensitive about everyone and everything he crosses paths with, and he's constantly making a fuss about nothing. Maybe it's because he's too emotionally fragile...
+
+mp3::
+
