@@ -447,7 +447,7 @@ A capable person who keeps a low profile for too long is often perceived as some
 
       mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Something_to_Share.mp3
 
-      #### Interesting Things
+     #### Interesting Things
       There are many things in this world that may catch our eye, but don't always believe what you see. If what we see in the world were all there was to it, then there'd be no need to think, would there?
 
       mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_Interesting_Things.mp3
@@ -457,7 +457,7 @@ A capable person who keeps a low profile for too long is often perceived as some
 
       mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Alhaitham/Voice%20Overs/VO_Alhaitham_About_Lesser_Lord_Kusanali.mp3
 
-      #### About Kaveh: Overly Sensitive
+     #### About Kaveh: Overly Sensitive
        Kaveh tends to be overly sensitive about everyone and everything he crosses paths with, and he's constantly making a fuss about nothing. Maybe it's because he's too emotionally fragile...
 
        mp3::
