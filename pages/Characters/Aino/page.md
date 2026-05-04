@@ -426,4 +426,4 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Chat: Plans
 It's been way too long since I last had some candy. My brain's grinding to a halt, like a rusty machine... That's it! I'm having five whole Krumkakes for dinner tonight, and nothing's gonna stop me. Not even Ineffa's super-angry mode!
 
-mp3::
+mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Chat_-_Plans.mp3
