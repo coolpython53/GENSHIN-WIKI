@@ -431,4 +431,6 @@ mp3::https://github.com/coolpython53/GENSHIN-WIKI/blob/main/pages/Characters/Ain
 #### Chat: Toothache 
 *grimace* I just got a really bad toothache... Whyyy? Ineffa, help me! *whimper*
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Chat_-_Toothache.mp3
+
+#### 
