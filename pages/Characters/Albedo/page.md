@@ -723,4 +723,17 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 Live.
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Elemental_Skill_1_03.mp3
+
+#### Elemental Burst
+Moment of birth.
+
+mp3::
+
+Feel this ancient power.
+
+mp3::
+
+Witness my great undertaking.
+
 mp3::
