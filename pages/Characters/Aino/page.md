@@ -418,6 +418,7 @@ Arlecchino later tracked Dottore to his research facility to the north, where sh
    - Aino is also the only character with a set birthday aside from Aloy who has sent a birthday mail without also having official birthday artwork on the same day, as she celebrated her birthday during the first half of Version "Luna I." This may be because of the aforementioned release situation; it is otherwise unclear why this would happen.
 
    ### Voice Overs
+  
    #### Hello
     Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
 
