@@ -717,6 +717,10 @@ Burst forth.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Elemental_Skill_1_01.mp3
 
- Come into being!
+Come into being!
 
- mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Elemental_Skill_1_02.mp3
+
+Live.
+
+mp3::
