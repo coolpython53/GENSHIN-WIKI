@@ -417,9 +417,12 @@ Arlecchino later tracked Dottore to his research facility to the north, where sh
 - Aside from the Traveler and characters who have a red background, Aino is the first character who was initially released with only a set number of copies available: One copy of Aino could be obtained via The Clink Clank Whiz-Kid! when Version "Luna I" began, but as she was part of the second half's Character Event Wishes but not the first half's, additional copies could not be obtained until the second half of Version "Luna I."
    - Aino is also the only character with a set birthday aside from Aloy who has sent a birthday mail without also having official birthday artwork on the same day, as she celebrated her birthday during the first half of Version "Luna I." This may be because of the aforementioned release situation; it is otherwise unclear why this would happen.
 
-   ### Voice Overs
-  
-   #### Hello
-    Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
+### Voice Overs
+#### Hello
+Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
+### Voice Overs
 
-    mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Hello.mp3
+#### Hello
+Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Hello.mp3
