@@ -710,3 +710,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 Citrinitas is the final stage of the alchemical transmutation process. The meaning of the object being transmuted has finally been brought to light, becoming gold and revealing its true value... I too have found my own meaning.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/VO_Albedo_Feelings_About_Ascension_-_04.mp3
+
+### Combat
+#### Elemental skill
+Burst forth.
+
+mp3::
