@@ -24,3 +24,5 @@ There is 1 item that can be crafted using Cecilia:
   - Mora ×500
 
 ## Ascension
+- {[Albedo]page::Characters/Albedo}
+- Venti
