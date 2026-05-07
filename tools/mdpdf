@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer & Wiki Exporter</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        /* Typography for the preview area */
+        .prose h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
+        .prose h2 { font-size: 1.875rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .prose h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1.25rem; }
+        .prose p { margin-bottom: 1rem; line-height: 1.6; color: #374151; }
+        .prose code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; }
+        .prose pre { background: #1f2937; color: white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 1rem 0; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .prose blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; font-style: italic; color: #4b5563; margin: 1rem 0; }
+        
+        /* Wiki Link Styling */
+        .wiki-link { color: #2563eb; font-weight: 500; border-bottom: 1px dashed #bfdbfe; }
+
+        /* Audio visual cues for Print */
+        .audio-print-link { display: none; font-family: monospace; font-size: 0.8rem; color: #4b5563; padding: 8px; border: 1px solid #e5e7eb; border-radius: 4px; background: #f9fafb; word-break: break-all; }
+
+        /* PDF Export Styles - FIXED */
+        @media print {
+            /* Hide UI elements */
+            header, .no-print, #charCount, .px-4.py-2.bg-slate-50 { display: none !important; }
+            
+            /* Reset layout for print */
+            body, html { background: white !important; height: auto !important; overflow: visible !important; }
+            main { display: block !important; height: auto !important; overflow: visible !important; }
+            section { width: 100% !important; height: auto !important; overflow: visible !important; border: none !important; }
+            
+            /* Force preview container to take full page */
+            #preview-container { 
+                position: static !important;
+                width: 100% !important; 
+                max-width: 100% !important;
+                padding: 0 !important; 
+                margin: 0 !important; 
+                box-shadow: none !important;
+                display: block !important;
+            }
+
+            .prose { max-width: none !important; }
+            
+            /* Handle Media Visibility */
+            audio { display: none !important; }
+            .audio-wrapper { page-break-inside: avoid; }
+            .audio-print-link { display: block !important; margin-top: 5px; margin-bottom: 20px; }
+            .wiki-link { border: none !important; color: black !important; font-weight: normal !important; text-decoration: none !important; }
+            
+            /* Ensure images don't cut off */
+            img { max-width: 100% !important; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 h-screen flex flex-col overflow-hidden">
+
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center no-print shrink-0">
+        <div class="flex items-center gap-2">
+            <div class="bg-blue-600 p-2 rounded-lg">
+                <i data-lucide="file-text" class="text-white w-5 h-5"></i>
+            </div>
+            <h1 class="text-xl font-bold text-slate-800">Wiki Previewer</h1>
+        </div>
+        
+        <div class="flex items-center gap-3">
+            <button onclick="clearEditor()" class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-red-600 transition-colors">
+                Clear
+            </button>
+            <button onclick="window.print()" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm transition-all active:scale-95">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                Download PDF
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-1 flex overflow-hidden">
+        <section class="w-1/2 h-full flex flex-col border-r border-slate-200 bg-white no-print">
+            <div class="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider flex justify-between">
+                <span>Markdown Input (Wiki Syntax)</span>
+                <span id="charCount">0 characters</span>
+            </div>
+            <textarea 
+                id="markdownInput" 
+                spellcheck="false"
+                class="flex-1 w-full p-6 focus:outline-none resize-none font-mono text-sm leading-relaxed text-slate-700"
+                placeholder="# Start typing your Markdown here..."
+            ># Wiki Preview Test
+
+## Custom Image Rendering
+image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Anemo/Jean/blueprint.jpg ::::50
+
+## Page Links
+Check out {[Jean]page::Characters/Anemo/Jean} or see the {[Full List]page::Characters}.
+
+## Audio Files
+mp3::https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3</textarea>
+        </section>
+
+        <section id="preview-section" class="w-1/2 h-full flex flex-col bg-slate-50 overflow-y-auto">
+            <div class="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider sticky top-0 z-10 no-print">
+                Preview
+            </div>
+            <div id="preview-container" class="p-8 md:p-12 max-w-3xl mx-auto w-full bg-white shadow-sm min-h-full prose">
+                <div id="previewContent"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const editor = document.getElementById('markdownInput');
+        const previewContent = document.getElementById('previewContent');
+        const charCount = document.getElementById('charCount');
+
+        lucide.createIcons();
+        marked.setOptions({ breaks: true, gfm: true });
+
+        // Strip HTML and clean whitespace
+        function clean(str) { 
+            if (!str) return "";
+            return str.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim(); 
+        }
+
+        function renderWikiContent(html) {
+            // 1. Process Page Links: {[Text]page::Path}
+            html = html.replace(/\{?\[([^\]]+)\]page::([^\}]+)\}?/g, (m, label, path) => {
+                return `<span class="wiki-link">${label.replace(/_/g, ' ')}</span>`;
+            });
+
+            // 2. Process images: image::URL ::::SIZE (with or without %)
+            html = html.replace(/(?:<p>|<a[^>]*>)?\s*image::(.*?)(?:\s*::::\s*(\d+)%?)?\s*(?:<\/a>|<\/p>|<br>|$)/gi, (m, rawUrl, rawSize) => {
+                const url = clean(rawUrl);
+                const size = rawSize || "100";
+                if (!url) return m;
+                return `<img src="${url}" style="width:${size}%;height:auto;" class="rounded-lg shadow-sm my-4 block">`;
+            });
+
+            // 3. Process audio: mp3::URL
+            html = html.replace(/(?:<p>|<a[^>]*>)?\s*mp3::(.*?)\s*(?:<\/a>|<\/p>|<br>|$)/gi, (m, rawUrl) => {
+                const url = clean(rawUrl);
+                if (!url) return m;
+                return `
+                <div class="audio-wrapper my-4">
+                    <audio controls class="w-full"><source src="${url}" type="audio/mpeg"></audio>
+                    <div class="audio-print-link"><strong>Audio Source:</strong> ${url}</div>
+                </div>`;
+            });
+
+            return html;
+        }
+
+        function updatePreview() {
+            const rawText = editor.value;
+            let htmlOutput = marked.parse(rawText);
+            
+            // Apply wiki processing
+            htmlOutput = renderWikiContent(htmlOutput);
+            
+            previewContent.innerHTML = htmlOutput;
+            charCount.innerText = `${rawText.length} characters`;
+        }
+
+        function clearEditor() {
+            if (confirm("Clear all text?")) {
+                editor.value = "";
+                updatePreview();
+                editor.focus();
+            }
+        }
+
+        editor.addEventListener('input', updatePreview);
+        window.addEventListener('load', updatePreview);
+
+        editor.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const start = this.selectionStart;
+                const end = this.selectionEnd;
+                this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
+                this.selectionStart = this.selectionEnd = start + 4;
+            }
+        });
+    </script>
+</body>
+</html>
