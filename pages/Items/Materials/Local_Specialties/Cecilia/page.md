@@ -26,3 +26,6 @@ There is 1 item that can be crafted using Cecilia:
 ## Ascension
 - {[Albedo]page::Characters/Albedo}
 - Venti
+
+## Description
+A beautiful flower with a name that suits its appearance. It only grows where harsh winds blow, and is just as intangible as the true heart of an unbound soul.
