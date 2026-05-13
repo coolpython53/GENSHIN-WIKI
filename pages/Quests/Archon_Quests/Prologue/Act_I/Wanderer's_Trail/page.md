@@ -21,4 +21,7 @@ The god took away your only kin, and you were sealed and cast into a deep slumbe
 
 ## Dialogue
 ‍Paimon‍: So... what you're trying to say is that you fell here... from another world?
+
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_1.mp3
+
+‍Paimon‍: But when you wanted to leave, and go on to the next world, your path was blocked by some unknown god?
