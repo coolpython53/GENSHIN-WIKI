@@ -28,3 +28,4 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_2.mp3
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_3.mp3
