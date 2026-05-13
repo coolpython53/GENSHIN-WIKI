@@ -4,7 +4,7 @@ Wanderer's Trail is an {[Archon Quest]page::Quests/Archon_Quests/folder.md}. It 
 ## Steps
 1. Go to Paimon
 2. Follow Paimon
-- Defeat theHydro Slime ×1 (optional)
+- Defeat the Hydro Slime ×1 (optional)
 3. Unlock the Teleport Waypoint
 4. Go to the foot of the cliff
 5. Climb to the top of the rock face
