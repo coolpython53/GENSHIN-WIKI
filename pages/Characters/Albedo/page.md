@@ -740,6 +740,15 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 #### Sprint Start
 
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Sprint%20Start%2001.mp3
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Sprint%20Start%2002.mp3
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Sprint%20Start%2003.mp3
+
+
+#### Deploying Wind Glider
+
 mp3::
 
 mp3::
