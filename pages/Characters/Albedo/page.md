@@ -737,3 +737,11 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 Witness my great undertaking.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Elemental%20Burst%2003.mp3
+
+#### Sprint Start
+
+mp3::
+
+mp3::
+
+mp3::
