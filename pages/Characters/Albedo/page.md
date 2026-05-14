@@ -749,8 +749,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 #### Deploying Wind Glider
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Deploying%20Wind%20Glider%2001.mp3
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Deploying%20Wind%20Glider%2002.mp3
 
-mp3::
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Albedo/Voice-overs/Deploying%20Wind%20Glider%2003.mp3
