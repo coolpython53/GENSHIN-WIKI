@@ -8,7 +8,7 @@ Clearwater Jade is a Local Specialty found in Chenyu Vale, Liyue.
 Clearwater Jade can be obtained in Chenyu Vale, either growing freely or on the shells of Jadestone Turtles.
 
 ## Shops
-There is 1 NPC that sells Clearwater Jade:
+There is 1 Shop that sells Clearwater Jade:
 - Fengtai (cost: 1,000 {[Mora]page::Currencies/Mora}) 5 in stock
    - Refreshes every 3 Days
 
