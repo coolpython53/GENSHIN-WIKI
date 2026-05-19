@@ -37,3 +37,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 **Lumine (Female Traveler)**: Who're you?!
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Lumine_5.mp3
+
+**Asmoday (Sustainer of Heavenly Principles)**: The sustainer of heavenly principles. The arrogation of mankind ends now.
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_SOHP_6.mp3
