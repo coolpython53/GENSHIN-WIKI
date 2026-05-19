@@ -41,3 +41,6 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 **Asmoday (Sustainer of Heavenly Principles)**: The sustainer of heavenly principles. The arrogation of mankind ends now.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_SOHP_6.mp3
+
+(The twins battle with Asmoday to no avail. The Traveler's sibling is engulfed by a swarm of red-and-black cubes and condensed into a single cube in the god's hand.)
+
