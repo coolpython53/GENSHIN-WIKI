@@ -4,7 +4,7 @@ Wanderer's Trail is an {[Archon Quest]page::Quests/Archon_Quests/folder.md}. It 
 ## Steps
 1. Go to Paimon
 2. Follow Paimon
-- Defeat the Hydro Slime ×1 (optional)
+  - Defeat the Hydro Slime ×1 (optional)
 3. Unlock the Teleport Waypoint
 4. Go to the foot of the cliff
 5. Climb to the top of the rock face
@@ -29,3 +29,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_2.mp3
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_3.mp3
+
+Asmoday (Sustainer of Heavenly Principles): Outlanders, you're journey ends here.
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_SOHP_4.mp3
