@@ -33,3 +33,7 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 **Asmoday (Sustainer of Heavenly Principles)**: Outlanders, you're journey ends here.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_SOHP_4.mp3
+
+**Lumine (Female Traveler)**: Who're you?!
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Lumine_5.mp3
