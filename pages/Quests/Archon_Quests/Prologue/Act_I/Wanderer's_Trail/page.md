@@ -20,16 +20,16 @@ The god took away your only kin, and you were sealed and cast into a deep slumbe
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.yout-ube.com/embed/ShB3vNlSdDA?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
 
 ## Dialogue
-‍Paimon‍: So... what you're trying to say is that you fell here... from another world?
+‍**Paimon‍**: So... what you're trying to say is that you fell here... from another world?
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_1.mp3
 
-‍Paimon‍: But when you wanted to leave, and go on to the next world, your path was blocked by some unknown god?
+‍**Paimon‍**: But when you wanted to leave, and go on to the next world, your path was blocked by some unknown god?
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_2.mp3
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_Paimon_3.mp3
 
-Asmoday (Sustainer of Heavenly Principles): Outlanders, you're journey ends here.
+**Asmoday (Sustainer of Heavenly Principles)**: Outlanders, you're journey ends here.
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Quests/Archon_Quests/Prologue/Act_I/Wanderer's_Trail/Voice-Overs/Voiceline_SOHP_4.mp3
