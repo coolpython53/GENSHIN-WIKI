@@ -8,64 +8,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
 
 <style>
+/* Base layout adjustments */
 body { 
-      margin: 0; 
-      font-family: 'Happy Monkey', cursive; 
-      background: #0b0f1a; 
-      color: white; 
-    }#layout { display:flex; height:100vh; }
-
-#sidebar {
-  width:300px;
-  background:#111827;
-  padding:10px;
-  overflow-y:auto;
+  margin: 0; 
+  font-family: 'Happy Monkey', cursive; 
+  background: #0b0f1a; 
+  color: white; 
 }
 
-input {
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  background:#0f172a;
-  color:white;
-  border:1px solid #333;
-  border-radius:6px;
+#layout { 
+  display: flex; 
+  height: 100vh; 
+  overflow: hidden;
+}
+
+/* Sidebar Specific Styles */
+#sidebar {
+  width: 300px;
+  background: #111827;
+  padding: 10px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+#sidebar input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #0f172a;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .item {
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:6px;
-  cursor:pointer;
-  border-radius:6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-.item:hover { background:#1f2937; }
-
-.folder { font-weight:bold; }
+.item:hover { background: #1f2937; }
+.folder { font-weight: bold; }
 
 img.icon {
-  width:18px;
-  height:18px;
-  border-radius:4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
 }
 
+/* Content Area Isolation */
 #content {
-  flex:1;
-  padding:20px;
-  overflow-y:auto;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #0b0f1a; /* Base canvas color */
 }
 
-img { max-width:100%; border-radius:10px; }
-audio { width:100%; }
-
-a { color:#60a5fa; cursor:pointer; }
-
-ul { padding-left:20px; }
-li { margin:4px 0; cursor:pointer; }
-li:hover { text-decoration:underline; }
 #title { display: none; }
+
+/* SCOPED WIKI CONTENT STYLES
+  These apply ONLY to standard markdown rendering. 
+  They won't break pages using Tailwind or custom embedded HTML.
+*/
+.wiki-content img { 
+  max-width: 100%; 
+  border-radius: 10px; 
+}
+.wiki-content audio { 
+  width: 100%; 
+}
+.wiki-content a { 
+  color: #60a5fa; 
+  cursor: pointer; 
+  text-decoration: none;
+}
+.wiki-content a:hover {
+  text-decoration: underline;
+}
+.wiki-content ul { 
+  padding-left: 20px; 
+}
+.wiki-content li { 
+  margin: 4px 0; 
+}
+
+/* Tailwind Compatibility fix: Ensures loaded markup doesn't fight core img parameters */
+#page img {
+  max-width: inline;
+}
 </style>
 </head>
 
@@ -79,7 +114,7 @@ li:hover { text-decoration:underline; }
 
   <div id="content">
     <h2 id="title">Wiki</h2>
-    <div id="page">Select a page</div>
+    <div id="page" class="wiki-content">Select a page</div>
   </div>
 </div>
 
@@ -205,7 +240,6 @@ async function renderNode(node, container, depth = 0) {
 /* ---------------- PAGE ---------------- */
 
 async function loadPage(fullPath){
-  //title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
   page.innerHTML = "Loading...";
 
   const url = `${BASE_URL}pages/${fullPath}/page.md`;
@@ -240,7 +274,6 @@ async function loadFolder(fullPath){
       text = convertAssets(fullPath,text);
       text = convertPageLinks(text);
 
-      //title.innerText = fullPath.split("/").pop().replace(/_/g,' ');
       page.innerHTML = marked.parse(text);
     }
   } catch {}
@@ -290,9 +323,11 @@ function convertAssets(fullPath, text){
 
 function restoreImages(){
   const el = document.getElementById("page");
+  let currentHTML = el.innerHTML;
   imageStore.forEach((img,i)=>{
-    el.innerHTML = el.innerHTML.replaceAll(`@@IMG${i}@@`, img);
+    currentHTML = currentHTML.replaceAll(`@@IMG${i}@@`, img);
   });
+  el.innerHTML = currentHTML;
 }
 
 /* ---------------- LINKS ---------------- */
