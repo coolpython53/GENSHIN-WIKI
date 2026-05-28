@@ -22,3 +22,5 @@ No recipes use Clearwater Jade as an ingredient.
 ## Description
 A jade from Chenyu Vale named for its cool, refreshing touch, being akin to cool water.
 Ancestral legends have it that the jade scattered among the rocks came from the azure heavens. The envoys, before they became silent, bestowed these beauteous gems upon the early residents and guided them to build an altar that reached the heavens, that they may receive the blessings and curses from above. Later on, many tribes that descended from these ancestors kept this primordial, simple faith, and their reverence for jade was merged into Liyue tradition, shaping the culture we see today.
+
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/NssJR6yN0tM" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
