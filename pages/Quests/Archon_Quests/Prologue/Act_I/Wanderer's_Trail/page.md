@@ -44,3 +44,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 
 (The twins battle with Asmoday to no avail. The Traveler's sibling is engulfed by a swarm of red-and-black cubes and condensed into a single cube in the god's hand.)
 
+**(Traveler)**: (Lumine/Aether)!
+
+(The Traveler tries to take back their sibling, only to be engulfed by the cubes themselves.)
+
+**(Traveler)**: Wait! Don't go! Give my (‍sister‍/‍brother‍) back!
