@@ -46,6 +46,8 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Ques
 
 **(Traveler)**: (Lumine/Aether)!
 
-(The Traveler tries to take back their sibling, only to be engulfed by the cubes themselves.)
+*(The Traveler tries to take back their sibling, only to be engulfed by the cubes themselves.)*
 
 **(Traveler)**: Wait! Don't go! Give my (‍sister‍/‍brother‍) back!
+
+*(The Traveler gets one last look at the god while being cubed, then the scene cuts to black.)*
