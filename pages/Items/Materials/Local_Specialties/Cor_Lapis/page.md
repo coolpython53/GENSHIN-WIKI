@@ -46,6 +46,6 @@ There are 6 items that can be crafted with Cor Lapis:
 - Chongyun
 - Keqing
 - Zhongli
-<iframe width="560" height="315" src="https://www.youtube.com/embed/--FKR3Uvp98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/--FKR3Uvp98" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></
 ## Notes
 [1] Not a typo. The special version used during the quest doesn't require any mora.
