@@ -14,3 +14,38 @@ There are 3 Shops that sells Clearwater Jade:
    - Refreshes every 3 Days
 - Qiuwei (cost: 1,000 {[Mora]page::Currencies/Mora}) 5 in stock
    - Refreshes every 3 Days
+
+## Crafting
+There are 6 items that can be crafted with Cor Lapis:
+- Dustproof Potion
+  - Butterfly Wings x1
+  - Cor Lapis x1
+  - Mora x100
+- Geo Treasure Compass
+  - Golden Raven Insignia x10
+  - Cor Lapis x30
+  - Crystal Chunk x50
+  - Mora x50,000
+- Geoculus Resonance Stone
+  - Cor Lapis x5
+  - Glaze Lily x5
+  - Crystal Chunk x1
+  - Mora x500
+- Special Unmoving Essential Oil
+  - Frog (Material) x2
+  - Cor Lapis x2
+  - Mora x0<sup> [1]</sup>
+- Special Unmoving Essential Oil
+  - Frog (Material) x1
+  - Cor Lapis x1
+  - Mora x100
+- Yellow Dye
+  - Cor Lapis x1
+
+## Ascension
+- Chongyun
+- Keqing
+- Zhongli
+<iframe width="560" height="315" src="https://www.youtube.com/embed/--FKR3Uvp98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Notes
+[1] Not a typo. The special version used during the quest doesn't require any mora.
