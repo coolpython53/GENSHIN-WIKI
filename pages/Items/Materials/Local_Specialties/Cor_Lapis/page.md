@@ -1,7 +1,8 @@
 # Cor Lapis
-Cor Lapis are a Local Specialty found in the wild all over Liyue.
 
 image::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Items/Materials/Local_Specialties/Cor_Lapis/blueprint.jpg
+
+Cor Lapis are a Local Specialty found in the wild all over Liyue.
 
 ## How to obtain
 Cor Lapis can be harvested after breaking the outer shell of Cor Lapis nodes, which are found at the base of cliffs and in caves and mines throughout Liyue; many can notably be found on Mt. Hulao and Cuijue Slope. Like all Geo objects, Cor Lapis nodes are best damaged by Blunt Attacks.
