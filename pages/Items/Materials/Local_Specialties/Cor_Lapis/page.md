@@ -7,7 +7,7 @@ Cor Lapis are a Local Specialty found in the wild all over Liyue.
 ## How to obtain
 Cor Lapis can be harvested after breaking the outer shell of Cor Lapis nodes, which are found at the base of cliffs and in caves and mines throughout Liyue; many can notably be found on Mt. Hulao and Cuijue Slope. Like all Geo objects, Cor Lapis nodes are best damaged by Blunt Attacks.
 
-## Shop Availability
+## Shops
 There are 3 Shops that sells Clearwater Jade:
 - Changshun (cost: 1,500 {[Mora]page::Currencies/Mora}) 5 in stock
    - Refreshes every 3 Days
@@ -47,6 +47,8 @@ There are 6 items that can be crafted with Cor Lapis:
 - Chongyun
 - Keqing
 - Zhongli
+
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/--FKR3Uvp98" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></
+
 ## Notes
 [1] Not a typo. The special version used during the quest doesn't require any mora.
