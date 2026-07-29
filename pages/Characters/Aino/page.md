@@ -421,17 +421,17 @@ Arlecchino later tracked Dottore to his research facility to the north, where sh
 #### Hello
 Oh! Are you here to play with me? Hee-hee, my name's Aino, and I'm an inventor! Me and Ineffa live together. I could probably eat all the cakes and cookies in the world, because I love them sooo much. But my favorite kind of all is Lakkaberry Krumkake! Come visit my Clink-Clank Krumkake Craftshop whenever you want! Anyway, that's me — what about you? Tell me something about you, then we'll be friends!
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Hello.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice_Overs/VO_Aino_Hello.mp3
 
 #### Chat: Plans
 It's been way too long since I last had some candy. My brain's grinding to a halt, like a rusty machine... That's it! I'm having five whole Krumkakes for dinner tonight, and nothing's gonna stop me. Not even Ineffa's super-angry mode!
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Chat_-_Plans.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice_Overs/VO_Aino_Chat_-_Plans.mp3
 
 #### Chat: Toothache 
 *grimace* I just got a really bad toothache... Whyyy? Ineffa, help me! *whimper*
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Chat_-_Toothache.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice_Overs/VO_Aino_Chat_-_Toothache.mp3
 
 #### Chat: Play
 Don't worry, I put Ineffa in charge of all my work for today, so we can go play with Knuckle Duckle!
