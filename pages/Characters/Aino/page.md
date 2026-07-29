@@ -17,7 +17,7 @@ After reaching Friendship Level 6 with Aino, a Krumkake Bolt may be obtained thr
 
 #### Ascension Cost 0 -> 1
 - 20,000 {[Mora]page::Currencies/Mora}
-- 1 Va­ru­na­da La­zu­rite Sli­ver
+- 1 Varunada Lazurite Sliver
 - 3 Portable Bearing
 - 3 Broken Drive Shaft
 
@@ -433,4 +433,12 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 
 mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Characters/Aino/Voice%20Overs/VO_Aino_Chat_-_Toothache.mp3
 
-#### 
+#### Chat: Play
+Don't worry, I put Ineffa in charge of all my work for today, so we can go play with Knuckle Duckle!
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice Overs/VO_Aino_Chat_-_Play.mp3
+
+#### When it Rains
+Achoo! *sniff* ...Ugh, my shoes and socks are soaking wet. I wanna go home...
+
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice Overs/VO_Aino_When_It_Rains.mp3
