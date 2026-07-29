@@ -436,9 +436,9 @@ mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/main/pages/Char
 #### Chat: Play
 Don't worry, I put Ineffa in charge of all my work for today, so we can go play with Knuckle Duckle!
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice Overs/VO_Aino_Chat_-_Play.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice_Overs/VO_Aino_Chat_-_Play.mp3
 
 #### When it Rains
 Achoo! *sniff* ...Ugh, my shoes and socks are soaking wet. I wanna go home...
 
-mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice Overs/VO_Aino_When_It_Rains.mp3
+mp3::https://raw.githubusercontent.com/coolpython53/GENSHIN-WIKI/pages/Characters/Aino/Voice_Overs/VO_Aino_When_It_Rains.mp3
