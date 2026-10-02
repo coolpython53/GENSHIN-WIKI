@@ -1,0 +1,1 @@
+This folder contains media, images, sounds, and videos from Genshin Impact.
